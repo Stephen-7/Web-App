@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="css/registered.css">
+    <link rel="stylesheet" href="../css/shared.css">
+</head>
+<body>
+<div id="box">
+    <div class="header">
+        <span class="left"></span>
+        <p class="center">登录</p>
+        <span class="right"></span>
+    </div>
+
+    <div class="body">
+        <div class="st">
+            <span class="iconCenter"></span>
+        </div>
+        <p class="text">App文案</p>
+    </div>
+
+    <div class="form">
+        <div class="for">
+            <input type="text" name="phone" placeholder="请输入手机号码" maxlength="11" class="phone">
+        </div>
+
+        <div class="for">
+            <input type="password" name="password" placeholder="请输入登录密码" class="password">
+        </div>
+
+        <div class="for1">
+            <span class="code1">注册</span>
+            <span class="code2">忘记密码</span>
+        </div>
+    </div>
+
+    <p class="registered">登录</p>
+</div>
+</body>
+<script src="../script/jquery-3.2.1.js"></script>
+<script src="../script/shared.js"></script>
+<script>
+    $(function () {
+        $('.code1')[0].addEventListener('click',function(){
+            window.location.href = "./Landing.html";
+        });
+
+        $('.left')[0].addEventListener('click',function () {
+            window.history.back();
+        })
+    })
+</script>
+</html>

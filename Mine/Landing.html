@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>注册</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="css/Landing.css">
+</head>
+<body>
+<div id="box">
+    <div class="header">
+        <span class="left"></span>
+        <p class="center">注册</p>
+        <span class="right"></span>
+    </div>
+    <div class="body">
+        <div class="st">
+            <span class="iconCenter"></span>
+        </div>
+        <p class="text">App文案</p>
+    </div>
+
+    <div class="form">
+        <div class="for">
+            <input type="text" name="phone" placeholder="请输入手机号码" maxlength="11" class="phone">
+        </div>
+        <div class="for">
+            <input type="text" name="code" placeholder="请输入验证码" class="code1">
+            <span class="code2">获取验证码</span>
+        </div>
+        <div class="for">
+            <input type="text" name="password" placeholder="登录密码" class="password">
+        </div>
+        <div class="for">
+            <input type="text" name="onceAgain" placeholder="确认密码" class="onceAgain">
+        </div>
+    </div>
+    <p class="warn"></p>
+    <p class="registered">点击注册</p>
+    <p class="ExistingAccount">已有账户登录</p>
+</div>
+</body>
+<script src="../script/jquery-3.2.1.js"></script>
+<script src="../script/shared.js"></script>
+<script>
+    $(function () {
+        $('.left')[0].addEventListener('click',function(){
+            window.history.back();
+        });
+        $('.ExistingAccount')[0].addEventListener('click',function(){
+            window.location.href = "./registered.html";
+        });
+
+        var codeTime = true;
+        $('.code2')[0].addEventListener('click',function () {
+            var phone = $('.phone').val();
+            if(!(/^1[34578]\d{9}$/.test(phone))){
+                $('.warn').show();
+                $('.warn').text("请填入正确的手机号码");
+                setTimeout(function(){
+                    $('.warn').hide();
+                },1000);
+                return false;
+            }
+            if(codeTime){
+                codeTime = false;
+                $.ajax({
+                    url:'index.json',
+                    type:'get',
+                    dataType: 'json',
+                    success:function (res) {
+                        console.log(res);
+                        if(res.code === 200){
+                            var time = 60;
+                            var timer = setInterval(function(){
+                                if(time <= 0){
+                                    $('.code2').text('获取验证码');
+                                    codeTime = true;
+                                    clearInterval(timer);
+                                    return false;
+                                }
+                                $('.code2').text('已发送('+time+'s)');
+                                time--;
+                            },1000);
+                        }else {
+                            $('.warn').show();
+                            $('.warn').text(res.msg);
+                            codeTime = true;
+                            setTimeout(function(){
+                                $('.warn').hide();
+                            },1000)
+                        }
+                    }
+                })
+            }
+
+        });
+
+        $('.registered')[0].addEventListener('click',function () {
+            var phone = $('.phone').val().trim();
+            var code = $('.code1').val().trim();
+            var password = $('.password').val().trim();
+            var onceAgain = $('.onceAgain').val().trim();
+            if(!(/^1[34578]\d{9}$/.test(phone))){
+                $('.warn').show();
+                $('.warn').text("请填入正确的手机号码");
+                setTimeout(function(){
+                    $('.warn').hide();
+                },1000);
+                return false;
+            }
+            if(phone){
+                if(code){
+                    if(password){
+                        if(onceAgain){
+                            var data = {};
+                            data = {
+                                "username": phone,
+                                "code": code,
+                                "password": password,
+                                "onceAgain": onceAgain
+                            };
+                            $.ajax({
+                                url:"index.json",
+                                type: 'post',
+                                dataType: 'json',
+                                data:JSON.stringify(data),
+                                headers:{
+                                    'Content-Type': 'application/json'
+                                },
+                                success:function (res) {
+                                    if(res.code === 200){
+                                        $('.warn').show();
+                                        $('.warn').text("注册成功");
+                                        setTimeout(function(){
+                                            $('.warn').hide();
+                                            window.location.href = './Mine.html';
+                                        },2000)
+                                    }else {
+                                        $('.warn').show();
+                                        $('.warn').text(res.msg);
+                                        setTimeout(function(){
+                                            $('.warn').hide();
+                                        },2000)
+                                    }
+                                },
+                                error: function (err) {
+                                    console.log(err);
+                                }
+                            })
+                        }else{
+                            $('.warn').show();
+                            $('.warn').text("请再输入密码");
+                            setTimeout(function(){
+                                $('.warn').hide();
+                            },1000);
+                            return false;
+                        }
+                    }else{
+                        $('.warn').show();
+                        $('.warn').text("请输入密码");
+                        setTimeout(function(){
+                            $('.warn').hide();
+                        },1000);
+                        return false;
+                    }
+                }else{
+                    $('.warn').show();
+                    $('.warn').text("请输入验证码");
+                    setTimeout(function(){
+                        $('.warn').hide();
+                    },1000);
+                    return false;
+                }
+            }else{
+                $('.warn').show();
+                $('.warn').text("请输入手机号码");
+                setTimeout(function(){
+                    $('.warn').hide();
+                },1000);
+                return false;
+            }
+        })
+
+    })
+</script>
+</html>

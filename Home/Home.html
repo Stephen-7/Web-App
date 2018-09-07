@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="css/Home.css">
+</head>
+<body>
+<div id="box">
+    <div class="headerNav">
+        <span class="icon"></span>
+        <div class="header_nav">
+            <span class="icon_search"></span>
+            <input type="enter" placeholder="搜索有家商品/店铺">
+        </div>
+        <span class="Landing">登录</span>
+    </div>
+
+    <div class="Carousel">
+        <ul class="">
+            <li><a href="#"><img src="image/banner_10.jpg" alt=""></a></li>
+            <li><a href="#"><img src="image/banner_3.jpg" alt=""></a></li>
+            <li><a href="#"><img src="image/banner_4.jpg" alt=""></a></li>
+            <li><a href="#"><img src="image/banner_5.jpg" alt=""></a></li>
+            <li><a href="#"><img src="image/banner_6.jpg" alt=""></a></li>
+            <li><a href="#"><img src="image/banner_7.jpg" alt=""></a></li>
+            <li><a href="#"><img src="image/banner_8.jpg" alt=""></a></li>
+            <li><a href="#"><img src="image/banner_9.jpg" alt=""></a></li>
+            <li><a href="#"><img src="image/banner_10.jpg" alt=""></a></li>
+            <li><a href="#"><img src="image/banner_3.jpg" alt=""></a></li>
+        </ul>
+        <ol class="index">
+            <li class="current"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ol>
+    </div>
+
+    <div class="list">
+        <ul>
+            <li><a href="#"><img src="image/nav1.png" alt=""><p>生活超市</p></a></li>
+            <li><a href="#"><img src="image/nav2.png" alt=""><p>商品入口</p></a></li>
+            <li><a href="#"><img src="image/nav3.png" alt=""><p>服装城</p></a></li>
+            <li><a href="#"><img src="image/nav4.png" alt=""><p>深海生鲜</p></a></li>
+            <li><a href="#"><img src="image/nav5.png" alt=""><p>限时到货</p></a></li>
+            <li><a href="#"><img src="image/nav6.png" alt=""><p>充值中心</p></a></li>
+            <li><a href="#"><img src="image/nav7.png" alt=""><p>惠赚钱</p></a></li>
+            <li><a href="#"><img src="image/nav8.png" alt=""><p>领券</p></a></li>
+            <li><a href="#"><img src="image/nav9.png" alt=""><p>物流查询</p></a></li>
+            <li><a href="#"><img src="image/nav10.png" alt=""><p>我的关注</p></a></li>
+        </ul>
+    </div>
+
+    <div class="body">
+        <p class="text">特价秒杀区</p>
+        <p class="time">14点场
+            <span>0</span>
+            <span>0</span>
+            <span>:</span>
+            <span>0</span>
+            <span>0</span>
+            <span>:</span>
+            <span>0</span>
+            <span>0</span>
+        </p>
+        <p class="genDuo">更多 ></p>
+    </div>
+
+</div>
+<div class="BotNavigation">
+    <ul>
+        <li class="active"><a href="../Home/Home.html" class="Current"><img src="../images/1-home.png" alt=""></a></li>
+        <li><a href="../Find/Find.html"><img src="../images/2-find.png" alt=""></a></li>
+        <li><a href="../Classification/Classification.html"><img src="../images/3-catergry.png" alt=""></a></li>
+        <li><a href="../ShoppingCart/ShoppingCart.html"><img src="../images/4-cart.png" alt=""></a></li>
+        <li><a href="../Mine/Mine.html"><img src="../images/5-me.png" alt=""></a></li>
+    </ul>
+</div>
+</body>
+<script src="../script/jquery-3.2.1.js"></script>
+<script src="../script/shared.js"></script>
+<script src="script/Home.js"></script>
+<script>
+    function countTime() {
+        //获取当前时间
+        var date = new Date();
+        var now = date.getTime();
+        //设置截止时间
+        var endDate = new Date("2016-10-22 23:23:23");
+        var end = endDate.getTime();
+        //时间差
+        var leftTime = end-now;
+        //定义变量 d,h,m,s保存倒计时的时间
+        var d,h,m,s;
+        if (leftTime>=0) {
+            d = Math.floor(leftTime/1000/60/60/24);
+            h = Math.floor(leftTime/1000/60/60%24);
+            m = Math.floor(leftTime/1000/60%60);
+            s = Math.floor(leftTime/1000%60);
+        }
+        //将倒计时赋值到div中
+        document.getElementById("_d").innerHTML = d+"天";
+        document.getElementById("_h").innerHTML = h+"时";
+        document.getElementById("_m").innerHTML = m+"分";
+        document.getElementById("_s").innerHTML = s+"秒";
+        //递归每秒调用countTime方法，显示动态时间效果
+        setTimeout(countTime,1000);
+
+    }
+
+</script>
+</html>

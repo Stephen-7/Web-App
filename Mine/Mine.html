@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>个人中心</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="css/Mine.css">
+</head>
+<body>
+<div id="box">
+
+    <div class="header_nav1">
+        <div class="header_left">
+            <span class="header_icon"></span>
+        </div>
+        <div class="header_center">
+            <p class="header_text1"><span class="registered">注册</span> / <span class="Landing">登录</span><span class="header_go"></span></p>
+            <p class="header_text2">这个人很懒，什么都没有留下。</p>
+        </div>
+        <div class="header_right">
+            <span class="header_Setting"></span>
+        </div>
+    </div>
+
+    <div class="center_nav2">
+        <div class="center_center">
+            <ul>
+                <li><a href="#"><img src="image/daizhifu2.png" alt=""><p>待付款</p></a></li>
+                <li><a href="#"><img src="image/daifahuo2.png" alt=""><p>待发货</p></a></li>
+                <li><a href="#"><img src="image/daishouhuo2.png" alt=""><p>代收货</p></a></li>
+                <li><a href="#"><img src="image/quanbudingdan2.png" alt=""><p>全部订单</p></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="body_nav3">
+        <div class="body_center">
+            <ul class="clearfix">
+                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>待评论</p></a></li>
+                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>可使用</p></a></li>
+                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>关注</p></a></li>
+                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>余额</p></a></li>
+                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>足迹</p></a></li>
+                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>收藏</p></a></li>
+                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>卡券</p></a></li>
+                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>积分</p></a></li>
+                <li><a href="./Recharge.html"><img src="image/minepage_go_gray.png" alt=""><p>充值</p></a></li>
+                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>退款</p></a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="bottom_nav">
+        <div class="Variety">
+            <p>会员等级</p><span></span>
+        </div>
+        <div class="Variety">
+            <p>我的贡献</p><span></span>
+        </div>
+        <div class="Variety">
+            <p>每日福利</p><span></span>
+        </div>
+        <div class="Variety">
+            <p>发票助手</p><span></span>
+        </div>
+        <div class="Variety">
+            <p>联系客服</p><span></span>
+        </div>
+        <div class="Variety">
+            <p>我要合作</p><span></span>
+        </div>
+        <div class="Variety">
+            <p>声明及协议</p><span></span>
+        </div>
+    </div>
+
+
+
+</div>
+<div class="BotNavigation">
+    <ul>
+        <li><a href="../Home/Home.html"><img src="../images/1-home.png" alt=""></a></li>
+        <li><a href="../Find/Find.html"><img src="../images/2-find.png" alt=""></a></li>
+        <li><a href="../Classification/Classification.html"><img src="../images/3-catergry.png" alt=""></a></li>
+        <li><a href="../ShoppingCart/ShoppingCart.html"><img src="../images/4-cart.png" alt=""></a></li>
+        <li><a href="./Mine.html"><img src="../images/5-me.png" alt=""></a></li>
+    </ul>
+</div>
+<script src="../script/jquery-3.2.1.js"></script>
+<script>
+    $(function(){
+        $('.registered')[0].addEventListener('click',function(){
+            window.location.href = "./registered.html";
+        });
+        $('.Landing')[0].addEventListener('click',function(){
+            window.location.href = "./Landing.html";
+        });
+
+        $('.header_Setting')[0].addEventListener('click',function () {
+            alert("这是设置按钮");
+        })
+    })
+</script>
+</body>
+</html>

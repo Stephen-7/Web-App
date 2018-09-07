@@ -1,0 +1,117 @@
+.Balance{
+    width: 100%;
+    height: 30px;
+    text-align: left;
+    line-height: 30px;
+    font-size: 16px;
+    color: #000000;
+    padding-left: 20px;
+    margin: 20px 0 10px 0;
+    font-weight: bold;
+}
+.money_center{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+.money_center ul{
+
+}
+.money_center ul li{
+    width: 25%;
+    height: 40px;
+    border: 1px solid #B7B7B7;
+    float: left;
+    margin: 10px 4.1% 10px 4%;
+    border-radius: 5px;
+}
+.money_text{
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    color:#333333;
+}
+.checkText{
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #4077FF;
+    color:#ffffff;
+    border-radius: 5px;
+}
+
+.money_body{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.zfb,.wx,.yl{
+    width: 100%;
+    height: 40px;
+}
+.icon1,.icon2,.icon3{
+    width: 10%;
+    height: 40px;
+    display: inline-block;
+    margin-left: 5%;
+    padding: 3% 1.5% 3% 1.5%;
+    float: left;
+}
+.icon1 {
+    background: url('../../images/alipay@2x.png') no-repeat;
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+}
+.icon2 {
+    background: url('../../images/wechatpay@2x.png') no-repeat;
+    background-size: 23px 20px;
+    background-position: 50% 50%;
+}
+.icon3 {
+    background: url('../../images/Unionpay@2x.png') no-repeat;
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+}
+.text{
+    width: 70%;
+    height: 40px;
+    font-size: 14px;
+    color:#333333;
+    text-align: left;
+    line-height: 40px;
+    padding-left: 10px;
+    float: left;
+}
+.tab1,.tab2,.tab3{
+    width: 10%;
+    height: 40px;
+    display: inline-block;
+    margin-right: 5%;
+    background: url('../../images/Recharge_btn_checknor@2x.png') no-repeat;
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+    padding: 3% 1.5% 3% 1.5%;
+    float: right;
+}
+
+.check{
+    background: url('../../images/Recharge_btn_select@2x.png') no-repeat;
+    background-size: 18px 18px;
+    background-position: 50% 50%;
+}
+.but{
+    width: 55%;
+    height: 35px;
+    display: inline-block;
+    margin-left: 22.5%;
+    background-color: #4077FF;
+    font-size: 14px;
+    line-height: 35px;
+    text-align: center;
+    color: white;
+    border-radius: 20px;
+    margin-top: 40px;
+}
