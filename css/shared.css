@@ -20,8 +20,8 @@
 .left{
     float: left;
     background: url("../images/back@2x.png") no-repeat;
-    background-size: 50% 60%;
-    background-position: 5px 8px;
+    background-size: 25px 25px;
+    background-position: 15px 7px;
 }
 .right{
     float: right;
@@ -30,12 +30,11 @@
     width: 70%;
     height: 40px;
     float: left;
-    font-size: 18px;
+    font-size: 16px;
     color:#000000;
     text-align: center;
     line-height: 40px;
 }
-
 
 
 

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>充值中心</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <style>
+        .Recharge_header{
+            width: 100%;
+            height: 40px;
+        }
+        .Recharge_header_text{
+            width: 90%;
+            height: 40px;
+            text-align: left;
+            line-height: 40px;
+            font-size: 16px;
+            color:#333333;
+            /*font-weight: bold;*/
+            margin: 10px 0 10px 20px;
+            overflow: hidden;
+        }
+        .Recharge_center{
+            width: 100%;
+            height:auto;
+            overflow: hidden;
+            margin-top: 10px;
+        }
+        .Recharge_center_ul{
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+        }
+        .Recharge_center_ul li{
+            width: 25%;
+            height: 40px;
+            float: left;
+            margin: 1% 1% 2.5% 5.5%;
+        }
+        .Recharge_center_ul li p{
+            width: 100%;
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border: 1px solid #e5e5e5;
+            border-radius: 5px;
+            font-size: 14px;
+            /*color:#333333;*/
+        }
+        .check{
+            background-color: #4077FF;
+            color: #ffffff;
+        }
+
+        .Recharge_footer{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+        }
+        .Recharge_footer_box{
+            width: 100%;
+            height: 30px;
+            margin: 15px 0 15px 0;
+        }
+        .Recharge_footer_icon1,.Recharge_footer_icon2,.Recharge_footer_icon3{
+            width: 15%;
+            height: 30px;
+            display: inline-block;
+            float: left;
+        }
+        .Recharge_footer_icon1{
+            background: url("../images/alipay@2x.png") no-repeat;
+            background-size: 20px 20px;
+            background-position: 70% 50%;
+        }
+        .Recharge_footer_icon2{
+            background: url("../images/wechatpay@2x.png") no-repeat;
+            background-size: 20px 20px;
+            background-position: 70% 50%;
+        }
+        .Recharge_footer_icon3{
+            background: url("../images/Unionpay@2x.png") no-repeat;
+            background-size: 20px 20px;
+            background-position: 70% 50%;
+        }
+        .Recharge_footer_text{
+            width: 70%;
+            height: 30px;
+            display: inline-block;
+            float: left;
+            text-align: left;
+            color: #333333;
+            line-height: 30px;
+            font-size: 14px;
+            padding-left: 5px;
+        }
+        .Recharge_footer_false{
+            width: 15%;
+            height: 30px;
+            display: inline-block;
+            float: right;
+            background: url("../images/Recharge_btn_checknor@2x.png") no-repeat;
+            background-size: 20px 20px;
+            background-position: 25% 50%;
+        }
+        .true{
+            background: url("../images/Recharge_btn_select@2x.png") no-repeat;
+            background-size: 20px 20px;
+            background-position: 25% 50%;
+        }
+
+        .Recharge_true{
+            width: 60%;
+            height: 35px;
+            display: inline-block;
+            background-color: #4077FF;
+            color: #ffffff;
+            text-align: center;
+            font-size: 15px;
+            line-height: 35px;
+            border-radius: 30px;
+            margin-left: 20%;
+            margin-top:10px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="header">
+        <span class="left" onclick="window.history.back()"></span>
+        <p class="center">充值中心</p>
+        <span class="right"></span>
+    </div>
+    <div class="Recharge_header">
+        <p class="Recharge_header_text">用户当前余额：1亿元</p>
+    </div>
+    <div class="Recharge_center">
+        <ul class="Recharge_center_ul" id="Recharge_center_ul">
+            <li><p class="Recharge_center_text check">10元</p></li>
+            <li><p class="Recharge_center_text">50元</p></li>
+            <li><p class="Recharge_center_text">100元</p></li>
+            <li><p class="Recharge_center_text">200元</p></li>
+            <li><p class="Recharge_center_text">500元</p></li>
+            <li><p class="Recharge_center_text">1000元</p></li>
+            <li><p class="Recharge_center_text">5000元</p></li>
+        </ul>
+    </div>
+    <div class="Recharge_footer">
+        <div class="Recharge_footer_box">
+            <span class="Recharge_footer_icon1"></span>
+            <p class="Recharge_footer_text">支付宝</p>
+            <span class="Recharge_footer_false " id="Recharge_footer_false1"></span>
+        </div>
+        <div class="Recharge_footer_box">
+            <span class="Recharge_footer_icon2"></span>
+            <p class="Recharge_footer_text">微信</p>
+            <span class="Recharge_footer_false" id="Recharge_footer_false2"></span>
+        </div>
+        <div class="Recharge_footer_box">
+            <span class="Recharge_footer_icon3"></span>
+            <p class="Recharge_footer_text">银联（推荐）</p>
+            <span class="Recharge_footer_false true" id="Recharge_footer_false3"></span>
+        </div>
+    </div>
+
+    <p class="Recharge_true">立即充值</p>
+</div>
+</body>
+<script src="../script/jquery-3.2.1.js"></script>
+<script>
+    $(function () {
+        var p = $('#Recharge_center_ul')[0].getElementsByTagName('p');
+        for(var i=0; i<p.length; i++){
+            p[i].onclick = function () {
+                $(".Recharge_center_text").removeClass("check");
+                $(this).addClass("check");
+            };
+        }
+
+        var index;
+        $('.Recharge_footer_box')[0].addEventListener('click',function () {
+            $('#Recharge_footer_false1').addClass('true');
+            $('#Recharge_footer_false2').removeClass('true');
+            $('#Recharge_footer_false3').removeClass('true');
+            index = 0;
+        });
+        $('.Recharge_footer_box')[1].addEventListener('click',function () {
+            $('#Recharge_footer_false1').removeClass('true');
+            $('#Recharge_footer_false2').addClass('true');
+            $('#Recharge_footer_false3').removeClass('true');
+            index = 1;
+        });
+        $('.Recharge_footer_box')[2].addEventListener('click',function () {
+            $('#Recharge_footer_false1').removeClass('true');
+            $('#Recharge_footer_false2').removeClass('true');
+            $('#Recharge_footer_false3').addClass('true');
+            index = 2;
+        });
+
+        $('.Recharge_true')[0].addEventListener('click',function () {
+            if(index === 0){
+                window.location.href = "./zhifubao.html";
+            }else if(index === 1){
+                window.location.href = "./weixin.html";
+            }else if(index === 2){
+                window.location.href = "./yinlian.html";
+            }
+        })
+
+    })
+</script>
+</html>
