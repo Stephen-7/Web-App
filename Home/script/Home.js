@@ -4,7 +4,7 @@ $('.icon')[0].addEventListener('click',function(){
 });
 
 $('.Landing')[0].addEventListener('click',function(){
-    window.location.href = "../Mine/registered.html";
+    window.location.href = "../Mine/Landing.html";
 //            alert('跳转登录');
 });
 

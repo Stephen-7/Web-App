@@ -1,197 +1,269 @@
-#box{
-    background-color: #d8dddc;
+#box {
+    background-color: #eeeeee;
+    /*height: 100%;*/
 }
 
-.header_nav1{
+.Mine_header {
     width: 100%;
     height: 60px;
-    margin-top: 10px;
     overflow: hidden;
-    background-color: #ffffff;
-}
-.header_left{
-    width: 15%;
-    height: 100%;
-    float: left;
-    margin-left: 5%;
-}
-.header_icon{
-    width: 85%;
-    height: 70%;
-    display: inline-block;
-    background: url(../image/touxiang.png) no-repeat;
-    background-size: 40px 40px;
-    margin: 15% 0 15% 15%;
 }
 
-.header_center{
-    width: 65%;
-    height: 100%;
+.Mine_header_left {
+    width: 20%;
+    height: 60px;
+    padding-left: 5%;
     float: left;
 }
-.header_text1{
+
+.Mine_header_icon {
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background: url("../image/touxiang.png") no-repeat;
+    background-size: 40px 40px;
+    margin: 10px 9% 10px 9%;
+}
+
+.Mine_header_center {
+    width: 60%;
+    height: 60px;
+    float: left;
+}
+.Mine_header_text0{
     width: 100%;
-    height: 30px;
+    height: 23px;
+    text-align: left;
+    line-height: 25px;
+    font-size: 15px;
+    color: #333333;
+    margin-top: 10px;
+    padding-left: 5px;
+    display: none;
+}
+.Mine_header_text1{
+    width: 100%;
+    height: 23px;
+    text-align: left;
+    line-height: 25px;
+    font-size: 15px;
+    color: #333333;
+    margin-top: 10px;
     padding-left: 5px;
 }
-.registered,.Landing{
-    width: auto;
-    height: 30px;
+
+.Mine_header_text2 {
+    width: 100%;
+    height: 25px;
     text-align: left;
+    line-height: 15px;
+    color: #333333;
+    font-size: 12px;
+    padding-left: 5px;
+}
+
+.Mine_registered, .Mine_Landing {
+    color: #333333;
     font-size: 16px;
     font-weight: bold;
-    line-height: 35px;
 }
-.header_go{
+
+.Mine_header_go {
     width: 20px;
     height: 20px;
     display: inline-block;
-    background: url(../image/minepage_go_gray.png) no-repeat;
+    background: url("../image/gerenzhongxin_gerengo@2x.png") no-repeat;
     background-size: 25px 25px;
-    background-position: 0 1px;
+    background-position: -1px 2px;
 }
-.header_text2{
-    width: 100%;
-    height: 20px;
-    font-size: 12px;
-    text-align: left;
-    line-height: 20px;
-    padding-left: 5px;
-}
-.header_right{
-    width: 15%;
-    height: 100%;
+
+.Mine_header_right {
+    width: 20%;
+    height: 60px;
     float: right;
 }
-.header_Setting{
-    width: 55%;
-    height: 45%;
-    display: inline-block;
-    background: url(../image/minepage_btn_set.png) no-repeat;
-    background-size: 100% 100%;
-    margin: 15% 0 0 15%;
-}
 
-.center_nav2{
-    width: 100%;
-    height: 80px;
-    padding-top: 10px;
-    /*margin-top: 10px;*/
-    overflow: hidden;
-    background-color: #ffffff;
-}
-.center_center{
-    width: 90%;
-    height: 60px;
-    margin: 0 5% 0 5%;
-    border-radius: 10px;
-    box-shadow: 0 1px 2px 2px rgba(123,123,242,0.22);
-}
-.center_center ul{
-    width: 100%;
-    height: 60px;
-}
-.center_center ul li{
-    width: 25%;
-    height: 60px;
-    float: left;
-}
-.center_center ul li a{
-    width:100%;
-    height: 100%;
-    display: block;
-}
-.center_center ul li a img{
-    width: 30%;
-    height: 45%;
-    margin: 8% 35% 0 35%;
-}
-.center_center ul li a p{
-    width: 100%;
-    height: 20px;
-    text-align: center;
-    line-height: 20px;
-    font-size: 12px;
-    color:#333333;
-}
-
-.body_nav3{
-    width: 100%;
-    height: 160px;
-    padding-top: 10px;
-    overflow: hidden;
-    background-color: #ffffff;
-}
-.body_center{
-    width: 85%;
-    height: 140px;
-    margin: 0 7.5% 0 7.5%;
-    border-radius: 10px;
-    box-shadow: 0 1px 2px 2px rgba(123,123,242,0.22);
-}
-.clearfix{
-    width: 100%;
-    height: 100%;
-}
-.clearfix li{
-    width: 20%;
-    height: 50%;
-    float: left;
-}
-.clearfix li a{
-    width: 100%;
-    height: 100%;
-}
-.clearfix li a img{
-    width: 45%;
-    height: 45%;
-    margin: 10% 27.5% 0 27.5%;
-}
-.clearfix li a p{
-    width: 100%;
+.Mine_header_Setting {
+    width: 25px;
     height: 25px;
-    font-size: 12px;
-    color: #333333;
-    text-align: center;
-    line-height: 25px;
+    display: inline-block;
+    background: url("../image/minepage_btn_set@2x.png") no-repeat;
+    background-size: 25px 25px;
+    margin-top: 10px;
+    margin-left: 30%;
 }
 
-.bottom_nav{
+.Mine_nav {
     width: 100%;
     height: auto;
     overflow: hidden;
-    margin:0 0 45px 0;
-    background-color: #fff;
 }
-.Variety{
-    width: 100%;
-    height: 40px;
-    padding-left: 15px;
-    float: left;
-}
-.Variety p{
+
+.Mine_nav_center {
     width: 90%;
-    height: 40px;
-    float: left;
-    font-size: 13px;
-    text-align: left;
-    line-height: 40px;
-    border-bottom: 1px solid #e5e5e5;
+    height: 90px;
+    margin-left: 5%;
+    border-radius: 10px;
+    position: relative;
+    background-color: #ffffff;
 }
-.Variety>span{
-    width: 10%;
-    height: 40px;
-    display: inline-block;
-    background: url("../image/minepage_go_gray.png") no-repeat;
-    background-size: 80% 65%;
-    background-position: 100% 50%;
+
+.Mine_nav_add {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    padding-left: 10px;
     border-bottom: 1px solid #e5e5e5;
 }
 
-.active {
-    color: white;
-    background-color: black;
+.Mine_nav_add_left {
+    width: 40%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #333333;
+    float: left;
+    text-align: left;
 }
-.none {
-    background-color: whitesmoke;
+
+.Mine_nav_add_right {
+    width: 60%;
+    height: 30px;
+    line-height: 30px;
+    text-align: right;
+    font-size: 12px;
+    color: #999999;
+    float: right;
+    padding-right: 30px;
+}
+
+.Mine_nav_add_go {
+    width: 15px;
+    height: 17px;
+    display: inline-block;
+    background: url("../image/minepage_go_gray@2x.png") no-repeat;
+    background-size: 20px 18px;
+    position: absolute;
+    top: 7%;
+}
+
+.Mine_nav_ul {
+    width: 96%;
+    height: 60px;
+    margin-left: 2%;
+}
+
+.Mine_nav_ul li {
+    width: 16%;
+    height: 60px;
+    float: left;
+    margin: 0 2% 0 2%;
+}
+
+.Mine_nav_ul li a {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: -0px;
+}
+
+.Mine_nav_ul li a img {
+    width: 20px;
+    height: 20px;
+    background-color: deepskyblue;
+    display: block;
+    margin: 20% 0 7px 30%;
+}
+
+.Mine_nav_ul li a p {
+    width: auto;
+    font-size: 12px;
+    color: #333333;
+    text-align: center;
+}
+
+.Mine_center {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    margin-top: 10px;
+}
+
+.Mine_center_center {
+    width: 90%;
+    height: 150px;
+    margin-left: 5%;
+    border-radius: 10px;
+    background-color: #ffffff;
+}
+
+.Mine_center_clearfix {
+    width: 100%;
+    height: 100%;
+}
+
+.Mine_center_clearfix li {
+    width: 25%;
+    height: 75px;
+    float: left;
+}
+
+.Mine_center_clearfix li a {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.Mine_center_clearfix li a img {
+    width: 40px;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 20px;
+    border: 2px solid green;
+    margin: 10% 0 2% 27%;
+}
+
+.Mine_center_clearfix li a p {
+    font-size: 12px;
+    text-align: center;
+    color: #333333;
+}
+
+.Mine_footer {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 10px 0 50px 5%;
+    background-color: #ffffff;
+}
+
+.Mine_footer_Variety {
+    width: 100%;
+    height: 35px;
+    float: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.Mine_footer_Variety_text {
+    width: 92%;
+    height: 35px;
+    text-align: left;
+    padding-left: 15px;
+    line-height: 35px;
+    font-size: 13px;
+    color: #333333;
+    float: left;
+}
+
+.Mine_footer_Variety > a > span {
+    width: 8%;
+    height: 20px;
+    display: inline-block;
+    float: right;
+    background: url("../image/minepage_go_gray@2x.png") no-repeat;
+    background-size: 20px 20px;
+    margin-top: 7.5px;
 }
