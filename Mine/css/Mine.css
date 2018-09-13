@@ -1,7 +1,4 @@
-#box {
-    background-color: #eeeeee;
-    /*height: 100%;*/
-}
+
 
 .Mine_header {
     width: 100%;
@@ -39,6 +36,9 @@
     color: #333333;
     margin-top: 10px;
     padding-left: 5px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
     display: none;
 }
 .Mine_header_text1{
@@ -50,6 +50,7 @@
     color: #333333;
     margin-top: 10px;
     padding-left: 5px;
+    display: block;
 }
 
 .Mine_header_text2 {
@@ -103,9 +104,11 @@
     width: 90%;
     height: 90px;
     margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 10px;
     position: relative;
-    background-color: #ffffff;
+    box-shadow: 0 1px 5px 	#FF4E56;
 }
 
 .Mine_nav_add {
@@ -188,15 +191,16 @@
     height: auto;
     overflow: hidden;
     position: relative;
-    margin-top: 10px;
 }
 
 .Mine_center_center {
     width: 90%;
     height: 150px;
     margin-left: 5%;
+    margin-top: 10px;
+    margin-bottom: 10px;
     border-radius: 10px;
-    background-color: #ffffff;
+    box-shadow: 0 1px 5px 	#FF4E56;
 }
 
 .Mine_center_clearfix {
@@ -237,7 +241,7 @@
     overflow: hidden;
     border-radius: 10px;
     margin: 10px 0 50px 5%;
-    background-color: #ffffff;
+    box-shadow: 0 1px 5px 	#FF4E56;
 }
 
 .Mine_footer_Variety {

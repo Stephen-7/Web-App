@@ -14,7 +14,7 @@
 <body>
 <div id="box">
     <div class="header">
-        <span class="left"></span>
+        <span class="left" onclick="window.history.back();"></span>
         <p class="center">登录</p>
         <span class="right"></span>
     </div>
@@ -49,12 +49,12 @@
 <script>
     $(function () {
         $('.code1')[0].addEventListener('click',function(){
-            window.location.href = "./Landing.html";
+            window.location.href = "./Registered.html";
+        });
+        $('.code2')[0].addEventListener('click',function(){
+            window.location.href = "./forgetPassword.html";
         });
 
-        $('.left')[0].addEventListener('click',function () {
-            window.history.back();
-        })
     })
 </script>
 </html>

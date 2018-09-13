@@ -14,7 +14,7 @@
 <body>
 <div id="box">
     <div class="header">
-        <span class="left"></span>
+        <span class="left" onclick="window.history.back();"></span>
         <p class="center">注册</p>
         <span class="right"></span>
     </div>
@@ -41,12 +41,15 @@
         </div>
     </div>
     <p class="warn"></p>
+    <div class="Registered_Terms">
+        <span class="Registered_Terms_check"></span>
+        <p class="Registered_Terms_p">我已仔细阅读并同意<a href="#" class="Registered_Terms_a">《这是啥注册条款》</a></p>
+    </div>
     <p class="registered">点击注册</p>
     <p class="ExistingAccount">已有账户登录</p>
 </div>
 </body>
 <script src="../script/jquery-3.2.1.js"></script>
-<script type="text/javascript" src="./bower_components/mockjs/dist/mock.js"></script>
 <script src="../script/shared.js"></script>
 <script>
     $(function () {
@@ -54,9 +57,12 @@
             window.history.back();
         });
         $('.ExistingAccount')[0].addEventListener('click',function(){
-            window.location.href = "./registered.html";
+            window.location.href = "./Landing.html";
         });
 
+        $('.Registered_Terms_check')[0].addEventListener('click',function () {
+            $('.Registered_Terms_check').addClass('add');
+        });
         var codeTime = true;
         $('.code2')[0].addEventListener('click',function () {
             var phone = $('.phone').val();
