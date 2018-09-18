@@ -2,13 +2,8 @@
 
     |---SimpleLife
     |
-    |    |---修改时间 2018-09-04 17:49
-    |    |
-    |    |    |---css 公共样式。
-    |    |    |---images 公共图片。
-    |    |    |---script 第三方资源。
-    |    |    |
-    |    |    | 
+    |    |---修改时间 2018-09-18 13:35
+    |    |   
     |    |    |---Hone 首页。
     |    |    |   
     |    |    |---Find 发现。
@@ -18,12 +13,24 @@
     |    |    |---ShoppingCart 购物车。
     |    |    |    
     |    |    |---Mine 我的。
-    |    |    |    |---Landing 注册。
-    |    |    |    |---registered 登录。 
-    |    |   
-    |  
-    |---Mack.js 项目的内容数据。
-    |---README.md 项目信息。
-    |
-
-
+    |    |    |    |---registered 注册。
+    |    |    |    |---Landing 登录。 
+    |    |    |    |---Classification 忘记密码。
+    |    |    |    |---Recharge 充值中心。  
+    |    |    |    |---WeChat 微信充值。  
+    |    |    |    |---Alipay 支付宝充值。
+    |    |    |    |---UnionPay 银联充值。
+    |    |    |    
+    |    |    |  
+    |    |    |---第三方资源
+    |    |    |    |---css 公共样式。
+    |    |    |    |    |---base.css
+    |    |    |    |    |---shared.css
+    |    |    |    |
+    |    |    |    |---script 公共JavaScript。
+    |    |    |    |    |---jQuery.3.2.1.js
+    |    |    |    |    |---shared.js
+    |    |    |    |
+    |    |    |    |---images 公共图片。
+    |    |    |    |---Mack.js 项目请求拦截假数据。
+    |    |    |    |---README.md 项目信息。
