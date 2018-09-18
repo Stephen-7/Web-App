@@ -1,8 +1,8 @@
 # 项目分析
 
-    |---SimpleLife
+    |---web-App
     |
-    |    |---修改时间 2018-09-18 13:35
+    |    |---修改时间 2018-09-18 21:26
     |    |   
     |    |    |---Hone 首页。
     |    |    |   
@@ -15,7 +15,7 @@
     |    |    |---Mine 我的。
     |    |    |    |---registered 注册。
     |    |    |    |---Landing 登录。 
-    |    |    |    |---Classification 忘记密码。
+    |    |    |    |---forgetPassword 忘记密码。
     |    |    |    |---Recharge 充值中心。  
     |    |    |    |---WeChat 微信充值。  
     |    |    |    |---Alipay 支付宝充值。
