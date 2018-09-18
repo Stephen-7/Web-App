@@ -10,14 +10,16 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/shared.css">
     <style>
-        #box{
+        #box {
             background-color: #F3F3F3;
         }
-        .header{
+
+        .header {
             background-color: #ffffff;
             border: none;
         }
-        .withdraw_header{
+
+        .withdraw_header {
             width: 100%;
             height: auto;
             overflow: hidden;
@@ -25,13 +27,15 @@
             margin-top: 10px;
             background-color: white;
         }
-        .withdraw_header_top{
+
+        .withdraw_header_top {
             width: 95%;
             height: 39px;
             border-bottom: 1px solid #e5e5e5;
             margin-left: 5%;
         }
-        .withdraw_header_text1,.withdraw_header_text2{
+
+        .withdraw_header_text1, .withdraw_header_text2 {
             width: 30%;
             height: 40px;
             display: inline-block;
@@ -41,21 +45,24 @@
             float: left;
             line-height: 40px;
         }
-        .withdraw_header_text1{
-            width: 30%;
-            height: 40px;
-        }
-        .withdraw_header_text2{
-            width: 70%;
+
+        .withdraw_header_text1 {
+            width: 18%;
             height: 40px;
         }
 
-        .withdraw_header_center{
+        .withdraw_header_text2 {
+            width: 82%;
+            height: 40px;
+        }
+
+        .withdraw_header_center {
             width: 95%;
             height: 90px;
             margin-left: 5%;
         }
-        .withdraw_header_center_ck{
+
+        .withdraw_header_center_ck {
             width: 100%;
             height: 40px;
             font-size: 15px;
@@ -63,7 +70,8 @@
             text-align: left;
             line-height: 40px;
         }
-        .withdraw_header_center_type{
+
+        .withdraw_header_center_type {
             width: auto;
             height: 20px;
             text-align: left;
@@ -71,19 +79,22 @@
             font-size: 12px;
             color: #999999;
         }
-        .withdraw_header_center_num{
+
+        .withdraw_header_center_num {
             width: auto;
             height: auto;
             text-align: left;
             font-size: 12px;
-            color: rgba(255,29,60,0.7);
+            color: rgba(255, 29, 60, 0.7);
         }
-        .withdraw_header_center_rmb{
+
+        .withdraw_header_center_rmb {
             width: 100%;
             height: 49px;
             border-bottom: 1px solid #e5e5e5;
         }
-        .withdraw_header_center_icon{
+
+        .withdraw_header_center_icon {
             width: 10%;
             height: 49px;
             display: inline-block;
@@ -93,7 +104,8 @@
             float: left;
             color: #333333;
         }
-        .withdraw_header_center_text{
+
+        .withdraw_header_center_text {
             width: 90%;
             height: 48px;
             display: inline-block;
@@ -101,9 +113,9 @@
             line-height: 49px;
             font-size: 30px;
             color: #333333;
-            /*font-weight: bold;*/
         }
-        .withdraw_header_center_HandlingFee{
+
+        .withdraw_header_center_HandlingFee {
             width: 100%;
             height: 40px;
             text-align: left;
@@ -112,27 +124,31 @@
             font-size: 12px;
             color: #999999;
         }
-        .withdraw_center{
+
+        .withdraw_center {
             width: 100%;
             height: 80px;
             margin-top: 10px;
             background-color: #ffffff;
         }
-        .withdraw_center_phone{
+
+        .withdraw_center_phone {
             width: 100%;
             height: 40px;
         }
-        .withdraw_center_addPhone{
+
+        .withdraw_center_addPhone {
             width: 17%;
             height: 40px;
             float: left;
             display: inline-block;
             line-height: 40px;
-            color:#333333;
+            color: #333333;
             font-size: 14px;
             margin-left: 5%;
         }
-        #phone{
+
+        #phone {
             width: 53%;
             height: 40px;
             text-align: left;
@@ -141,40 +157,44 @@
             line-height: 40px;
             float: left;
         }
-        .withdraw_center_addCode{
+
+        .withdraw_center_addCode {
             width: 25%;
             height: 40px;
             float: left;
             line-height: 40px;
-            color:#4077FF;
+            color: #4077FF;
             font-size: 14px;
             text-align: center;
         }
-        .withdraw_center_code{
+
+        .withdraw_center_code {
             width: 100%;
             height: 39px;
             border-top: 1px solid #e5e5e5;
         }
-        .withdraw_center_addNum{
+
+        .withdraw_center_addNum {
             width: 17%;
             height: 39px;
             float: left;
             display: inline-block;
             line-height: 39px;
-            color:#333333;
+            color: #333333;
             font-size: 14px;
             margin-left: 5%;
         }
-        #code{
+
+        #code {
             width: 78%;
             height: 40px;
             float: left;
             line-height: 40px;
-            color:#333333;
+            color: #333333;
             font-size: 14px;
         }
 
-        .withdraw_footer{
+        .withdraw_footer {
             width: 60%;
             height: 40px;
             line-height: 40px;
@@ -186,6 +206,7 @@
             border-radius: 30px;
             margin-top: 30px;
         }
+
     </style>
 </head>
 <body>
@@ -202,10 +223,11 @@
             <span class="withdraw_header_text2">中国银行（2222）</span>
         </div>
         <div class="withdraw_header_center">
-            <p class="withdraw_header_center_ck">提现金额 <span class="withdraw_header_center_type">(可提现金额<span class="withdraw_header_center_num">100</span>元）</span></p>
+            <p class="withdraw_header_center_ck">提现金额 <span class="withdraw_header_center_type">(可提现金额<span
+                    class="withdraw_header_center_num">100</span>元）</span></p>
             <div class="withdraw_header_center_rmb">
                 <span class="withdraw_header_center_icon">￥</span>
-                <input type="text" name="code" class="withdraw_header_center_text" value="">
+                <input type="text" name="value" class="withdraw_header_center_text" value="">
             </div>
             <p class="withdraw_header_center_HandlingFee">提现手续费2元,预计到账时间：72小时内</p>
         </div>
@@ -226,6 +248,7 @@
     <p class="withdraw_footer">确认提现</p>
 
     <p class="warn"></p>
+    <p class="allFor"></p>
     <div class="loading">
         <div class="loadingItem">
             <p class="loadingImg"></p>
@@ -238,30 +261,130 @@
 <script src="../script/shared.js"></script>
 <script>
     $(function () {
-        var value = $('.withdraw_header_center_text').val();
-        var phone = $('#phone').val();
-        var code = $('#code').val();
-        var codeTime = true;
 
-        $('.withdraw_center_addCode')[0].addEventListener('click',function () {
+        $('.withdraw_center_addCode')[0].addEventListener('click', function () {
+            var value = $('.withdraw_header_center_text').val();
+            var phone = $('#phone').val();
+
             if(value === ''){
                 $('.warn').show();
-                $('.warn').text("请填入提现的金额");
-                setTimeout(function(){
+                $('.warn').text("请输入提现的金额");
+                setTimeout(function () {
                     $('.warn').hide();
-                },1000);
+                }, 1000);
             }else {
-                if(!(/^1[34578]\d{9}$/.test(phone))){
+                if (!(/^1[34578]\d{9}$/.test(phone))) {
                     $('.warn').show();
                     $('.warn').text("请填入正确的手机号码");
+                    setTimeout(function () {
+                        $('.warn').hide();
+                    }, 1000);
+                    return false;
+                }
+
+                var codeTime = true;
+                if(codeTime){
+                    codeTime = false;
+                    $.ajax({
+//                        url:'index.json',
+                        type:'get',
+                        dataType: 'json',
+                        success:function (res) {
+                            console.log(res);
+                            if(res.code === 200){
+                                var time = 60;
+                                var timer = setInterval(function(){
+                                    if(time <= 0){
+                                        $('.withdraw_center_addCode').text('获取验证码');
+                                        codeTime = true;
+                                        clearInterval(timer);
+                                        return false;
+                                    }
+                                    $('.withdraw_center_addCode').text('已发送('+time+'s)');
+                                    time--;
+                                },1000);
+                                $('.allFor').slideDown();
+                                $('.allFor').text('发送成功，请留意手机验证码');
+                                setTimeout(function () {
+                                    $('.allFor').slideUp()
+                                },1500)
+                            }else {
+                                $('.warn').show();
+                                $('.warn').text(res.msg);
+                                codeTime = true;
+                                setTimeout(function(){
+                                    $('.warn').hide();
+                                },1000)
+                            }
+                        }
+                    })
+                }
+            }
+        });
+
+
+        $('.withdraw_footer')[0].addEventListener('click',function () {
+            var value = $('.withdraw_header_center_text').val();
+            var phone = $('#phone').val();
+            var code = $('#code').val();
+
+            if(value){
+                if(phone){
+                    if(code){
+                        $.ajax({
+//                            url:"index.json",
+                            type: 'post',
+                            dataType: 'json',
+                            success:function (res) {
+                                if(res.code === 200){
+                                    $('.loading').show();
+                                    $('.warn').show();
+                                    $('.warn').text("注册成功");
+                                    setTimeout(function(){
+                                        $('.loading').hide();
+                                        $('.warn').hide();
+//                                        window.location.href = './Mine.html';
+                                    },2000)
+                                }else {
+                                    $('.warn').show();
+                                    $('.warn').text(res.msg);
+                                    setTimeout(function(){
+                                        $('.warn').hide();
+                                    },2000)
+                                }
+                            },
+                            error: function (err) {
+                                $('.warn').show();
+                                $('.warn').text(res.err);
+                                setTimeout(function(){
+                                    $('.warn').hide();
+                                },2000)
+                            }
+                        });
+                    }else {
+                        $('.warn').show();
+                        $('.warn').text("请输入验证码");
+                        setTimeout(function(){
+                            $('.warn').hide();
+                        },1000);
+                        return false;
+                    }
+                }else {
+                    $('.warn').show();
+                    $('.warn').text("请输入手机号码");
                     setTimeout(function(){
                         $('.warn').hide();
                     },1000);
                     return false;
                 }
+            }else{
+                $('.warn').show();
+                $('.warn').text("请输入提现的金额");
+                setTimeout(function(){
+                    $('.warn').hide();
+                },1000);
+                return false;
             }
-
-
         })
     })
 </script>

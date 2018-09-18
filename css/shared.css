@@ -215,3 +215,19 @@ textarea,input{
     bottom: 200px;
     display: none;
 }
+
+
+.allFor{
+    width: 60%;
+    height: 30px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    text-align: center;
+    line-height: 30px;
+    font-size: 13px;
+    color:#fff;
+    position: absolute;
+    bottom:15%;
+    left: 20%;
+    display: none;
+}
