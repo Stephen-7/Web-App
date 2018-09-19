@@ -7,9 +7,9 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/shared.css">
-    <link rel="stylesheet" href="css/Landing.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/shared.css">
+    <link rel="stylesheet" href="../css/Landing.css">
 </head>
 <body>
 <div id="box">
@@ -49,15 +49,15 @@
     <p class="ExistingAccount">已有账户登录</p>
 </div>
 </body>
-<script src="../script/jquery-3.2.1.js"></script>
-<script src="../script/shared.js"></script>
+<script src="../../script/jquery-3.2.1.js"></script>
+<script src="../../script/shared.js"></script>
 <script>
     $(function () {
         $('.left')[0].addEventListener('click',function(){
             window.history.back();
         });
         $('.ExistingAccount')[0].addEventListener('click',function(){
-            window.location.href = "./Landing.html";
+            window.location.href = "Landing.html";
         });
 
         $('.Registered_Terms_check')[0].addEventListener('click',function () {
@@ -146,7 +146,7 @@
                                         $('.warn').text("注册成功");
                                         setTimeout(function(){
                                             $('.warn').hide();
-                                            window.location.href = './Mine.html';
+                                            window.location.href = '../Mine.html';
                                         },2000)
                                     }else {
                                         $('.warn').show();

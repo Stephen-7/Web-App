@@ -7,8 +7,8 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../../css/base.css">
+    <link rel="stylesheet" href="../../css/shared.css">
     <style>
         .Recharge_header{
             width: 100%;
@@ -74,17 +74,17 @@
             float: left;
         }
         .Recharge_footer_icon1{
-            background: url("image/alipay@2x.png") no-repeat;
+            background: url("../image/alipay@2x.png") no-repeat;
             background-size: 20px 20px;
             background-position: 70% 50%;
         }
         .Recharge_footer_icon2{
-            background: url("image/wechatpay@2x.png") no-repeat;
+            background: url("../image/wechatpay@2x.png") no-repeat;
             background-size: 20px 20px;
             background-position: 70% 50%;
         }
         .Recharge_footer_icon3{
-            background: url("image/Unionpay@2x.png") no-repeat;
+            background: url("../image/Unionpay@2x.png") no-repeat;
             background-size: 20px 20px;
             background-position: 70% 50%;
         }
@@ -104,12 +104,12 @@
             height: 30px;
             display: inline-block;
             float: right;
-            background: url("../images/Recharge_btn_checknor@2x.png") no-repeat;
+            background: url("../../images/Recharge_btn_checknor@2x.png") no-repeat;
             background-size: 20px 20px;
             background-position: 25% 50%;
         }
         .true{
-            background: url("../images/Recharge_btn_select@2x.png") no-repeat;
+            background: url("../../images/Recharge_btn_select@2x.png") no-repeat;
             background-size: 20px 20px;
             background-position: 25% 50%;
         }
@@ -171,7 +171,7 @@
     <p class="Recharge_true">立即充值</p>
 </div>
 </body>
-<script src="../script/jquery-3.2.1.js"></script>
+<script src="../../script/jquery-3.2.1.js"></script>
 <script>
     $(function () {
         var p = $('#Recharge_center_ul')[0].getElementsByTagName('p');
@@ -204,11 +204,11 @@
 
         $('.Recharge_true')[0].addEventListener('click',function () {
             if(index === 0){
-                window.location.href = "./zhifubao.html";
+                window.location.href = "zhifubao.html";
             }else if(index === 1){
-                window.location.href = "./weixin.html";
+                window.location.href = "weixin.html";
             }else if(index === 2){
-                window.location.href = "./yinlian.html";
+                window.location.href = "yinlian.html";
             }
         })
 
