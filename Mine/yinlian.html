@@ -9,6 +9,85 @@
     <meta content="telephone=no" name="format-detection">
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/shared.css">
+    <style>
+        #box {
+            background-color: #F3F3F3;
+        }
+
+        .header {
+            background-color: #ffffff;
+            border: none;
+        }
+
+        .UnionPay_center{
+            width: 100%;
+            height: 80px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 10px;
+            background-color: white;
+        }
+
+        .UnionPay_center_top,.UnionPay_center_bottom{
+            width: 100%;
+            height: 40px;
+        }
+
+        .UnionPay_center_type,.UnionPay_center_name{
+            width: 20%;
+            height: 40px;
+            display: inline-block;
+            margin-left: 5%;
+            float: left;
+            text-align: left;
+            line-height: 40px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        #type, #name{
+            width: 75%;
+            height: 40px;
+            float: left;
+            text-align: left;
+            line-height: 40px;
+            font-size: 15px;
+            color: #333;
+        }
+
+
+        .UnionPay_footer{
+            width: 100%;
+            height: 40px;
+            overflow: hidden;
+            margin-top: 10px;
+            background-color: white;
+        }
+
+        .UnionPay_footer_num{
+            width: 20%;
+            height: 40px;
+            display: inline-block;
+            margin-left: 5%;
+            float: left;
+            text-align: left;
+            line-height: 40px;
+            font-size: 15px;
+            color: #333;
+        }
+
+        #num{
+            width: 75%;
+            height: 40px;
+            float: left;
+            text-align: left;
+            line-height: 40px;
+            font-size: 15px;
+            color: #333;
+        }
+
+
+    </style>
 </head>
 <body>
 <div id="box">
@@ -17,6 +96,103 @@
         <p class="center">银联充值中心</p>
         <span class="right"></span>
     </div>
+
+    <div class="UnionPay_center">
+        <div class="UnionPay_center_top">
+            <span class="UnionPay_center_type" style="border-bottom: 1px solid #e5e5e5">中国银行</span>
+            <input type="text" name="value" maxlength="19" id="type" value="" style="border-bottom: 1px solid #e5e5e5">
+        </div>
+        <div class="UnionPay_center_bottom">
+            <span class="UnionPay_center_name">持卡人</span>
+            <input type="text" name="value" id="name" value="">
+        </div>
+    </div>
+
+    <div class="UnionPay_footer">
+        <span class="UnionPay_footer_num">充值金额</span>
+        <input type="text" name="value" id="num" value="">
+    </div>
+
+
+    <p class="publicAll">确认充值</p>
+
+    <p class="warn"></p>
+    <p class="allFor"></p>
+    <div class="loading">
+        <div class="loadingItem">
+            <p class="loadingImg"></p>
+        </div>
+    </div>
+
 </div>
 </body>
+<script src="../script/jquery-3.2.1.js"></script>
+<script src="../script/shared.js"></script>
+<script>
+    $(function () {
+        $('.publicAll')[0].addEventListener('click',function () {
+            var type = $('#type').val();
+            var name = $('#name').val();
+            var num = $('#num').val();
+
+
+            if(type === ''){
+                $('.warn').show();
+                $('.warn').text("请输入银行卡号");
+                setTimeout(function () {
+                    $('.warn').hide();
+                }, 1000);
+            }else if(!(/^[\u4e00-\u9fa5]{2,4}$/.test(name))){
+                $('.warn').show();
+                $('.warn').text("请输入您的正确名字");
+                setTimeout(function () {
+                    $('.warn').hide();
+                }, 1000);
+            }else if(num === ''){
+                $('.warn').show();
+                $('.warn').text("请输入您要提现的金额");
+                setTimeout(function () {
+                    $('.warn').hide();
+                }, 1000);
+            }else {
+                $.ajax({
+//              url:"index.json",
+                    type: 'post',
+                    dataType: 'json',
+                    success:function (res) {
+                        alert(123);
+                        $('.loading').show();
+                        if(res.code === 200){
+                            $('.warn').show();
+                            $('.warn').text("提现成功");
+                            setTimeout(function(){
+                                $('.loading').hide();
+                                $('.warn').hide();
+//                          window.location.href = '';
+                            },2000)
+                        }else {
+                            $('.warn').show();
+                            $('.warn').text(res.msg);
+                            setTimeout(function(){
+                                $('.warn').hide();
+                            },2000)
+                        }
+                    },
+                    error: function (err) {
+                        alert(456);
+                        $('.warn').show();
+                        $('.warn').text(res.err);
+                        setTimeout(function(){
+                            $('.warn').hide();
+                        },2000)
+                    }
+                });
+            }
+
+
+
+
+        })
+    })
+</script>
 </html>

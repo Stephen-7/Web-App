@@ -21,7 +21,7 @@
     float: left;
     background: url("../images/back@2x.png") no-repeat;
     background-size: 25px 25px;
-    background-position: 15px 7px;
+    background-position: 5px 7px;
 }
 .right{
     float: right;
@@ -231,3 +231,17 @@ textarea,input{
     left: 20%;
     display: none;
 }
+
+.publicAll{
+    width: 60%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    font-size: 15px;
+    color: #fff;
+    border-radius: 30px;
+    margin-left: 20%;
+    margin-top: 30px;
+    background-color: #4077FF;
+}
+

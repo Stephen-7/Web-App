@@ -35,9 +35,7 @@
             margin-left: 5%;
         }
 
-        .withdraw_header_text1, .withdraw_header_text2 {
-            width: 30%;
-            height: 40px;
+        .withdraw_header_text1, .withdraw_header_text2,.withdraw_header_text3 {
             display: inline-block;
             font-size: 15px;
             color: #333333;
@@ -52,9 +50,17 @@
         }
 
         .withdraw_header_text2 {
-            width: 82%;
+            width: 55%;
             height: 40px;
         }
+
+        .withdraw_header_text3 {
+            width: 27%;
+            height: 40px;
+            text-align: center;
+            color:#4077FF;
+        }
+
 
         .withdraw_header_center {
             width: 95%;
@@ -221,10 +227,10 @@
         <div class="withdraw_header_top">
             <span class="withdraw_header_text1">提现至</span>
             <span class="withdraw_header_text2">中国银行（2222）</span>
+            <span class="withdraw_header_text3">更改银行卡</span>
         </div>
         <div class="withdraw_header_center">
-            <p class="withdraw_header_center_ck">提现金额 <span class="withdraw_header_center_type">(可提现金额<span
-                    class="withdraw_header_center_num">100</span>元）</span></p>
+            <p class="withdraw_header_center_ck">提现金额 <span class="withdraw_header_center_type">(可提现金额<span class="withdraw_header_center_num">100</span>元）</span></p>
             <div class="withdraw_header_center_rmb">
                 <span class="withdraw_header_center_icon">￥</span>
                 <input type="text" name="value" class="withdraw_header_center_text" value="">
@@ -262,6 +268,10 @@
 <script>
     $(function () {
 
+        $('.withdraw_header_text3')[0].addEventListener('click',function () {
+            window.location.href = './BindingBankCard.html';
+        });
+
         $('.withdraw_center_addCode')[0].addEventListener('click', function () {
             var value = $('.withdraw_header_center_text').val();
             var phone = $('#phone').val();
@@ -281,6 +291,7 @@
                     }, 1000);
                     return false;
                 }
+
 
                 var codeTime = true;
                 if(codeTime){
@@ -343,7 +354,7 @@
                                     setTimeout(function(){
                                         $('.loading').hide();
                                         $('.warn').hide();
-//                                        window.location.href = './Mine.html';
+//                                        window.location.href = '';
                                     },2000)
                                 }else {
                                     $('.warn').show();
