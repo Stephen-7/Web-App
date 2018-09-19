@@ -213,6 +213,140 @@
             margin-top: 30px;
         }
 
+        .publicBg{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
+            position: fixed;
+            top:0;
+            left: 0;
+            display: none;
+        }
+
+        .publicBox{
+            width: 70%;
+            height: auto;
+            overflow: hidden;
+            background-color: white;
+            border-radius: 10px;
+            position: absolute;
+            top:23%;
+            left:15%
+        }
+
+        .publicTitle{
+            width: 100%;
+            height: 49px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .publicLeft{
+            width: 15%;
+            height: 49px;
+            display: inline-block;
+            float: left;
+            margin-left: 5%;
+            background: url("image/rechange_close @2x.png") no-repeat;
+            background-size: 25px 25px;
+            background-position: left 15px;
+        }
+        .publicCenter{
+            width: 60%;
+            height: 49px;
+            float: left;
+            text-align: center;
+            line-height: 49px;
+            font-size: 16px;
+            color: #333333;
+            font-weight: bold;
+        }
+        .publicRight{
+            width: 15%;
+            height: 49px;
+            display: inline-block;
+            float: right;
+            margin-right: 5%;
+            text-align: right;
+            line-height: 49px;
+            font-size: 15px;
+            color: #4077ff;
+        }
+
+        .publicList{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .publicIndex{
+            width: 94%;
+            height: 100%;
+            overflow: hidden;
+            margin-left: 6%;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .publicText{
+            width: 88%;
+            height: 49px;
+            display: inline-block;
+            line-height: 49px;
+            font-size: 15px;
+            color: #333333;
+            text-align: left;
+            float: left;
+        }
+        
+        .publicIcon{
+            width: 10%;
+            height: 49px;
+            display: inline-block;
+            background: url(image/minepage_go_gray.png) no-repeat;
+            background-size: 20px 20px;
+            background-position: -5px 15px;
+            float: right;
+            margin-right: 2%;
+        }
+
+        .publicAdd{
+            width: 94%;
+            height: 50px;
+            margin-left: 6%;
+            background-color: white;
+        }
+
+        .publicAdd_Add{
+            width: 13%;
+            height: 50px;
+            display: inline-block;
+            float: left;
+            background: url('image/rechange_close @2x.png') no-repeat;
+            background-size: 25px 25px;
+            background-position: 2px 14px;
+            transform: rotate(45deg);
+
+        }
+        .publicAdd_Text{
+            width: 77%;
+            height: 50px;
+            float: left;
+            line-height: 50px;
+            text-align: left;
+            font-size: 15px;
+            color: #333333;
+        }
+
+        .publicAdd_icon{
+            width: 10%;
+            height: 49px;
+            display: inline-block;
+            background: url(image/minepage_go_gray.png) no-repeat;
+            background-size: 20px 20px;
+            background-position: -5px 15px;
+            float: right;
+
+        }
     </style>
 </head>
 <body>
@@ -227,7 +361,7 @@
         <div class="withdraw_header_top">
             <span class="withdraw_header_text1">提现至</span>
             <span class="withdraw_header_text2">中国银行（2222）</span>
-            <span class="withdraw_header_text3">更改银行卡</span>
+            <span class="withdraw_header_text3" onclick="$('.publicBg').show();">更改银行卡</span>
         </div>
         <div class="withdraw_header_center">
             <p class="withdraw_header_center_ck">提现金额 <span class="withdraw_header_center_type">(可提现金额<span class="withdraw_header_center_num">100</span>元）</span></p>
@@ -251,6 +385,28 @@
         </div>
     </div>
 
+
+    <div class="publicBg">
+        <div class="publicBox">
+            <div class="publicTitle">
+                <span class="publicLeft" onclick="$('.publicBg').hide();"></span>
+                <p class="publicCenter">已绑定银行卡</p>
+                <span class="publicRight" onclick="alert(123)">删除</span>
+            </div>
+            <div class="publicList">
+                <p class="publicIndex"><span class="publicText">中国银行（2222）</span><span class="publicIcon"></span></p>
+                <p class="publicIndex"><span class="publicText">中国银行（2222）</span><span class="publicIcon"></span></p>
+            </div>
+            <div class="publicAdd">
+                <span class="publicAdd_Add"></span>
+                <p class="publicAdd_Text">添加银行卡</p>
+                <span class="publicAdd_icon"></span>
+            </div>
+        </div>
+    </div>
+
+
+
     <p class="withdraw_footer">确认提现</p>
 
     <p class="warn"></p>
@@ -268,9 +424,10 @@
 <script>
     $(function () {
 
-        $('.withdraw_header_text3')[0].addEventListener('click',function () {
+        $('.publicAdd')[0].addEventListener('click',function () {
             window.location.href = './BindingBankCard.html';
         });
+
 
         $('.withdraw_center_addCode')[0].addEventListener('click', function () {
             var value = $('.withdraw_header_center_text').val();
@@ -396,7 +553,9 @@
                 },1000);
                 return false;
             }
-        })
+        });
+
+
     })
 </script>
 </html>
