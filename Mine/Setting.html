@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>设置</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <style>
+        #box{
+            background-color: #F8F8F8;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .header{
+            background-color: white;
+            border: none;
+        }
+
+        .Setting_center{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .Setting_center_p{
+            width: 100%;
+            height: 39px;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .Setting_center_p a{
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .Setting_center_leftText{
+            width: 90%;
+            height: 39px;
+            line-height: 39px;
+            text-align: left;
+            padding-left: 15px;
+            font-size: 15px;
+            color: #333333;
+            float: left;
+        }
+        .Setting_center_rightIcon{
+            width: 10%;
+            height: 39px;
+            display: inline-block;
+            background: url("image/minepage_go_gray.png") no-repeat;
+            background-size: 25px 25px;
+            background-position: 50% 50%;
+            float: left;
+        }
+
+        .Cache{
+            width: auto;
+            height: 39px;
+            display: inline-block;
+            float: right;
+            text-align: right;
+            font-size: 15px;
+            color:#A6A8B6;
+        }
+
+        .publicAll{
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="header">
+        <span class="left" onclick="window.history.back()"></span>
+        <p class="center">设置</p>
+        <span class="right"></span>
+    </div>
+    <div class="Setting_center">
+        <p class="Setting_center_p">
+            <a href="#">
+                <span class="Setting_center_leftText">意见反馈</span>
+                <span class="Setting_center_rightIcon"></span>
+            </a>
+        </p>
+        <p class="Setting_center_p">
+            <a href="#">
+                <span class="Setting_center_leftText">关于我们</span>
+                <span class="Setting_center_rightIcon"></span>
+            </a>
+        </p>
+        <p class="Setting_center_p">
+            <a href="#">
+                <span class="Setting_center_leftText">检查缓存 <span class="Cache">当前缓存：0.00M</span></span>
+                <span class="Setting_center_rightIcon"></span>
+            </a>
+        </p>
+        <p class="Setting_center_p">
+            <a href="#">
+                <span class="Setting_center_leftText">用户协议</span>
+                <span class="Setting_center_rightIcon"></span>
+            </a>
+        </p>
+    </div>
+    <p class="publicAll">退出登录</p>
+</div>
+</body>
+<script src="../script/jquery-3.2.1.js"></script>
+<script src="../script/shared.js"></script>
+<script>
+    $(function(){
+        $('.publicAll')[0].addEventListener('click',function () {
+            alert(123)
+        })
+    })
+</script>
+
+</html>

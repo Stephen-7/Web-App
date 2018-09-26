@@ -13,7 +13,6 @@
 </head>
 <body>
 <div id="box">
-
     <div class="Mine_header">
         <div class="Mine_header_left">
             <span class="Mine_header_icon"></span>
@@ -26,6 +25,16 @@
         <div class="Mine_header_right">
             <span class="Mine_header_Setting"></span>
         </div>
+    </div>
+
+    <div class="Mine_money">
+        <p class="Mine_money_index1">当前余额</p>
+        <p class="Mine_money_index2">长期持有，盈利无上限</p>
+        <p class="Mine_money_index3">666</p>
+        <p class="Mine_money_index4">
+            <span class="Mine_money_TX indexOut">充值</span>
+            <span class="Mine_money_CZ">提现</span>
+        </p>
     </div>
 
     <div class="Mine_nav">
@@ -99,8 +108,20 @@
         });
 
         $('.Mine_header_Setting')[0].addEventListener('click',function () {
-            alert("这是设置按钮");
-        })
+            window.location.href = "Setting.html";
+        });
+
+        $('.Mine_money_TX')[0].addEventListener('click',function(){
+            $('.Mine_money_TX').addClass('indexOut');
+            $('.Mine_money_CZ').removeClass('indexOut');
+            window.location.href = "Recharge/Recharge.html";
+        });
+
+        $('.Mine_money_CZ')[0].addEventListener('click',function(){
+            $('.Mine_money_CZ').addClass('indexOut');
+            $('.Mine_money_TX').removeClass('indexOut');
+            window.location.href = "Recharge/withdraw.html";
+        });
     })
 </script>
 </body>

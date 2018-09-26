@@ -21,7 +21,7 @@
     float: left;
     background: url("../images/back@2x.png") no-repeat;
     background-size: 25px 25px;
-    background-position: 5px 7px;
+    background-position: 20% 50%;
 }
 .right{
     float: right;
