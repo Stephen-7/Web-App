@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>新增收货地址</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <style>
+        #box{
+            background-color: #F8F8F8;
+        }
+
+        .header{
+            background-color: #fff;
+            border:none;
+        }
+
+        .right{
+            text-align: center;
+            line-height: 40px;
+            color: #4077FF;
+            font-size: 14px;
+        }
+
+        .NewHarvestAddress_form{
+            width: 100%;
+            height: 45px;
+            overflow: hidden;
+            border-top: 1px solid #e5e5e5;
+            background-color: #fff;
+        }
+
+        .NewHarvestAddress_form4{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            border-top: 1px solid #e5e5e5;
+            background-color: #fff;
+        }
+
+        .NewHarvestAddress_data,
+        .NewHarvestAddress_XX{
+            width: 22%;
+            height: 45px;
+            display: inline-block;
+            float: left;
+            font-size: 14px;
+            color: #333333;
+            line-height: 45px;
+            text-align: left;
+            margin-left: 3%;
+        }
+
+        .NewHarvestAddress_name{
+            width: 75%;
+            height: 45px;
+            float: left;
+            font-size: 15px;
+            color: #333333;
+            text-align: left;
+            line-height: 45px;
+        }
+
+        .NewHarvestAddress_index{
+            width: 72%;
+            height: auto;
+            float: left;
+            font-size: 14px;
+            color: #333333;
+            text-align: left;
+            margin-top: 12.5px;
+            margin-bottom: 10px;
+        }
+
+        .NewHarvestAddress_diZhi{
+            width: 97%;
+            height: 45px;
+            float: left;
+            font-size: 15px;
+            color: #333333;
+            text-align: left;
+            line-height: 45px;
+            margin-left: 3%;
+        }
+
+        .btn{
+            width: 40px;
+            height: 20px;
+            display: inline-block;
+            float: right;
+            background: url("image/orders_btn_usecoupon_pre.png") no-repeat;
+            background-size: 40px 20px;
+            margin-right: 5%;
+            margin-top: 13px;
+        }
+
+        .NewHarvestAddress_text{
+            width: 75%;
+            height: 45px;
+            display: inline-block;
+            float: left;
+            font-size: 14px;
+            color: #A6A8B6;
+            text-align: right;
+            line-height: 45px;
+            position: relative;
+        }
+
+        .NewHarvestAddress_add{
+            width:10%;
+            height: 45px;
+            float: right;
+            display: inline-block;
+            background: url("image/minepage_go_gray.png") no-repeat;
+            background-size: 20px 20px;
+            background-position: 30% 50%;
+        }
+
+        .NewHarvestAddress_bg{
+            width: 100%;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
+            position: fixed;
+            top:0;
+            left: 0;
+            display: none;
+        }
+        
+        .NewHarvestAddress_no{
+            width: 25px;
+            height: 25px;
+            display: inline-block;
+            background: url("image/rechange_close.png") no-repeat;
+            background-size: 23px 23px;
+            border-radius: 50%;
+            border: 1px solid #fff;
+            position: absolute;
+            top:4%;
+            right: 7%;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="header">
+        <span class="left" onclick="window.history.back()"></span>
+        <p class="center">新增收货地址</p>
+        <span class="right">保存</span>
+    </div>
+
+    <div class="NewHarvestAddress_form">
+        <span class="NewHarvestAddress_data">名字</span>
+        <input type="text" class="NewHarvestAddress_name">
+    </div>
+    <div class="NewHarvestAddress_form">
+        <span class="NewHarvestAddress_data">身份证号</span>
+        <input type="text" class="NewHarvestAddress_name">
+    </div>
+    <div class="NewHarvestAddress_form">
+        <span class="NewHarvestAddress_data">手机号码</span>
+        <input type="text" class="NewHarvestAddress_name">
+    </div>
+    <div class="NewHarvestAddress_form">
+        <span class="NewHarvestAddress_data">所在地区</span>
+        <p class="NewHarvestAddress_text">请选择 <span class="NewHarvestAddress_add"></span> </p>
+    </div>
+    <div class="NewHarvestAddress_form4">
+        <span class="NewHarvestAddress_XX">详细地址</span>
+        <p class="NewHarvestAddress_index">中华人民共和国广东省广州市海珠区客村丽影广场</p>
+    </div>
+    <div class="NewHarvestAddress_form">
+        <span class="NewHarvestAddress_diZhi">设置默认地址 <span class="btn"></span> </span>
+    </div>
+</div>
+
+
+<div class="NewHarvestAddress_bg">
+    <span class="NewHarvestAddress_no"></span>
+</div>
+
+
+</body>
+<script src="../script/jquery-3.2.1.js"></script>
+<script src="../script/shared.js"></script>
+<script>
+    $(function(){
+        $('.NewHarvestAddress_text')[0].addEventListener('click',function () {
+            $('.NewHarvestAddress_bg').show();
+        });
+        $('.NewHarvestAddress_no')[0].addEventListener('click',function () {
+            $('.NewHarvestAddress_bg').hide();
+        })
+    })
+</script>
+</html>

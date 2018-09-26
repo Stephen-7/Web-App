@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>确定订单</title>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/shared.css">
+    <style>
+        #box{
+            background-color: #F8F8F8;
+        }
+
+        .header{
+            background-color: #fff;
+        }
+
+        .ConfirmOrder_address{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            border-bottom: 1px solid #e5e5e5;
+            margin-bottom: 10px;
+            background-color: #fff;
+        }
+        .ConfirmOrder_left{
+            width: 10%;
+            height: 50px;
+            display: inline-block;
+            float: left;
+            background: url("image/xingquban.png") no-repeat;
+            background-size: 10px 14px;
+            background-position: 50% 50%;
+        }
+        .ConfirmOrder_center{
+            width: 80%;
+            height: 50px;
+            display: inline-block;
+            float: left;
+            text-align: left;
+            font-size: 16px;
+            color: #333333;
+            line-height: 50px;
+        }
+        .ConfirmOrder_right{
+            width: 10%;
+            height: 50px;
+            display: inline-block;
+            float: right;
+            background: url("image/minepage_go_gray.png") no-repeat;
+            background-size: 23px 23px;
+            background-position: 50% 50%;
+        }
+        
+        .ConfirmOrder_image{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+            background-color: #fff;
+        }
+
+        .ConfirmOrder_image_img{
+            width: 25%;
+            height: 80px;
+            display: inline-block;
+            margin: 10px 4% 10px 4%;
+            background: url("image/meishi.jpg") no-repeat;
+            background-size: 100% 100%;
+            float: left;
+        }
+
+        .ConfirmOrder_image_text{
+            width: 67%;
+            height: 60px;
+            padding-right: 15px;
+            justify-content: center;
+            margin-top: 10px;
+            font-size: 15px;
+            color:#333333;
+            float: left;
+        }
+
+        .ConfirmOrder_image_nan{
+            width: 67%;
+            height: 20px;
+            display: inline-block;
+            text-align: left;
+            font-size: 16px;
+            color:#FF4E56;
+            float: left;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        
+
+        .ConfirmOrder_text{
+            width: 100%;
+            height: 39px;
+            padding-left: 15px;
+            line-height: 39px;
+            color: #333333;
+            font-size: 14px;
+            border-top: 1px solid #e5e5e5;
+            background-color: #fff;
+        }
+
+        .ConfirmOrder_nan,.ConfirmOrder_nan0{
+            width: auto;
+            height: 39px;
+            display: inline-block;
+            line-height: 39px;
+            font-size: 14px;
+            color:#FF4E56;
+            float: right;
+            margin-right: 15px;
+        }
+
+        .ConfirmOrder_nan0{
+            padding-top: 7px;
+        }
+
+        .ConfirmOrder_Less{
+            width: 30px;
+            height: 25px;
+            display: inline-block;
+            background: url("image/jifenduihuan_icon_jianshao.png") no-repeat;
+            background-size: 30px 25px;
+            float: right;
+        }
+        .ConfirmOrder_Quantity{
+            width: 55px;
+            height: 25px;
+            background-color: #f8f8f8;
+            line-height: 25px;
+            text-align: center;
+            float: right;
+        }
+        .ConfirmOrder_add{
+            width: 30px;
+            height: 25px;
+            display: inline-block;
+            background: url("image/jifenduihuan_icon_zengjia .png") no-repeat;
+            background-size: 30px 25px;
+            float: right;
+        }
+
+
+        .ConfirmOrder_btn{
+            width: 100%;
+            height: 45px;
+            background-color: #fff;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            border-top: 1px solid #e5e5e5;
+        }
+
+        .ConfirmOrder_btn_left{
+            width: 60%;
+            height: 45px;
+            display: inline-block;
+            padding-left: 15px;
+            line-height: 45px;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        .ConfirmOrder_btn_btn{
+            width: auto;
+            height: 45px;
+            display: inline-block;
+            line-height: 45px;
+            font-size: 16px;
+            color: #FF4E56;
+        }
+
+        .ConfirmOrder_btn_right{
+            width: 40%;
+            height: 45px;
+            display: inline-block;
+            line-height: 45px;
+            text-align: center;
+            font-size: 15px;
+            color: #fff;
+            float: right;
+            background-color: #4077FF;
+        }
+    </style>
+</head>
+<body>
+<div id="box">
+    <div class="header">
+        <span class="left" onclick="window.history.back()"></span>
+        <p class="center">确定订单</p>
+        <span class="right"></span>
+    </div>
+
+    <div class="ConfirmOrder_address">
+        <span class="ConfirmOrder_left"></span>
+        <span class="ConfirmOrder_center">添加收货地址</span>
+        <span class="ConfirmOrder_right"></span>
+    </div>
+
+    <div class="ConfirmOrder_image">
+        <span class="ConfirmOrder_image_img"></span>
+        <p class="ConfirmOrder_image_text">蜂蜜系列护肤秋冬不脱皮不敏感,超级补水用过的发射点…</p>
+        <span class="ConfirmOrder_image_nan">￥382.3</span>
+    </div>
+
+    <p class="ConfirmOrder_text">商品数量
+        <span class="ConfirmOrder_nan0">
+            <span class="ConfirmOrder_Less"></span>
+            <input type="text" class="ConfirmOrder_Quantity">
+            <span class="ConfirmOrder_add"></span>
+        </span>
+    </p>
+    <p class="ConfirmOrder_text">商品合计 <span class="ConfirmOrder_nan">￥5588</span></p>
+    <p class="ConfirmOrder_text">运费合计 <span class="ConfirmOrder_nan">￥0.00</span></p>
+    <p class="ConfirmOrder_text">优惠活动 <span class="ConfirmOrder_nan">-￥0.00</span></p>
+    <p class="ConfirmOrder_text">实际合计 <span class="ConfirmOrder_nan">￥5588</span></p>
+
+
+    <div class="ConfirmOrder_btn">
+        <span class="ConfirmOrder_btn_left">支付金额：<span class="ConfirmOrder_btn_btn">￥5588</span></span>
+        <span class="ConfirmOrder_btn_right">立即购买</span>
+    </div>
+</div>
+</body>
+</html>
