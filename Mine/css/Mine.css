@@ -192,19 +192,10 @@
     height: auto;
     overflow: hidden;
     margin-top: 10px;
+    position: relative;
     background-color: white;
 }
 
-.Mine_nav_center {
-    width: 90%;
-    height: 90px;
-    margin-left: 5%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    position: relative;
-    box-shadow: 0 1px 5px 	#FF4E56;
-}
 
 .Mine_nav_add {
     width: 100%;
@@ -233,7 +224,7 @@
     font-size: 12px;
     color: #999999;
     float: right;
-    padding-right: 30px;
+    padding-right: 23px;
 }
 
 .Mine_nav_add_go {
@@ -259,45 +250,64 @@
     margin: 0 2% 0 2%;
 }
 
-.Mine_nav_ul li a {
+.Mine_nav_dfk,
+.Mine_nav_dfh,
+.Mine_nav_dsh,
+.Mine_nav_dpl,
+.Mine_nav_tk{
     width: 100%;
-    height: auto;
-    display: block;
-    margin: -0px;
+    height: 25px;
+    display: inline-block;
+    margin-top: 7.5px;
 }
 
-.Mine_nav_ul li a img {
-    width: 20px;
+.Mine_nav_dfk{
+    background: url("../image/daifukuan.png") no-repeat;
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+}
+
+.Mine_nav_dfh{
+    background: url("../image/daifahuo.png") no-repeat;
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+}
+
+.Mine_nav_dsh{
+    background: url("../image/daishouhuo.png") no-repeat;
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+}
+
+.Mine_nav_dpl{
+    background: url("../image/daipingjia.png") no-repeat;
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+}
+
+.Mine_nav_tk{
+    background: url("../image/tuihuo.png") no-repeat;
+    background-size: 20px 20px;
+    background-position: 50% 50%;
+}
+
+.Mine_nav_text{
+    width: 100%;
     height: 20px;
-    background-color: deepskyblue;
-    display: block;
-    margin: 20% 0 7px 30%;
-}
-
-.Mine_nav_ul li a p {
-    width: auto;
     font-size: 12px;
     color: #333333;
     text-align: center;
+    line-height: 20px;
+    margin-bottom: 7.5px;
 }
 
 .Mine_center {
     width: 100%;
-    height: auto;
+    height: 130px;
     overflow: hidden;
     position: relative;
     margin-top: 10px;
     background-color: white;
-}
-
-.Mine_center_center {
-    width: 90%;
-    height: 150px;
-    margin-left: 5%;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    box-shadow: 0 1px 5px 	#FF4E56;
 }
 
 .Mine_center_clearfix {
@@ -307,29 +317,34 @@
 
 .Mine_center_clearfix li {
     width: 25%;
-    height: 75px;
+    height: 65px;
     float: left;
 }
 
-.Mine_center_clearfix li a {
+.Mine_center_img{
     width: 100%;
-    height: 100%;
-    display: block;
+    height: 30px;
+    display: inline-block;
+    margin-top: 8px;
+    margin-bottom: 2px;
+    background: url("../image/rank.png") no-repeat;
+    background-size: 35px 35px;
+    background-position: 50% 50%;
 }
 
-.Mine_center_clearfix li a img {
-    width: 40px;
-    height: 40px;
-    background-color: yellow;
-    border-radius: 20px;
-    border: 2px solid green;
-    margin: 10% 0 2% 27%;
-}
-
-.Mine_center_clearfix li a p {
+.Mine_center_text{
+    width: 100%;
+    height: 15px;
+    margin-bottom: 10px;
     font-size: 12px;
-    text-align: center;
     color: #333333;
+    text-align: center;
+    line-height: 15px;
+}
+
+.Mine_center_text:hover{
+    color: red;
+    text-decoration: underline;
 }
 
 .Mine_footer {
@@ -360,10 +375,10 @@
 
 .Mine_footer_Variety > a > span {
     width: 8%;
-    height: 20px;
+    height: 35px;
     display: inline-block;
     float: right;
     background: url("../image/minepage_go_gray@2x.png") no-repeat;
     background-size: 20px 20px;
-    margin-top: 7.5px;
+   background-position: 30% 50%;
 }

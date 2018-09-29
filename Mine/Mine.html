@@ -37,32 +37,28 @@
         </p>
     </div>
 
-    <div class="Mine_nav">
-        <div class="Mine_nav_center">
+        <div class="Mine_nav">
             <div class="Mine_nav_add"><p class="Mine_nav_add_left">我的订单</p><p class="Mine_nav_add_right">查看更多订单<span class="Mine_nav_add_go"></span></p></div>
             <ul class="Mine_nav_ul">
-                <li><a href="#"><img src="" alt=""><p>待付款</p></a></li>
-                <li><a href="#"><img src="" alt=""><p>待发货</p></a></li>
-                <li><a href="#"><img src="" alt=""><p>代收货</p></a></li>
-                <li><a href="#"><img src="" alt=""><p>待评论</p></a></li>
-                <li><a href="#"><img src="" alt=""><p>退款</p></a></li>
+                <li onclick="window.location.href=''"><span class="Mine_nav_dfk"></span><p class="Mine_nav_text">待付款</p></li>
+                <li onclick="window.location.href=''"><span class="Mine_nav_dfh"></span><p class="Mine_nav_text">待发货</p></li>
+                <li onclick="window.location.href=''"><span class="Mine_nav_dsh"></span><p class="Mine_nav_text">代收货</p></li>
+                <li onclick="window.location.href=''"><span class="Mine_nav_dpl"></span><p class="Mine_nav_text">待评论</p></li>
+                <li onclick="window.location.href=''"><span class="Mine_nav_tk"></span><p class="Mine_nav_text">退款</p></li>
             </ul>
         </div>
-    </div>
 
     <div class="Mine_center">
-        <div class="Mine_center_center">
-            <ul class="Mine_center_clearfix">
-                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>可使用</p></a></li>
-                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>关注</p></a></li>
-                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>足迹</p></a></li>
-                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>收藏</p></a></li>
-                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>卡券</p></a></li>
-                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>积分</p></a></li>
-                <li><a href="Recharge/Recharge.html"><img src="image/minepage_go_gray.png" alt=""><p>充值</p></a></li>
-                <li><a href="#"><img src="image/minepage_go_gray.png" alt=""><p>我的问答</p></a></li>
-            </ul>
-        </div>
+        <ul class="Mine_center_clearfix">
+            <li><span class="Mine_center_img"></span><p class="Mine_center_text">可使用</p></li>
+            <li><span class="Mine_center_img"></span><p class="Mine_center_text">关注</p></li>
+            <li><span class="Mine_center_img"></span><p class="Mine_center_text">足迹</p></li>
+            <li><span class="Mine_center_img"></span><p class="Mine_center_text">收藏</p></li>
+            <li><span class="Mine_center_img"></span><p class="Mine_center_text">卡券</p></li>
+            <li><span class="Mine_center_img"></span><p class="Mine_center_text">积分</p></li>
+            <li><span class="Mine_center_img"></span><p class="Mine_center_text">发票</p></li>
+            <li><span class="Mine_center_img"></span><p class="Mine_center_text">我的问答</p></li>
+        </ul>
     </div>
 
     <div class="Mine_footer">
@@ -101,6 +97,7 @@
     </ul>
 </div>
 <script src="../script/jquery-3.2.1.js"></script>
+<script src="../script/shared.js"></script>
 <script>
     $(function(){
         $('.Mine_registered')[0].addEventListener('click',function(){
@@ -122,6 +119,10 @@
             $('.Mine_money_TX').removeClass('indexOut');
             window.location.href = "Recharge/withdraw.html";
         });
+
+//        $('.Mine_nav_ul>li')[1].addEventListener('click',function () {
+//            alert(1234)
+//        })
     })
 </script>
 </body>

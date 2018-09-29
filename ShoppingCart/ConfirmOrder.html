@@ -149,7 +149,6 @@
             float: right;
         }
 
-
         .ConfirmOrder_btn{
             width: 100%;
             height: 45px;
@@ -231,4 +230,13 @@
     </div>
 </div>
 </body>
+<script src="../script/jquery-3.2.1.js"></script>
+<script src="../script/shared.js"></script>
+<script>
+    $(function(){
+        $('.ConfirmOrder_address')[0].addEventListener('click',function () {
+            window.location.href='NewHarvestAddress.html';
+        })
+    })
+</script>
 </html>
