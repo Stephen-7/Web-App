@@ -1,0 +1,130 @@
+
+#box {
+    width: 100%;
+    height: 100vh;
+}
+
+.AllHeader {
+    width: 100%;
+    height: 40px;
+    overflow: hidden;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #fff;
+}
+
+.AllLeft {
+    width: 15%;
+    height: 40px;
+    display: inline-block;
+    background: url("../image/back-.png") no-repeat;
+    background-size: 15px 20px;
+    background-position: 30% 50%;
+    float: left;
+}
+
+.AllCenter {
+    width: 70%;
+    height: 40px;
+    float: left;
+    font-size: 18px;
+    color: #28354C;
+    line-height: 40px;
+    text-align: center;
+
+}
+
+.AllRight {
+    width: 15%;
+    height: 40px;
+    display: inline-block;
+    float: right;
+}
+
+#AllBg {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    display: none;
+}
+
+.AllBox {
+    width: 80%;
+    height: 180px;
+    background-color: #fff;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+    border-radius: 10px;
+}
+
+.AllDetermine {
+    width: 100%;
+    height: 45px;
+    font-size: 18px;
+    color: #28354C;
+    line-height: 50px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.AllText {
+    width: 80%;
+    height: 90px;
+    font-size: 14px;
+    color: #28354C;
+    text-align: left;
+    margin-left: 10%;
+    line-height: 20px;
+
+}
+
+.AllFor {
+    width: 100%;
+    height: 44px;
+    border-top: 1px solid #e5e5e5;
+}
+
+.AllNo {
+    width: 50%;
+    height: 44px;
+    display: inline-block;
+    line-height: 44px;
+    text-align: center;
+    font-size: 16px;
+    color: #28354c;
+    float: left;
+    font-weight: bold;
+}
+
+.AllYes {
+    width: 49.5%;
+    height: 44px;
+    display: inline-block;
+    line-height: 44px;
+    text-align: center;
+    font-size: 16px;
+    color: #28354c;
+    float: left;
+    border-left: 1px solid #e5e5e5;
+    font-weight: bold;
+}
+
+.AllCheck {
+    color: #4077FF;
+}
+
+
+
+
+textarea,input{
+    outline:none;
+    border:none;
+    -webkit-appearance: none;
+}
