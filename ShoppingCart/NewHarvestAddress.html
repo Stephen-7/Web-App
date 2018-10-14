@@ -67,13 +67,14 @@
 
         .NewHarvestAddress_index{
             width: 72%;
-            height: auto;
+            height: 60px;
             float: left;
             font-size: 14px;
             color: #333333;
             text-align: left;
             margin-top: 12.5px;
             margin-bottom: 10px;
+            resize: none;
         }
 
         .NewHarvestAddress_diZhi{
@@ -110,15 +111,13 @@
             position: relative;
         }
 
-        .NewHarvestAddress_add{
-            width:10%;
-            height: 45px;
-            float: right;
-            display: inline-block;
-            background: url("image/minepage_go_gray.png") no-repeat;
-            background-size: 20px 20px;
-            background-position: 30% 50%;
-        }
+       .select{
+           width: 150px;
+           height: 45px;
+           text-align: center;
+           color: #333333;
+           font-size: 14px;
+       }
 
         .NewHarvestAddress_bg{
             width: 100%;
@@ -166,16 +165,21 @@
     </div>
     <div class="NewHarvestAddress_form">
         <span class="NewHarvestAddress_data">所在地区</span>
-        <p class="NewHarvestAddress_text">请选择 <span class="NewHarvestAddress_add"></span> </p>
-
-    </div>
-    <div class="NewHarvestAddress_form">
-        <span class="NewHarvestAddress_data">所在地区</span>
-        <p class="NewHarvestAddress_text" onclick="$('#AllBg').show()">请选择 <span class="NewHarvestAddress_add"></span></p>
+        <p class="NewHarvestAddress_text">
+            <select class="select">
+                <option value="volvo">-- 请选择城市 --</option>
+                <option value="1">广州市</option>
+                <option value="2">深圳市</option>
+                <option value="3">惠州市</option>
+                <option value="4">香港特别行政区</option>
+                <option value="5">澳门特别行政区</option>
+                <option value="6">新疆维吾尔族自治区</option>
+            </select>
+        </p>
     </div>
     <div class="NewHarvestAddress_form4">
         <span class="NewHarvestAddress_XX">详细地址</span>
-        <p class="NewHarvestAddress_index">中华人民共和国广东省广州市海珠区客村丽影广场</p>
+        <textarea class="NewHarvestAddress_index"></textarea>
     </div>
     <div class="NewHarvestAddress_form">
         <span class="NewHarvestAddress_diZhi">设置默认地址 <span class="btn"></span> </span>
@@ -185,6 +189,7 @@
 
 <div class="NewHarvestAddress_bg">
     <span class="NewHarvestAddress_no"></span>
+
 </div>
 
 
@@ -193,12 +198,12 @@
 <script src="../script/shared.js"></script>
 <script>
     $(function(){
-        $('.NewHarvestAddress_text')[0].addEventListener('click',function () {
-            $('.NewHarvestAddress_bg').show();
-        });
-        $('.NewHarvestAddress_no')[0].addEventListener('click',function () {
-            $('.NewHarvestAddress_bg').hide();
-        })
+//        $('.NewHarvestAddress_text')[0].addEventListener('click',function () {
+//            $('.NewHarvestAddress_bg').show();
+//        });
+//        $('.NewHarvestAddress_no')[0].addEventListener('click',function () {
+//            $('.NewHarvestAddress_bg').hide();
+//        })
     })
 </script>
 </html>
