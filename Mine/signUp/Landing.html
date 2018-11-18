@@ -42,17 +42,78 @@
     </div>
 
     <p class="registered">登录</p>
+
+    <p class="warn"></p>
 </div>
 </body>
 <script src="../../script/jquery-3.2.1.js"></script>
 <script src="../../script/shared.js"></script>
+<script src="../../script/mock-min.js"></script>
+<script src="../../script/Mock.js"></script>
 <script>
+
+
+    window.name = 'wujialiang';
+    console.log(name);
     $(function () {
         $('.code1')[0].addEventListener('click',function(){
             window.location.href = "Registered.html";
         });
         $('.code2')[0].addEventListener('click',function(){
             window.location.href = "forgetPassword.html";
+        });
+
+
+        $('.registered')[0].addEventListener('click',function () {
+            var codeTime = true;
+            var phone = $('.phone').val();
+            var password = $('.password').val();
+            if(!(/^1[34578]\d{9}$/.test(phone))){
+                $('.warn').show();
+                $('.warn').text("请填入正确的手机号码");
+                setTimeout(function(){
+                    $('.warn').hide();
+                },1000);
+                return false;
+            }else if(password !== '' && password !== null){
+                $.ajax({
+                    url: 'http://admin/v1/login',
+                    type:'get',
+                    dataType: 'json',
+                    success:function (res) {
+                        if(res.code === 200){
+                            if(password === res.data.password){
+                                $('.warn').show();
+                                $('.warn').text("登陆成功");
+                                setTimeout(function(){
+                                    $('.warn').hide();
+                                },1000);
+                                window.location.href = "../Mine.html?name="+window.name;
+                            }else {
+                                $('.warn').show();
+                                $('.warn').text("登陆失败");
+                                setTimeout(function(){
+                                    $('.warn').hide();
+                                },1000);
+                            }
+                        }else {
+                            $('.warn').show();
+                            $('.warn').text(res.msg);
+                            codeTime = true;
+                            setTimeout(function(){
+                                $('.warn').hide();
+                            },1000)
+                        }
+                    }
+                })
+            }else {
+                $('.warn').show();
+                $('.warn').text("请填入正确的密码");
+                setTimeout(function(){
+                    $('.warn').hide();
+                },1000);
+            }
+
         });
 
     })

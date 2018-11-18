@@ -3,11 +3,6 @@ $('.icon')[0].addEventListener('click',function(){
     alert('跳转扫一扫');
 });
 
-$('.Landing')[0].addEventListener('click',function(){
-    window.location.href = "../../Mine/signUp/Landing.html";
-//            alert('跳转登录');
-});
-
 $('.icon_search')[0].addEventListener('click',function(){
 //            window.location.href = "../Mine/registered.html";
     alert('跳转搜索');
@@ -107,6 +102,10 @@ function banner() {
         startX = 0;
         endX = 0;
         distanceX = 0;
-    })
+    });
+
+
+
+
 
 }

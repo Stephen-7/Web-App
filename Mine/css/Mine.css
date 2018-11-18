@@ -101,7 +101,7 @@
     width: 25px;
     height: 25px;
     display: inline-block;
-    background: url("../image/minepage_btn.png") no-repeat;
+    background: url("../image/minepage_btn_set@2x.png") no-repeat;
     background-size: 25px 25px;
     margin-top: 10px;
     margin-left: 10%;
@@ -159,27 +159,24 @@
     width: 50%;
     height: 35px;
     float: left;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .Mine_money_TX,.Mine_money_CZ{
-     width: 30%;
-     height: 24px;
+     width: 50px;
+     height: 20px;
      display: inline-block;
-     border-radius: 30px;
-     margin: 5px 0 5px 23%;
+     border-radius: 10px;
      font-size: 12px;
      text-align: center;
-     line-height: 21px;
+     line-height: 19px;
      color:#4077FF;
      border: 1px solid #4077FF;
+     margin:0 10px 0 0;
  }
 
-.Mine_money_TX{
-    margin: 5px 0 5px 23%;
-}
-.Mine_money_CZ{
-    margin: 5px 5% 5px 7%;
-}
 
 .indexOut{
     background-color: #4077FF;

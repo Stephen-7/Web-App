@@ -1,13 +1,15 @@
+var random = Mock.Random;
+
 
 
 
 Mock.mock(
     'http://admin/v1/code',{
     "code":200,
-    "data|2": [
+    "data|6": [
         {
             "ctitle": "@ctitle",
-            "id":'@id',
+            'id':random.natural(1,99),
             "address": "广州市番禺区万利商业园",
             "cityId": "1234",
             "cityName": "广州市",
@@ -24,14 +26,14 @@ Mock.mock(
     "path": "path/test"
 });
 //
-// Mock.mock(/user/,{
-//     'code': 200,
-//     'data': {
-//         'id':random.natural(1,99),//id
-//         'nickname': random.cname(),//昵称
-//         'headImgUrl': random.image(100),//头像
-//         'openID': random.string('lower',24),//openID
-//         'createTime': random.date('yyyy-MM-dd HH:mm:ss'),//创建时间
-//         'state|0-2': 0,//0未认证，1审核中，2已认证
-//     }
-// })
+Mock.mock(
+    'http://admin/v1/login', {
+    'code': 200,
+    'data': {
+        'phone': "17620835317",
+        'password': "123456"
+    },
+    "desc":"ok",
+    "msg": "请求成功",
+    "path": "path/test"
+});

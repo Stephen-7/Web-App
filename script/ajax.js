@@ -28,6 +28,7 @@ function ajax(method,url,dataType) {
 
     xmlHttpReg.send(null);
 
+    alert('来到这里');
     xmlHttpReg.onreadystatechange = index();
 
     function index() {
@@ -39,7 +40,6 @@ function ajax(method,url,dataType) {
                 function $(id) {
                     return document.getElementById(id)
                 }
-
                 $("id").innerHTML = xmlHttpReg.responseText;
 
                 alert('请求成功')

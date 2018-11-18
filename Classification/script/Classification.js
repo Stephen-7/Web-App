@@ -99,7 +99,7 @@ function leftCategory(){
         li.className = 'current';
 
         // 6.3 求出滚动距离
-        var distance = -(li.index * 50);
+        var distance = -(li.index * 30);
 
         // 6.4 判断
         if(distance > minY){ // 会产生滚动
@@ -113,8 +113,8 @@ function leftCategory(){
 
         // 6.5 模拟数据
         var rightContent = document.getElementsByClassName('category_main_right')[0];
-        rightContent.style.transition = 'all .2s ease';
-        rightContent.style.webkitTransition = 'all .2s ease';
+        rightContent.style.transition = 'all .1s ease';
+        rightContent.style.webkitTransition = 'all .1s ease';
         rightContent.style.opacity = 0;
         setTimeout(function(){
             rightContent.style.opacity = 1;
