@@ -3,14 +3,51 @@ $('.icon')[0].addEventListener('click',function(){
     alert('跳转扫一扫');
 });
 
-$('.icon_search')[0].addEventListener('click',function(){
-//            window.location.href = "../Mine/registered.html";
-    alert('跳转搜索');
-});
+// $('.icon_search')[0].addEventListener('click',function(){
+// //            window.location.href = "../Mine/registered.html";
+//     alert('跳转搜索');
+// });
+//
+// $('.header_nav_image')[0].addEventListener('click',function(){
+// //            window.location.href = "../Mine/registered.html";
+//     alert('跳转搜索2');
+// });
+//
+// $('.header_right_icon')[0].addEventListener('click',function(){
+// //            window.location.href = "../Mine/registered.html";
+//     alert('跳转搜索2');
+// });
 
 window.onload = function () {
-    banner()
+    banner();
+    var topBegin = 0;
+    var topEend = 0;
+    var topTime = null;
+
+    var topIcon = document.getElementById('topIcon');
+    window.onscroll = function () {
+        var scrollTop = scroll().top;
+        scrollTop > 500 ? topIcon.style.display = 'block' : topIcon.style.display = 'none';
+        topBegin = scrollTop;
+    };
+
+    topIcon.onclick = function () {
+        clearInterval(topTime);
+        topTime = setInterval(function () {
+            topBegin = topBegin + (topEend - topBegin)/10;
+            window.scrollTo(0,topBegin);
+            if(Math.round(topBegin) == topEend){
+                clearInterval(topTime);
+            }
+        },10);
+    };
+
+
+
 };
+
+
+
 function banner() {
     var Carousel = document.getElementsByClassName('Carousel')[0];
     var CarouselW = Carousel.offsetWidth;
@@ -105,7 +142,59 @@ function banner() {
     });
 
 
-
-
-
 }
+
+
+$(function () {
+    var timestamp = Date.parse(new Date());
+    var arrItem = Date.parse(new Date('2018-12-31 14:00:00'));
+    var index = (arrItem - timestamp) / 1000;
+    var timer = setInterval(function(){
+        allTime(index);
+        index--;
+        if(index < 0){
+            clearInterval(timer);
+            $('.body_time_box').text('活动已结束');
+        }
+    },1000);
+
+
+
+    function allTime(time) {
+        var hh = Math.floor(time / (60 * 60));
+        var one = time % (60 * 60);
+        var mm = Math.floor(one / 60) ;
+        var ss = one % 60;
+
+        if(hh< 10){
+            $('.body_time_span1').text(0);
+            $('.body_time_span2').text(hh);
+
+        }else {
+            $('.body_time_span1').text(Math.floor(hh / (10)));
+            $('.body_time_span2').text(hh % 10);
+        }
+        if(mm< 10){
+            $('.body_time_span3').text(0);
+            $('.body_time_span4').text(mm);
+        }else {
+            $('.body_time_span3').text(Math.floor(mm / (10)));
+            $('.body_time_span4').text(mm % 10);
+        }
+        if(ss< 10){
+            $('.body_time_span5').text(0);
+            $('.body_time_span6').text(ss);
+        }else {
+            $('.body_time_span5').text(Math.floor(ss / (10)));
+            $('.body_time_span6').text(ss % 10);
+        }
+    }
+
+
+    $('.list_btn')[0].addEventListener('click',function () {
+        $('.loading').show();
+        setTimeout(function () {
+            $('.loading').hide();
+        }, 3000);
+    })
+});

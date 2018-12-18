@@ -7,8 +7,8 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/shared.css">
     <style>
         #box{
             background-color: #F8F8F8;
@@ -87,7 +87,7 @@
             height: 20px;
             display: inline-block;
             float: right;
-            background: url("image/orders_btn_usecoupon_pre.png") no-repeat;
+            /*background: url("image/orders_btn_usecoupon_pre.png") no-repeat;*/
             background-size: 40px 20px;
             margin-right: 5%;
             margin-top: 13px;
@@ -106,11 +106,18 @@
         }
 
        .select{
-           width: 150px;
+           width: 100%;
            height: 45px;
-           text-align: center;
+           text-align: right;
            color: #333333;
            font-size: 14px;
+           background-color: #FFFFFF;
+           appearance:none;
+           -moz-appearance:none;
+           -webkit-appearance:none;
+           -ms-appearance:none;
+           border: none;
+           outline: none;
        }
 
         .NewHarvestAddress_bg{
@@ -161,7 +168,7 @@
         <span class="NewHarvestAddress_data">所在地区</span>
         <p class="NewHarvestAddress_text">
             <select class="select">
-                <option value="volvo">-- 请选择城市 --</option>
+                <option value="volvo">请选择城市</option>
                 <option value="1">广州市</option>
                 <option value="2">深圳市</option>
                 <option value="3">惠州市</option>

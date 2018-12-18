@@ -7,9 +7,9 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/shared.css">
     <link rel="stylesheet" href="css/Classification.css">
-    <link rel="stylesheet" href="../css/shared.css">
 </head>
 <body>
 <div id="box">
@@ -87,15 +87,27 @@
         </div>
     </main>
 
-    <div class="BotNavigation">
-        <ul>
-            <li><a href="../Home/Home.html"><img src="../images/1-home.png" alt=""></a></li>
-            <li><a href="../Find/Find.html"><img src="../images/2-find.png" alt=""></a></li>
-            <li><a href="./Classification.html"><img src="../images/3-catergry.png" alt=""></a></li>
-            <li><a href="../ShoppingCart/ShoppingCart.html"><img src="../images/4-cart.png" alt=""></a></li>
-            <li><a href="../Mine/Mine.html"><img src="../images/5-me.png" alt=""></a></li>
-        </ul>
+
+
+    <!--提示框-->
+    <p class="warn"></p>
+    <!--loading-->
+    <div class="loading">
+        <div class="loadingItem">
+            <p class="loadingImg"></p>
+        </div>
     </div>
+</div>
+
+
+<div class="BotNavigation">
+    <ul class="tabBar" id="tabBar">
+        <li class="tabBarItem"><a href="../Home/Home.html"><img class="tabBarImg" src="../images/0-home.png" alt=""></a></li>
+        <li class="tabBarItem"><a href="../Find/Find.html"><img class="tabBarImg" src="../images/0-find.png" alt=""></a></li>
+        <li class="tabBarItem"><a href="../Classification/Classification.html"><img class="tabBarImg" src="../images/1-catergry.png" alt=""></a></li>
+        <li class="tabBarItem"><a href="../ShoppingCart/ShoppingCart.html"><img class="tabBarImg" src="../images/0-cart.png" alt=""></a></li>
+        <li class="tabBarItem"><a href="../Mine/Mine.html"><img class="tabBarImg" src="../images/0-me.png" alt=""></a></li>
+    </ul>
 </div>
 </body>
 <script src="../script/shared.js"></script>

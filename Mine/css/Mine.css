@@ -172,14 +172,14 @@
      font-size: 12px;
      text-align: center;
      line-height: 19px;
-     color:#4077FF;
-     border: 1px solid #4077FF;
+    color: rgb(147, 59, 255);
+     border: 1px solid rgb(147, 59, 255);;
      margin:0 10px 0 0;
  }
 
 
 .indexOut{
-    background-color: #4077FF;
+    background-image: linear-gradient(to right, rgb(198, 115, 255), rgb(147, 59, 255));
     color: white;
 }
 
@@ -235,16 +235,43 @@
 }
 
 .Mine_nav_ul {
-    width: 96%;
+    width: 100%;
     height: 60px;
-    margin-left: 2%;
+    /*margin-left: 2%;*/
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .Mine_nav_ul li {
-    width: 16%;
+    width: 20%;
     height: 60px;
     float: left;
-    margin: 0 2% 0 2%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: relative;
+}
+
+.numIcon{
+    width: 15px;
+    height: 15px;
+    background-color: #fff;
+    border-radius: 50%;
+    line-height: 15px;
+    font-size: 10px;
+    color: #FF1D3C;
+    text-align: center;
+    border: 1px solid #FF1D3C;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position: absolute;
+    top: 10%;
+    left: 55%;
+    /*display: none;*/
 }
 
 .Mine_nav_dfk,
@@ -255,7 +282,6 @@
     width: 100%;
     height: 25px;
     display: inline-block;
-    margin-top: 7.5px;
 }
 
 .Mine_nav_dfk{
@@ -295,7 +321,7 @@
     color: #333333;
     text-align: center;
     line-height: 20px;
-    margin-bottom: 7.5px;
+    /*margin-bottom: 7.5px;*/
 }
 
 .Mine_center {
@@ -354,17 +380,17 @@
 
 .Mine_footer_Variety {
     width: 100%;
-    height: 35px;
+    height: 40px;
     float: left;
     border-bottom: 1px solid #e5e5e5;
 }
 
 .Mine_footer_Variety_text {
     width: 92%;
-    height: 35px;
+    height: 40px;
     text-align: left;
     padding-left: 15px;
-    line-height: 35px;
+    line-height: 40px;
     font-size: 13px;
     color: #333333;
     float: left;

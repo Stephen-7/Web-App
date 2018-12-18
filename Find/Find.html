@@ -7,22 +7,134 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/shared.css">
+    <link rel="stylesheet" href="./style/Find.css">
 </head>
 <body>
-<div id="box">发现
-
-
-    <div class="BotNavigation">
-        <ul>
-            <li><a href="../Home/Home.html"><img src="../images/1-home.png" alt=""></a></li>
-            <li><a href="./Find.html"><img src="../images/2-find.png" alt=""></a></li>
-            <li><a href="../Classification/Classification.html"><img src="../images/3-catergry.png" alt=""></a></li>
-            <li><a href="../ShoppingCart/ShoppingCart.html"><img src="../images/4-cart.png" alt=""></a></li>
-            <li><a href="../Mine/Mine.html"><img src="../images/5-me.png" alt=""></a></li>
+<div id="box">
+    <div class="FindTop">
+        <header id="header">
+            <p class="headerLeft">
+                <span class="headerLeftText">发现</span>
+            </p>
+            <p class="headerContent"></p>
+            <p class="headerRight">
+                <span class="headerRight1"></span>
+                <span class="headerRight2"></span>
+            </p>
+        </header>
+        <ul class="FindTab">
+            <li class="TabList check">关注</li>
+            <li class="TabList">上新</li>
+            <li class="TabList">推荐</li>
+            <li class="TabList">晒单</li>
+            <li class="TabList">数码</li>
+            <li class="TabList">美丽</li>
         </ul>
     </div>
+    <div class="content">
+        <div class="checkBox" style="display: block">
+            <ul class="clearfixUl">
+                <li class="ItemList">
+                    <div class="ItemListChild">
+                        <div class="childRenHeader">
+                            <div class="personalLeft">
+                                <span class="personalIcon"></span>
+                            </div>
+                            <div class="personalContent">
+                                <p class="personalContentTop">
+                                    <span class="personalName">我是网红</span>
+                                    <span class="personalType">全球购买手</span>
+                                </p>
+                                <p class="personalContentBottom">哈喽，我就是我 、是颜色不一样的烟火！天空海阔，要做最美丽的那一个。</p>
+                            </div>
+                            <div class="personalRight">
+                                <span class="attention"><span class="attentionIcon"></span>关注</span>
+                            </div>
+                        </div>
+                        <p class="childRenTitle">
+                            想要在日常中轻松的喝一杯又不知怎么选择？我个人会推荐调和型威士忌！很久没喝了，今天借着这个机会开一瓶新酒与你们一起品尝，没想到竟然品出温柔的味道。
+                        </p>
+                    </div>
+                    <div class="contentVideo">
+                        <video class="checkBoxVideo" controls muted loop >
+                            <source class="source" src="../Home/video/001.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="ItemListBottom">
+                        <p class="read">58.2万阅读</p>
+                        <p class="point">
+                            <span class="comment"><span class="commentIcon"></span>776</span>
+                            <span class="like"><span class="likeIcon"></span>5243</span>
+                        </p>
+                    </div>
+                </li>
+                <li class="ItemList">
+                    <div class="ItemListChild">
+                        <div class="childRenHeader">
+                            <div class="personalLeft">
+                                <span class="personalIcon"></span>
+                            </div>
+                            <div class="personalContent">
+                                <p class="personalContentTop">
+                                    <span class="personalName">我是网红</span>
+                                    <span class="personalType">全球购买手</span>
+                                </p>
+                                <p class="personalContentBottom">哈喽，我就是我 、是颜色不一样的烟火！天空海阔，要做最美丽的那一个。</p>
+                            </div>
+                            <div class="personalRight">
+                                <span class="attention"><span class="attentionIcon"></span>关注</span>
+                            </div>
+                        </div>
+                        <p class="childRenTitle">
+                            想要在日常中轻松的喝一杯又不知怎么选择？我个人会推荐调和型威士忌！很久没喝了，今天借着这个机会开一瓶新酒与你们一起品尝，没想到竟然品出温柔的味道。
+                        </p>
+                    </div>
+                    <div class="contentVideo">
+                        <video class="checkBoxVideo" controls muted loop >
+                            <source class="source" src="../Home/video/001.mp4" type="video/mp4">
+                        </video>
+                    </div>
+                    <div class="ItemListBottom">
+                        <p class="read">58.2万阅读</p>
+                        <p class="point">
+                            <span class="comment"><span class="commentIcon"></span>776</span>
+                            <span class="like"><span class="likeIcon"></span>5243</span>
+                        </p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="checkBox">2</div>
+        <div class="checkBox">3</div>
+        <div class="checkBox">4</div>
+        <div class="checkBox">5</div>
+        <div class="checkBox">6</div>
+    </div>
+
+
+    <!--提示框-->
+    <p class="warn"></p>
+    <!--loading-->
+    <div class="loading">
+        <div class="loadingItem">
+            <p class="loadingImg"></p>
+        </div>
+    </div>
+
+</div>
+
+<div class="BotNavigation">
+    <ul class="tabBar" id="tabBar">
+        <li class="tabBarItem"><a href="../Home/Home.html"><img class="tabBarImg" src="../images/0-home.png" alt=""></a></li>
+        <li class="tabBarItem"><a href="../Find/Find.html"><img class="tabBarImg" src="../images/1-find.png" alt=""></a></li>
+        <li class="tabBarItem"><a href="../Classification/Classification.html"><img class="tabBarImg" src="../images/0-catergry.png" alt=""></a></li>
+        <li class="tabBarItem"><a href="../ShoppingCart/ShoppingCart.html"><img class="tabBarImg" src="../images/0-cart.png" alt=""></a></li>
+        <li class="tabBarItem"><a href="../Mine/Mine.html"><img class="tabBarImg" src="../images/0-me.png" alt=""></a></li>
+    </ul>
 </div>
 </body>
+<script src="../script/jquery-3.2.1.js"></script>
+<script src="./script/Find.js"></script>
 </html>

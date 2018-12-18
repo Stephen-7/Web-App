@@ -7,8 +7,8 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link rel="stylesheet" href="../../css/base.css">
-    <link rel="stylesheet" href="../../css/shared.css">
+    <link rel="stylesheet" href="../../style/base.css">
+    <link rel="stylesheet" href="../../style/shared.css">
     <style>
         #box {
             background-color: #F3F3F3;
@@ -51,7 +51,14 @@
 
         .withdraw_header_text2 {
             width: 55%;
-            height: 40px;
+            height: 38px;
+            background-color: #FFFFFF;
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            -ms-appearance:none;
+            border: none;
+            outline: none;
         }
 
         .withdraw_header_text3 {
@@ -360,7 +367,13 @@
     <div class="withdraw_header">
         <div class="withdraw_header_top">
             <span class="withdraw_header_text1">提现至</span>
-            <span class="withdraw_header_text2">中国银行（2222）</span>
+            <select class="withdraw_header_text2">
+                <option value="volvo">请输入银行卡</option>
+                <option value="1">中国银行</option>
+                <option value="2">中国农业银行</option>
+                <option value="3">中国工商银行</option>
+                <option value="3">中国建设银行</option>
+            </select>
             <span class="withdraw_header_text3" onclick="$('.publicBg').show();">更改银行卡</span>
         </div>
         <div class="withdraw_header_center">
@@ -394,8 +407,10 @@
                 <span class="publicRight" onclick="alert(123)">删除</span>
             </div>
             <div class="publicList">
-                <p class="publicIndex"><span class="publicText">中国银行（2222）</span><span class="publicIcon"></span></p>
-                <p class="publicIndex"><span class="publicText">中国银行（2222）</span><span class="publicIcon"></span></p>
+                <p class="publicIndex"><span class="publicText">中国银行（1111）</span><span class="publicIcon"></span></p>
+                <p class="publicIndex"><span class="publicText">中国建设银行（2222）</span><span class="publicIcon"></span></p>
+                <p class="publicIndex"><span class="publicText">中国工商银行（3333）</span><span class="publicIcon"></span></p>
+                <p class="publicIndex"><span class="publicText">中国农业银行（4444）</span><span class="publicIcon"></span></p>
             </div>
             <div class="publicAdd">
                 <span class="publicAdd_Add"></span>
@@ -554,8 +569,6 @@
                 return false;
             }
         });
-
-
     })
 </script>
 </html>

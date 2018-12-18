@@ -3,7 +3,6 @@
     width:100%;
     height: auto;
     position: relative;
-    /*background-color: #F8F8F8;*/
     background: linear-gradient(to bottom left,#8C1BAB 0%, #623AA2 50%,#F97794 100%);
     margin-bottom: 40px;
     padding-bottom: 10px;
@@ -13,37 +12,39 @@
     width:100%;
     height: 40px;
     z-index: 999;
-    /*position: fixed;*/
-    /*top:0;*/
-    /*left:0;*/
-    /*background-color: rgba(0,0,0,0.4);*/
+    position: sticky;
+    top:0;
+    left:0;
     background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);
 }
 .icon{
-    width:12%;
+    width:11%;
     height:40px;
     float: left;
     display: inline-block;
     background: url("../image/saoyisao.png") no-repeat;
-    background-size: 90% 90%;
+    background-size: 100% 90%;
     background-position: center center;
 }
 .header_nav{
-    width: 75%;
+    width: 78%;
     height:40px;
     float: left;
 }
 .header_nav input{
     width: 100%;
     height: 25px;
+    /*line-height: 25px;*/
     border-radius: 15px;
     margin: 7px 0 0 0;
-    padding-left: 30px;
+    padding-left: 25px;
     font-size: 12px;
     text-align: left;
-    line-height: 25px;
     border: none;
     outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .icon_search{
     width:20px;
@@ -51,7 +52,7 @@
     float: left;
     position: absolute;
     top: 12px;
-    left: 14.5%;
+    left: 12.5%;
 }
 .enter{
     width: 84%;
@@ -64,11 +65,11 @@
     height: 20px;
     display: inline-block;
     background:url("../image/xaingji.png") no-repeat;
-    background-size: 25px 25px;
+    background-size: 23px 23px;
     background-position: center center;
     position: absolute;
     top:10px;
-    right: 15%;
+    right: 13%;
 }
 .fdj{
     width: 35px;
@@ -78,7 +79,7 @@
     background-position: -161px 3px;
 }
 .header_right{
-    width: 13%;
+    width: 11%;
     height:40px;
     float: left;
     font-size: 15px;
@@ -147,8 +148,6 @@
 .Supermarket{
     width: 100%;
     margin-top: 5px;
-    /*background-color: #fff;*/
-    /*border-bottom: 1px solid #e0e0e0;*/
 }
 .Supermarket ul{
     width: 100%;
@@ -183,14 +182,13 @@
     height: 165px;
     margin: 5px 2.5% 12px 2.5%;
     background-color: #ffffff;
-    border:1px solid #e5e5e5;
     border-radius: 5px;
 }
 .body_header{
     width: 100%;
-    height: 20px;
+    height: 25px;
     display: flex;
-    margin-top: 5px;
+    align-items: center;
 }
 .body_title{
     width: auto;
@@ -206,18 +204,22 @@
 .body_time{
     flex: 1;
     height: 20px;
-    line-height: 20px;
     text-align: left;
     color: #333333;
     padding-left: 10px;
     font-size: 13px;
     display: flex;
+    justify-content: end;
+    align-items: center;
 }
 .body_time_box{
     width: auto;
     height: auto;
     margin-left: 5px;
     display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .body_time_box span{
     width: auto;
@@ -231,10 +233,12 @@
 .body_time_span_dian{
     width: 10px;
     height: 20px;
-    display: inline-block;
-    line-height: 17px;
     text-align: center;
     font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 .genDuo{
     width: auto;
@@ -326,7 +330,7 @@
     overflow: hidden;
     margin: 15px 2.5% 12px 2.5%;
     background-color: #ffffff;
-    border: 1px solid #e5e5e5;
+    /*border: 1px solid #e5e5e5;*/
     border-radius: 5px;
 }
 .Digital_header{
@@ -359,7 +363,7 @@
     line-height: 16px;
     text-align: center;
     padding: 0 3px 0 3px;
-    font-size: 12px;
+    font-size: 10px;
     color: #f10215;
     background-color: rgba(255,165,167,0.8);
     border-radius: 5px;
@@ -375,6 +379,7 @@
     color: #333333;;
     text-align: left;
     overflow: hidden;
+    padding-right: 10px;
 }
 .Digital_nav{
     width: 100%;
@@ -441,23 +446,63 @@
 }
 .Digital_nav_li_right{
     width: 45%;
-    height: 100px;
+    height: 99px;
     float: right;
+    padding: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .Digital_nav_li_right img{
     width: 100%;
-    height: 100px;
-    padding: 0 5px 7px 5px;
+    padding: 4% 2% 4% 2%;
 }
 
 
+.MallVideo{
+    width: 95%;
+    height: 200px;
+    margin: 15px 2.5% 12px 2.5%;
+    border-radius: 5px;
+    background-color: #F97794;
+}
+.MallVideoTop{
+    width: 100%;
+    height: auto;
+    background-color: #623AA2;
+}
+.MallVideoMp{
+    width: 70%;
+    height: 100px;
+}
+
+.EatDrinkHaveFun{
+    width: 95%;
+    height: 200px;
+    margin: 15px 2.5% 12px 2.5%;
+    border-radius: 5px;
+    background-color: #F8F8F8;
+}
+
+.Slider{
+    /*width: 400%;*/
+    /*height: 80px;*/
+    /*background-color: yellow;*/
+    /*margin: 15px 2.5% 12px 2.5%;*/
+    /*border-radius: 5px;*/
+}
+.SliderChildren{
+    /*width: 20%;*/
+    /*height: 80px;*/
+    /*background-color: pink;*/
+}
 
 .life{
     width: 95%;
     height: auto;
     margin: 15px 2.5% 12px 2.5%;
     background-color: #ffffff;
-    border: 1px solid #e5e5e5;
+    /*border: 1px solid #e5e5e5;*/
     border-radius: 5px;
     overflow: hidden;
 }
@@ -479,39 +524,39 @@
     margin: 4px 4px 4px 6px;
 }
 .life_left{
-    width: 50%;
+    width: 55%;
     height: auto;
     float: left;
     border-right: 1px solid #e5e5e5;
 }
 .life_left_top{
     width: 100%;
-    height: 75px;
+    height: 90px;
     background-color: skyblue;
 }
 .life_left_top img{
     width: 100%;
-    height: 75px;
+    height: 90px;
 }
 .life_left_bottom{
     width: 100%;
-    height: 75px;
+    height: 90px;
     background-color: skyblue;
     border-top: 1px solid #e5e5e5;
 }
 .life_left_bottom img{
     width: 100%;
-    height: 75px;
+    height: 90px;
 }
 .life_right{
-    width: 50%;
-    height: 150px;
+    width: 45%;
+    height: 180px;
     background-color: yellow;
     float: right;
 }
 .life_right img{
     width: 100%;
-    height: 150px;
+    height: 180px;
 }
 
 
@@ -531,22 +576,10 @@
     text-align: center;
     position: relative;
 }
-/*.list_header:before{*/
-    /*content: '';*/
-    /*width: 100%;*/
-    /*height: 1px;*/
-    /*background-color: #e0e0e0;*/
-    /*position: absolute;*/
-    /*left: 0;*/
-    /*top: 45%;*/
-    /*z-index:1;*/
-/*}*/
+
 .list_header span{
     font-size: 17px;
     color: #fff;
-    /*background-color: #F8F8F8;*/
-    /*padding: 0 20px;*/
-    z-index:0;
 }
 
 .add_list{
@@ -562,69 +595,14 @@
 .add_list_index{
     width: 46%;
     height: auto;
-    float: left;
     border-radius: 5px;
     margin: 1.4%;
     background-color: #ffffff;
 }
-.add_list_index_img,
-.add_list_index_img1,
-.add_list_index_img2,
-.add_list_index_img3,
-.add_list_index_img4,
-.add_list_index_img5,
-.add_list_index_img6,
-.add_list_index_img7,
-.add_list_index_img8{
-    width: 86%;
-    height: 120px;
-    display: inline-block;
-    margin: 7% 7% 0 7%;
-}
 .add_list_index_img{
-     background: url("../image/shuma03.jpg") no-repeat;
-     background-size: 100% 100%;
-     background-position: center center;
-}
-.add_list_index_img1{
-    background: url("../image/shuma04.jpg") no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-}
-.add_list_index_img2{
-    background: url("../image/buy-pro1.jpg") no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-}
-.add_list_index_img3{
-    background: url("../image/shoubiao.jpg") no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-}
-.add_list_index_img4{
-    background: url("../image/shuma03.jpg") no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-}
-.add_list_index_img5{
-    background: url("../image/yifu.jpg") no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-}
-.add_list_index_img6{
-    background: url("../image/kuzi.jpg") no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-}
-.add_list_index_img7{
-    background: url("../image/yumaoqiu.jpg") no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
-}
-.add_list_index_img8{
-    background: url("../image/qiuxie.jpg") no-repeat;
-    background-size: 100% 100%;
-    background-position: center center;
+    width: 100%;
+    height: 150px;
+    padding: 8px 10px 0 10px;
 }
 .add_list_index_title{
     flex: 1;
@@ -632,7 +610,6 @@
     line-height: 28px;
     font-size: 13px;
     color: #333333;
-    /*font-weight: bold;*/
     text-align: left;
     padding-left: 7%;
     overflow: hidden;
@@ -658,6 +635,7 @@
     line-height: 19px;
     padding: 1px 5px 1px 5px;
     font-size: 12px;
+    border-radius: 3px;
     color: #333333;
     text-align: center;
     background-color: #ffffff;
@@ -669,11 +647,24 @@
 .list_btn{
     width: 100%;
     height: 40px;
-    line-height: 40px;
+    line-height: 50px;
     text-align: center;
     font-size: 12px;
     color: #ffffff;
 
+}
+
+
+#topIcon{
+    width: 35px;
+    height: 35px;
+    background: url("../../images/scroll-to-top-icon.png");
+    background-repeat: no-repeat;
+    background-size: 35px 35px;
+    background-position: center center;
+    position: fixed;
+    right: 10%;
+    bottom: 15%;
 }
 
 

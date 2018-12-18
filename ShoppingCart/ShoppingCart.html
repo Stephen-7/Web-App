@@ -7,22 +7,72 @@
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
     <meta content="telephone=no" name="format-detection">
-    <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/shared.css">
+    <link rel="stylesheet" href="./style/ShoppingCart.css">
 </head>
 <body>
-<div id="box">购物车
+<div id="box">
+    <div class="Header">
+        <p class="HeaderLeft">
+            <span class="backIcon" onclick="window.history.back()"></span>
+        </p>
+        <p class="HeaderTitle">购物车 <span class="HeaderTitleIcon"></span></p>
+        <p class="HeaderRight1">管理</p>
+        <p class="HeaderRight2">完成</p>
+    </div>
 
 
-    <div class="BotNavigation">
-        <ul>
-            <li><a href="../Home/Home.html"><img src="../images/1-home.png" alt=""></a></li>
-            <li><a href="../Find/Find.html"><img src="../images/2-find.png" alt=""></a></li>
-            <li><a href="../Classification/Classification.html"><img src="../images/3-catergry.png" alt=""></a></li>
-            <li><a href="./ShoppingCart.html"><img src="../images/4-cart.png" alt=""></a></li>
-            <li><a href="../Mine/Mine.html"><img src="../images/5-me.png" alt=""></a></li>
-        </ul>
+
+
+
+    <div class="footer">
+        <p class="footerLeft">
+            <span class="footerIcon check"></span>
+            <span class="all">全选</span>
+        </p>
+        <div class="numAndZo" id="numAndZo">
+            <p class="footerContent">合计：123</p>
+            <span class="footerRight">去结算(2)</span>
+        </div>
+        <div class="deleteIndex" id="deleteIndex">
+            <p class="attention">移除关注</p>
+            <p class="delete">删除</p>
+        </div>
+    </div>
+
+    <!--提示框-->
+    <p class="warn"></p>
+    <!--loading-->
+    <div class="loading">
+        <div class="loadingItem">
+            <p class="loadingImg"></p>
+        </div>
+    </div>
+
+</div>
+
+<div class="sure">
+    <div class="sureBox">
+        <p class="sureBoxTitle">确定要删除这1种商品吗？</p>
+        <p class="tabBnt">
+            <span class="no" onclick=" $('.sure').hide()">取消</span>
+            <span class="yes">确定</span>
+        </p>
     </div>
 </div>
+
+<!--<div class="BotNavigation">-->
+    <!--<ul class="tabBar" id="tabBar">-->
+        <!--<li class="tabBarItem"><a href="../Home/Home.html"><img class="tabBarImg" src="../images/0-home.png" alt=""></a></li>-->
+        <!--<li class="tabBarItem"><a href="../Find/Find.html"><img class="tabBarImg" src="../images/0-find.png" alt=""></a></li>-->
+        <!--<li class="tabBarItem"><a href="../Classification/Classification.html"><img class="tabBarImg" src="../images/0-catergry.png" alt=""></a></li>-->
+        <!--<li class="tabBarItem"><a href="../ShoppingCart/ShoppingCart.html"><img class="tabBarImg" src="../images/1-cart.png" alt=""></a></li>-->
+        <!--<li class="tabBarItem"><a href="../Mine/Mine.html"><img class="tabBarImg" src="../images/0-me.png" alt=""></a></li>-->
+    <!--</ul>-->
+<!--</div>-->
+
 </body>
+<script src="../script/jquery-3.2.1.js"></script>
+<script src="./script/ShoppingCart.js"></script>
 </html>

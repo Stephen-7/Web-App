@@ -1,23 +1,10 @@
 
-//分类
+
 
 /**
  * Created by Stephen on 2017/12/13.
  */
 window.stephen = {};
-
-// mjd.transitianEnd = function (obj,callBack){
-//     if(typeof obj != 'object') return;
-//     obj.addEventListener('transitionEnd',function (e){
-//         callBack && callBack(e);
-//     })
-//     obj.addEventListener('webkittransitionEnd',function (e){
-//         callBack && callBack(e)
-//     })
-// }
-
-
-
 stephen.tap = function(obj, callBack){
     if(typeof obj != 'object') return;
 
@@ -46,4 +33,32 @@ stephen.tap = function(obj, callBack){
     });
 };
 
+
+
+function scroll() {
+    if (window.pageXOffset || window.pageYOffset) {
+        var obj = {
+            top: window.pageYOffset,
+            left: window.pageXOffset
+        };
+        return obj;
+    }else if(document.compatMode == 'CSS1Compat'){
+        // 标准浏览器
+        return {
+            top:document.documentElement.scrollTop,
+            left:document.documentElement.scrollLeft
+        }
+    }else {
+        // 怪异模式
+        return {
+            top:document.body.scrollTop,
+            left:document.body.scrollLeft
+        }
+    }
+}
+
+
+function id(id) {
+    return document.getElementById(id)
+}
 
