@@ -1,22 +1,4 @@
-$('.icon')[0].addEventListener('click',function(){
-//            window.location.href = "../landing/Landing.html";
-    alert('跳转扫一扫');
-});
 
-// $('.icon_search')[0].addEventListener('click',function(){
-// //            window.location.href = "../Mine/registered.html";
-//     alert('跳转搜索');
-// });
-//
-// $('.header_nav_image')[0].addEventListener('click',function(){
-// //            window.location.href = "../Mine/registered.html";
-//     alert('跳转搜索2');
-// });
-//
-// $('.header_right_icon')[0].addEventListener('click',function(){
-// //            window.location.href = "../Mine/registered.html";
-//     alert('跳转搜索2');
-// });
 
 window.onload = function () {
     banner();
@@ -41,8 +23,6 @@ window.onload = function () {
             }
         },10);
     };
-
-
 
 };
 
@@ -169,11 +149,11 @@ $(function () {
         if(hh< 10){
             $('.body_time_span1').text(0);
             $('.body_time_span2').text(hh);
-
         }else {
             $('.body_time_span1').text(Math.floor(hh / (10)));
             $('.body_time_span2').text(hh % 10);
         }
+
         if(mm< 10){
             $('.body_time_span3').text(0);
             $('.body_time_span4').text(mm);
@@ -181,6 +161,7 @@ $(function () {
             $('.body_time_span3').text(Math.floor(mm / (10)));
             $('.body_time_span4').text(mm % 10);
         }
+
         if(ss< 10){
             $('.body_time_span5').text(0);
             $('.body_time_span6').text(ss);
@@ -190,11 +171,28 @@ $(function () {
         }
     }
 
-
     $('.list_btn')[0].addEventListener('click',function () {
         $('.loading').show();
         setTimeout(function () {
             $('.loading').hide();
         }, 3000);
-    })
+    });
+
+
+
+    $('.icon')[0].addEventListener('click',function(){
+        alert('跳转扫一扫');
+    });
+
+    $('.header_nav_icon')[0].addEventListener('click',function () {
+        alert('放大镜');
+    });
+
+    $('.header_right')[0].addEventListener('click',function(){
+        alert('扫码');
+    });
+
+    $('.header_nav>input')[0].onkeyup = function () {
+        alert(123)
+    }
 });

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>搜索</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <link rel="stylesheet" href="../style/base.css">
+    <link rel="stylesheet" href="../style/shared.css">
+    <link rel="stylesheet" href="./css/searchFor.css">
+</head>
+<body>
+
+<div id="box">
+    <div class="header">
+        <p class="left"></p>
+        <p class="center">
+            <input type="enter" placeholder="搜索商品/店铺">
+            <span class="xiangJi"></span>
+        </p>
+        <p class="right">
+            <span class="searchFor">搜索</span>
+        </p>
+    </div>
+</div>
+
+</body>
+<script>
+    var arr = window.location.href.split('=')[1];
+    console.log(arr);
+    var obj = '';
+    for(var i=0; i<arr.length; i++){
+        var key = arr[i].split('?')[0];
+        obj[key] = arr[i].split('?')[1];
+    }
+
+    console.log(key);
+</script>
+</html>

@@ -10,35 +10,37 @@
 
 .headerNav{
     width:100%;
-    height: 40px;
+    height: 44px;
     z-index: 999;
     position: sticky;
     top:0;
     left:0;
     background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .icon{
     width:11%;
-    height:40px;
-    float: left;
+    height:45px;
     display: inline-block;
     background: url("../image/saoyisao.png") no-repeat;
-    background-size: 100% 90%;
+    background-size: 110% 90%;
     background-position: center center;
 }
 .header_nav{
     width: 78%;
-    height:40px;
-    float: left;
+    height:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .header_nav input{
     width: 100%;
-    height: 25px;
-    /*line-height: 25px;*/
+    height: 30px;
     border-radius: 15px;
-    margin: 7px 0 0 0;
-    padding-left: 25px;
-    font-size: 12px;
+    padding-left: 10px;
+    font-size: 14px;
     text-align: left;
     border: none;
     outline: none;
@@ -46,55 +48,35 @@
     justify-content: center;
     align-items: center;
 }
-.icon_search{
-    width:20px;
-    height: 20px;
-    float: left;
-    position: absolute;
-    top: 12px;
-    left: 12.5%;
-}
-.enter{
-    width: 84%;
-    height: 35px;
-    border-radius: 20px;
-    margin: 2.5px 0 0 10px;
-}
-.header_nav_image{
-    width: 25px;
-    height: 20px;
+.header_nav_icon{
+    width:45px;
+    height: 45px;
     display: inline-block;
-    background:url("../image/xaingji.png") no-repeat;
-    background-size: 23px 23px;
-    background-position: center center;
+    background: url("../../images/search@2x.png");
+    background-repeat: no-repeat;
+    background-size: 27px 27px;
+    background-position: 70% center;
     position: absolute;
-    top:10px;
-    right: 13%;
-}
-.fdj{
-    width: 35px;
-    height: 35px;
-    display: inline-block;
-    background: url("../../images/sprites.png") no-repeat;
-    background-position: -161px 3px;
+    top: 0;
+    right: 11%;
 }
 .header_right{
     width: 11%;
-    height:40px;
+    height:44px;
+    display: inline-block;
     float: left;
     font-size: 15px;
     color:#ffffff;
     text-align: center;
     line-height: 40px;
     background: url("../image/huiyuanma.png") no-repeat;
-    background-size: 30px 30px;
+    background-size: 35px 35px;
     background-position: center center;
 }
 .header_right_icon{
     width: 20px;
     height: 20px;
     display: inline-block;
-
 }
 
 
@@ -669,9 +651,9 @@
 
 
 
-[class^="icon_"]{
-    background: url("../../images/sprites.png") no-repeat;
-    -webkit-background-size:200px 200px;
-    background-size:230px 230px;
-    background-position: -96px 0;
-}
+/*[class^="icon_"]{*/
+    /*background: url("../../images/sprites.png") no-repeat;*/
+    /*-webkit-background-size:200px 200px;*/
+    /*background-size:230px 230px;*/
+    /*background-position: -93px 2px;*/
+/*}*/
