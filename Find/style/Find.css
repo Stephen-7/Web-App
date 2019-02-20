@@ -11,10 +11,14 @@
     background-repeat: no-repeat;
     overflow: scroll;
     box-sizing: content-box;
+    position: relative;
 }
 .FindTop{
     width: 100%;
     height: auto;
+    /*position: fixed;*/
+    /*top:0;*/
+    /*right: 0;*/
 }
 .FindBottom{
     width: 100%;
@@ -118,15 +122,23 @@
     width: 94%;
     height: auto;
     overflow: hidden;
-    position: absolute;
-    top:95px;
-    left: 3%;
+    margin:2% 3% 45px 3%;
+    /*margin:90px 3% 45px 3%;*/
+    /*position: fixed;*/
+    /*top:90px;*/
+    /*left: 3%;*/
 }
 
 .checkBox{
     width: 100%;
     height: auto;
     display: none;
+    overflow: scroll;
+}
+.checkBoxItem{
+    width: 100%;
+    height: auto;
+    overflow: scroll;
 }
 .clearfixUl{
     width: 100%;

@@ -1,35 +1,80 @@
 
-.header{
-    background-color: #f0f0f0;
+.headerNav{
+    width:100%;
+    height: 44px;
+    z-index: 999;
+    position: sticky;
+    top:0;
+    left:0;
+    /*background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);*/
+    background-color:#cccccc ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-.center input{
+.icon{
+    width:13%;
+    height:45px;
+    display: inline-block;
+    background: url("../image/backwhite@2x.png") no-repeat;
+    background-size: 27px 27px;
+    background-position: 30% center;
+}
+.header_nav{
+    width: 70%;
+    height:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.headerInput{
     width: 100%;
     height: 30px;
     border-radius: 15px;
-    padding-left: 10px;
-    font-size: 14px;
+    padding-left: 13px;
+    font-size: 13px;
     text-align: left;
+    line-height: 30px;
     border: none;
     outline: none;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.xiangJi{
-    width: 40px;
-    height: 43px;
+.header_nav_icon{
+    width:40px;
+    height:44px;
     display: inline-block;
-    background: url("../image/xaingji.png");
+    background: url("../../images/search@2x.png");
     background-repeat: no-repeat;
-    background-size: 30px 30px;
+    background-size: 27px 27px;
     background-position: center center;
     position: absolute;
-    top:0;
-    right:16%;
+    top: 0;
+    right: 0;
+}
+.header_nav_camera{
+    width:40px;
+    height: 45px;
+    display: inline-block;
+    background: url("../image/Camera_332px_1130661_easyicon.net.png");
+    background-repeat: no-repeat;
+    background-size: 19px 17px;
+    background-position: center 48%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
-.searchFor{
+.header_right{
+    width: 17%;
+    height:44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header_right_searchFor{
     width: 45px;
     height: 27px;
     background-image: linear-gradient(to right, rgb(198, 115, 255), rgb(147, 59, 255));

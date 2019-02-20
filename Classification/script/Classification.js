@@ -19,7 +19,7 @@ function leftCategory(){
     var maxY = 0, minY = -(childH - parentH);
 
     // 3. 缓冲区间
-    var buffer = 150;
+    var buffer = 100;
 
     // 4. 过渡效果\清除过渡效果\位置的改变
     var addTransition = function(){
@@ -113,12 +113,14 @@ function leftCategory(){
 
         // 6.5 模拟数据
         var rightContent = document.getElementsByClassName('category_main_right')[0];
-        rightContent.style.transition = 'all .1s ease';
-        rightContent.style.webkitTransition = 'all .1s ease';
-        rightContent.style.opacity = 0;
+        // rightContent.style.transition = 'all .1s ease';
+        // rightContent.style.webkitTransition = 'all .1s ease';
+        // rightContent.style.opacity = 0;
         setTimeout(function(){
             rightContent.style.opacity = 1;
         }, 200);
     });
 
 }
+
+

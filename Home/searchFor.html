@@ -11,28 +11,42 @@
 <body>
 
 <div id="box">
-    <div class="header">
-        <p class="left"></p>
-        <p class="center">
-            <input type="enter" placeholder="搜索商品/店铺">
-            <span class="xiangJi"></span>
-        </p>
-        <p class="right">
-            <span class="searchFor">搜索</span>
+    <div class="headerNav">
+        <span class="icon" onclick="window.history.back()"></span>
+        <div class="header_nav">
+            <input type="search" class="headerInput" placeholder="搜索商品/店铺">
+            <span class="header_nav_icon"></span>
+        </div>
+        <p class="header_right">
+            <span class="header_right_searchFor">搜索</span>
         </p>
     </div>
+
+
 </div>
 
 </body>
+<script src="../script/jquery-3.2.1.js"></script>
 <script>
-    var arr = window.location.href.split('=')[1];
-    console.log(arr);
-    var obj = '';
+    var params = window.location.href.split('?')[1];
+    var arr = params.split("&");
+    var token = {};
     for(var i=0; i<arr.length; i++){
-        var key = arr[i].split('?')[0];
-        obj[key] = arr[i].split('?')[1];
+        var key = arr[i].split("=")[0];
+        token[key] = arr[i].split("=")[1];
     }
 
-    console.log(key);
+
+
+    $(function () {
+        $('.header_nav_icon')[0].addEventListener('click',function () {
+            alert('放大镜');
+        });
+
+        $('.header_right_searchFor')[0].addEventListener('click',function () {
+            alert('搜索');
+        });
+    })
+
 </script>
 </html>
