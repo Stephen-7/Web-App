@@ -1,6 +1,3 @@
-var random = Mock.Random;
-
-
 
 
 Mock.mock(
@@ -9,7 +6,7 @@ Mock.mock(
     "data|6": [
         {
             "ctitle": "@ctitle",
-            'id':random.natural(1,99),
+            'id':1,
             "address": "广州市番禺区万利商业园",
             "cityId": "1234",
             "cityName": "广州市",
