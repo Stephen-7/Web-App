@@ -204,7 +204,7 @@ $(function () {
 
 
     var timestamp = Date.parse(new Date());
-    var arrItem = Date.parse(new Date('2019-12-21 14:00:00'));
+    var arrItem = Date.parse(new Date('2019-12-31 14:00:00'));
     var index = (arrItem - timestamp) / 1000;
     var timer = setInterval(function () {
         allTime(index);
@@ -244,7 +244,15 @@ $(function () {
     }
 
 
-
+    var oBox = $('.SliderChildrenBox'),oBoxWidth = $('.SliderChildrenBox').width();
+    oBox.find('li').on('click',function(){
+        var thisWidth = $(this).width(),moveLeft = this.offsetLeft;
+        if(oBoxWidth<moveLeft+thisWidth){
+            oBox.animate({scrollLeft:moveLeft});
+        }else{
+            oBox.animate({scrollLeft:0});
+        }
+    });
 
 
 
@@ -431,12 +439,12 @@ function checkList(id) {
     alert(id)
 }
 
-var params = window.location.href.split("?")[1];
-var arr = params.split("&");
-var obj = {};
-for (var i = 0; i < arr.length; i++) {
-    var key = arr[i].split("=")[0];
-    obj[key] = arr[i].split("=")[1];
-}
-console.log(obj[key]);
+// var params = window.location.href.split("?")[1];
+// var arr = params.split("&");
+// var obj = {};
+// for (var i = 0; i < arr.length; i++) {
+//     var key = arr[i].split("=")[0];
+//     obj[key] = arr[i].split("=")[1];
+// }
+// console.log(obj[key]);
 

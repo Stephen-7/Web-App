@@ -21,7 +21,7 @@ html {
     top:0;
     left: 0;
     z-index: 999;
-    background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);
+    /*background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);*/
     display: flex;
     justify-content: center;
     align-items: center;
@@ -519,20 +519,70 @@ html {
 
 .Slider{
     width: 95%;
-    height: 200px;
+    height: auto;
     margin: 15px 2.5% 12px 2.5%;
     border-radius: 5px;
     background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);
     overflow: scroll;
 }
+
 .SliderChildren{
-    width: 200%;
-    height: 80px;
-    background-color: pink;
-    overflow: scroll;
-    overflow-x: hidden;
-    overflow-y: auto;
+    flex: 1;
+    height: auto;
+    overflow-x:auto;
+    white-space:nowrap;
+    display: flex;
 }
+
+.SliderChildren::-webkit-scrollbar {
+    width:0;
+    height:0;
+    display: none;
+}
+
+.SliderChildrenBox {
+    width: 100px;
+    line-height: 30px;
+    margin-right: 10px;
+    background: #ccc;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+}
+
+/*.SliderChildrenBox{*/
+    /*display: flex;*/
+    /*align-items: center;*/
+    /*align-content: center;*/
+    /*justify-content: center;*/
+/*}*/
+
+.SliderChildrenBox:last-child {
+    margin:0;
+}
+
+.SliderImg{
+    width: 70px;
+    height: 70px;
+    margin-left: 5px;
+}
+
+.money{
+    flex: 1;
+    font-size: 15px;
+    color: #333333;
+    text-align: center;
+}
+
+.symbol{
+    font-size: 12px;
+    color: red;
+}
+
 
 .life{
     width: 95%;
