@@ -526,6 +526,12 @@ html {
     overflow: scroll;
 }
 
+.SliderTopTitle{
+    width: 100%;
+    height: 35px;
+    background-color: #cccccc;
+}
+
 .SliderChildren{
     flex: 1;
     height: auto;
@@ -541,12 +547,13 @@ html {
 }
 
 .SliderChildrenBox {
-    width: 100px;
+    width: 200px;
+    height: 80px;
     line-height: 30px;
-    margin-right: 10px;
-    background: #ccc;
+    background-color: #ffffff;
     text-align: center;
     display: flex;
+    margin: 0 10px;
     align-items: center;
     align-content: center;
     justify-content: center;
@@ -554,21 +561,17 @@ html {
     flex-wrap: wrap;
 }
 
-/*.SliderChildrenBox{*/
-    /*display: flex;*/
-    /*align-items: center;*/
-    /*align-content: center;*/
-    /*justify-content: center;*/
-/*}*/
+.SliderChildrenBox:first-child{
+    margin-left:0;
+}
 
 .SliderChildrenBox:last-child {
-    margin:0;
+    margin-right:0;
 }
 
 .SliderImg{
     width: 70px;
     height: 70px;
-    margin-left: 5px;
 }
 
 .money{

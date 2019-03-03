@@ -1,7 +1,7 @@
 window.onload = function () {
     backTop();
     banner();
-    MallHeadlines();
+    // MallHeadlines();
     changeNavColor();
 };
 
@@ -30,58 +30,61 @@ function backTop() {
 }
 
 function changeNavColor() {
-    var headerBox = document.getElementsByClassName('headerTop')[0];
-    var headerNav = document.getElementsByClassName('headerNav')[0];
-    var headerNavH = headerNav.offsetHeight;
+    var Carousel = document.getElementsByClassName('Carousel')[0];
+    var headerTop = document.getElementsByClassName('headerTop')[0];
+    var CarouselH = Carousel.offsetHeight;
     var scrollTopH = 0;
-    scrollTopH = document.body.scrollTop;
-    var opt = 0;
-    if (scrollTopH < headerNavH) {
-        opt = scrollTopH / headerNavH * 0.85;
-    } else {
-        opt = 0.85;
+    window.onscroll = function(){
+        scrollTopH = document.documentElement.scrollTop;
+
+        if (scrollTopH < CarouselH) {
+            var opt = scrollTopH / CarouselH * 1.3;
+        } else {
+            opt = 1.3;
+        }
+        headerTop.style.background = 'linear-gradient(to top right,rgba(59, 38, 103, '+ opt +') 0%, rgba(188, 120, 236, '+ opt +') 100%)';
     }
-    headerBox.style.background = 'rgba(201, 21, 35, ' + opt + ')';
 }
 
-function MallHeadlines() {
-    var Digital = document.getElementsByClassName('Digital_header_right')[0];
-    var DigitalH = Digital.offsetHeight;
-    var ulBox = Digital.getElementsByTagName('ul')[0];
 
-    function addTransition() {
-        ulBox.style.transition = 'all .2s ease';
-        ulBox.style.webkitTransition = 'all .2s ease';
-    }
-
-    function removeTransition() {
-        ulBox.style.transition = 'none';
-        ulBox.style.webkitTransition = 'none';
-    }
-
-    function changeTranslateX(x) {
-        ulBox.style.transform = 'translateY(' + x + 'px)';
-        ulBox.style.webkitTransform = 'translateY(' + x + 'px)';
-    }
-
-    var index = 1;
-    var timer = null;
-    timer = setInterval(scrollImg, 1500);
-
-    function scrollImg() {
-        index++;
-        addTransition();
-        changeTranslateX(-index * DigitalH)
-    }
-
-    if (index >= 5) {
-        index = 1;
-    } else if (index <= 0) {
-        index = 4;
-    }
-    removeTransition();
-    changeTranslateX(-index * DigitalH);
-}
+// function MallHeadlines() {
+//     var Digital = document.getElementsByClassName('Digital_header_right')[0];
+//     var DigitalH = Digital.offsetHeight;
+//     var ulBox = Digital.getElementsByTagName('ul')[0];
+//
+//     function addTransition() {
+//         ulBox.style.transition = 'all .2s ease';
+//         ulBox.style.webkitTransition = 'all .2s ease';
+//     }
+//
+//     function removeTransition() {
+//         ulBox.style.transition = 'none';
+//         ulBox.style.webkitTransition = 'none';
+//     }
+//
+//     function changeTranslateX(x) {
+//         ulBox.style.transform = 'translateY(' + x + 'px)';
+//         ulBox.style.webkitTransform = 'translateY(' + x + 'px)';
+//     }
+//
+//     var index = 1;
+//     var timer = null;
+//     timer = setInterval(scrollImg, 1500);
+//
+//     function scrollImg() {
+//         index++;
+//         addTransition();
+//         changeTranslateX(-index * DigitalH)
+//     }
+//
+//     if (index >= 5) {
+//         index = 1;
+//     } else if (index <= 0) {
+//         index = 4;
+//     }
+//     removeTransition();
+//     changeTranslateX(-index * DigitalH);
+// }
 
 function banner() {
     var Carousel = document.getElementsByClassName('Carousel')[0];
