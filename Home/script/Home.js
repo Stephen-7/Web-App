@@ -1,16 +1,11 @@
 window.onload = function () {
     backTop();
     banner();
-    // MallHeadlines();
     changeNavColor();
 };
 
 function backTop() {
-    var topBegin = 0;
-    var topEend = 0;
-    var topTime = null;
-
-    var topIcon = document.getElementById('topIcon');
+    var topBegin = 0,topEend = 0,topTime = null,topIcon = document.getElementById('topIcon');
     window.onscroll = function () {
         var scrollTop = scroll().top;
         scrollTop > 500 ? topIcon.style.display = 'block' : topIcon.style.display = 'none';
@@ -30,10 +25,7 @@ function backTop() {
 }
 
 function changeNavColor() {
-    var Carousel = document.getElementsByClassName('Carousel')[0];
-    var headerTop = document.getElementsByClassName('headerTop')[0];
-    var CarouselH = Carousel.offsetHeight;
-    var scrollTopH = 0;
+    var Carousel = document.getElementsByClassName('Carousel')[0],headerTop = document.getElementsByClassName('headerTop')[0],CarouselH = Carousel.offsetHeight,scrollTopH = 0;
     window.onscroll = function(){
         scrollTopH = document.documentElement.scrollTop;
 
@@ -47,48 +39,9 @@ function changeNavColor() {
 }
 
 
-// function MallHeadlines() {
-//     var Digital = document.getElementsByClassName('Digital_header_right')[0];
-//     var DigitalH = Digital.offsetHeight;
-//     var ulBox = Digital.getElementsByTagName('ul')[0];
-//
-//     function addTransition() {
-//         ulBox.style.transition = 'all .2s ease';
-//         ulBox.style.webkitTransition = 'all .2s ease';
-//     }
-//
-//     function removeTransition() {
-//         ulBox.style.transition = 'none';
-//         ulBox.style.webkitTransition = 'none';
-//     }
-//
-//     function changeTranslateX(x) {
-//         ulBox.style.transform = 'translateY(' + x + 'px)';
-//         ulBox.style.webkitTransform = 'translateY(' + x + 'px)';
-//     }
-//
-//     var index = 1;
-//     var timer = null;
-//     timer = setInterval(scrollImg, 1500);
-//
-//     function scrollImg() {
-//         index++;
-//         addTransition();
-//         changeTranslateX(-index * DigitalH)
-//     }
-//
-//     if (index >= 5) {
-//         index = 1;
-//     } else if (index <= 0) {
-//         index = 4;
-//     }
-//     removeTransition();
-//     changeTranslateX(-index * DigitalH);
-// }
 
 function banner() {
-    var Carousel = document.getElementsByClassName('Carousel')[0];
-    var CarouselW = Carousel.offsetWidth;
+    var Carousel = document.getElementsByClassName('Carousel')[0],CarouselW = Carousel.offsetWidth;
     var imageBox = Carousel.getElementsByTagName('ul')[0];
     var pointBox = Carousel.getElementsByTagName('ol')[0];
     var allPoints = pointBox.getElementsByTagName('li');
@@ -364,7 +317,6 @@ $(function () {
 
     var html = '';
     var loadMore = false;
-    var cou = 2;
     $.ajax({
         url:'http://home/list/v1/data',
         type: 'GET',
@@ -431,7 +383,8 @@ $(function () {
                 }
             });
         }else {
-
+            $('.list_btn').text('没有更多了');
+            loadMore = false;
         }
     });
 
@@ -441,6 +394,13 @@ $(function () {
 function checkList(id) {
     alert(id)
 }
+
+function addShop() {
+    console.log(0);
+    return false
+}
+
+
 
 // var params = window.location.href.split("?")[1];
 // var arr = params.split("&");
