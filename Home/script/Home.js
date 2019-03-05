@@ -338,7 +338,7 @@ $(function () {
                         '     <img class="add_list_index_img" src="' + li.image + '" alt="">\n' +
                         '     <P class="add_list_index_title">' + li.title + '</P>\n' +
                         '     <P class="add_list_index_zhan">\n' +
-                        '         <span class="add_list_index_zhan_left">￥' + li.price + '</span>\n' +
+                        '         <span class="add_list_index_zhan_left">¥' + li.price + '</span>\n' +
                         '         <span class="add_list_index_zhan_right" onclick="checkList(' + li.id + ')">看详情</span>\n' +
                         '     </P>\n' +
                         ' </div>';
@@ -373,7 +373,7 @@ $(function () {
                                 '     <img class="add_list_index_img" src="' + li.image + '" alt="">\n' +
                                 '     <P class="add_list_index_title">' + li.title + '</P>\n' +
                                 '     <P class="add_list_index_zhan">\n' +
-                                '         <span class="add_list_index_zhan_left">￥' + li.price + '</span>\n' +
+                                '         <span class="add_list_index_zhan_left">¥' + li.price + '</span>\n' +
                                 '         <span class="add_list_index_zhan_right" onclick="checkList(' + li.id + ')">看详情</span>\n' +
                                 '     </P>\n' +
                                 ' </div>';
@@ -392,7 +392,7 @@ $(function () {
 });
 
 function checkList(id) {
-    alert(id)
+    window.location.href = '../components/ProductShowcase.html?id='+id;
 }
 
 function addShop() {

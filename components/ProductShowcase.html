@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="../style/base.css">
     <link rel="stylesheet" href="../style/shared.css">
     <style>
+        #box{
+            background-color: #f8f8f8;
+        }
+
         .header{
             width: 100%;
             height: 44px;
@@ -17,7 +21,7 @@
             width: 15%;
             height: 44px;
             display: inline-block;
-            background: url("../Home/image/back@2x.png") no-repeat;
+            background: url("../images/back@2x.png") no-repeat;
             background-size: 25px 25px;
             background-position: center center;
         }
@@ -44,6 +48,28 @@
             width: 100%;
             height: auto;
             overflow: hidden;
+            position: relative;
+            background-color: #ffffff;
+        }
+
+        .DetailsPost{
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            border-radius: 50%;
+            background-color: rgba(0,0,0,0.1);
+            position: absolute;
+            top:10px;
+            left: 10px;
+        }
+
+        .DetailsBack{
+            width: 30px;
+            height: 30px;
+            display: inline-block;
+            background: url("../images/back@2x.png") no-repeat center center;
+            background-size: 20px 20px;
+
         }
 
         .DetailsBox{
@@ -61,53 +87,200 @@
         .DetailsSet{
             flex: 1;
             height: auto;
-            /*padding:15px 10px 20px 10px;*/
+            padding:10px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         .DetailsTitle{
-            flex: 1;
-            font-size: 15px;
-            color: #28354C;
+            width: 100%;
+            height: 25px;
             text-align: left;
-            line-height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .DetailsLimitedTime{
+            display: inline-block;
+            padding:0 3px;
+            height: 18px;
+            font-size: 10px;
+            color: #ffffff;
+            line-height: 18px;
+            text-align: center;
+            border-radius: 3px;
+            background-color: red;
+            margin-right: 5px;
+        }
+
+        .DetailsPrice{
+            font-size: 20px;
+            height: 18px;
+            color: red;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+        }
+
+        .DetailsOriginalPrice{
+            font-size: 12px;
+            color: #707C93;
+            text-align: center;
+            text-decoration:line-through;
+            display: inline-block;
+            font-weight: normal;
+            margin-left: 5px;
+        }
+
+        .DetailsDiscount{
+            height: 18px;
+            font-size: 12px;
+            color: #707C93;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        .DetailsShipping{
+            height: 18px;
+            line-height: 15px;
+            font-size: 12px;
+            color: red;
+            padding: 0 2px;
+            border-radius: 3px;
+            border: 1px solid red;
+            text-align: center;
+            display: inline-block;
         }
 
         .DetailsText{
-            font-size: 14px;
+            font-size: 15px;
+            color: #333333;
+            overflow:hidden;
+            padding: 5px 0;
+            text-overflow:ellipsis;
+            display:-webkit-box;
+            -webkit-box-orient:vertical;
+            -webkit-line-clamp:2;
+        }
+        
+        .DetailsSource{
+            width: 100%;
+            height: 25px;
+            text-align: left;
+            line-height: 25px;
             color: #707C93;
+            font-size: 13px;
+        }
+
+        .DetailsName{
+            padding: 0 3px;
+            font-size: 13px;
+            color: #4077ff;
+        }
+
+        .activity{
+            flex: 1;
+            height: auto;
+            padding:0 10px;
+            background-color: #ffffff;
+            border-top: 10px solid #f8f8f8;
+        }
+
+        .activitySet{
+            flex:1;
+            height: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .activitySet:last-child{
+            border-bottom:none;
+        }
+
+        .activityTitle{
+            flex: 1;
+            height: 40px;
+            text-align: left;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+        }
+
+        .activityTask{
+            line-height: 40px;
+            font-size: 13px;
+            color: #666666;
+        }
+
+        .activityQua{
+            height: 16px;
+            line-height: 16px;
+            padding: 0 1px;
+            border-radius: 3px;
+            font-size: 12px;
+            color: #ffffff;
+            background-color: red;
+            text-align: center;
+            margin-right: 5px;
+        }
+
+        .activityBack{
+            width: 30px;
+            height: 30px;
+            background: url("../images/chicangdan_go@2x.png") no-repeat;
+            background-position: right center;
+            background-size: 20px 20px;
         }
     </style>
 </head>
 <body>
     <div id="box">
-        <header class="header">
-            <span class="header_left"></span>
-            <p class="header_center">商品详情</p>
-            <span class="header_right"></span>
-        </header>
+        <!--<header class="header">-->
+            <!--<span class="header_left" onclick="window.history.back()"></span>-->
+            <!--<p class="header_center">商品详情</p>-->
+            <!--<span class="header_right"></span>-->
+        <!--</header>-->
 
         <div class="Details">
+            <p class="DetailsPost" onclick="window.history.back()">
+                <span class="DetailsBack"></span>
+            </p>
             <div class="DetailsBox">
                 <img class="DetailsImg" src="" alt="">
                 <div class="DetailsSet">
-                    <p class="DetailsTitle"></p>
-                    <p class="DetailsText"></p>
+                    <div class="DetailsTitle">
+                        <p class="DetailsLimitedTime">限时特价</p>
+                        <p class="DetailsPrice">¥29.9 <span class="DetailsOriginalPrice">¥299</span></p>
+                        <p class="DetailsDiscount">1折</p>
+                        <p class="DetailsShipping">包税</p>
+                    </div>
+                    <p class="DetailsText">美白紧致水嫩修护，补水美白收缩毛孔提亮肤色护肤精华液7天安瓶 10.5ML</p>
+                    <p class="DetailsSource">品牌来自瑞士 <span class="DetailsName">DEKREI</span></p>
                 </div>
+            </div>
+        </div>
+
+        <div class="activity">
+            <div class="activitySet">
+                <p class="activityTitle"><span class="activityTask">新人：</span>领取新人薯券大礼包,一单最高可立省25元</p><span class="activityBack"></span>
+            </div>
+            <div class="activitySet">
+                <p class="activityTitle"><span class="activityTask">薯券：</span><span class="activityQua">店铺券</span>满188减30 满280减60 满288减90</p><span class="activityBack"></span>
             </div>
         </div>
     </div>
 </body>
-<script src="../script/jquery-3.2.1.js"></script>
 <script src="../script/mock-min.js"></script>
-<script src="../script/Mock.js"></script>
-<script>
-    $.ajax({
-        url:'http://admin/v1/login',
-        type: 'GET',
-        dataType: "json",
-        success:function (res) {
-            console.log(res);
-        }
-    })
-</script>
+<script src="../script/jquery-3.2.1.js"></script>
+<script src="script/ProductShowcase.js"></script>
+<script src="script/data.js"></script>
+<script></script>
 </html>
