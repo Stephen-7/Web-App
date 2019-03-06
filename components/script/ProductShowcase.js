@@ -14,7 +14,6 @@ $(function () {
         dataType: "json",
         success:function (res) {
             if(res.code === 200){
-                // console.log(res.data);
                 let list = res.data;
                 for(x in list){
                     // console.log(list[x].id);

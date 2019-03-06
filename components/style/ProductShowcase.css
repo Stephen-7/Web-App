@@ -1,0 +1,526 @@
+
+#box{
+    height: auto;
+    background-color: #f8f8f8;
+}
+
+.header{
+    width: 100%;
+    height: 44px;
+    border-bottom:1px solid #E5E5E5;
+}
+
+.header_left{
+    width: 15%;
+    height: 44px;
+    display: inline-block;
+    background: url("../../images/back@2x.png") no-repeat;
+    background-size: 25px 25px;
+    background-position: center center;
+}
+
+.header_center{
+    width: 70%;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    color: #333333;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.header_right{
+    width: 15%;
+    height: 44px;
+    display: inline-block;
+}
+
+.Details{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    position: relative;
+    background-color: #ffffff;
+}
+
+.DetailsPost{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.1);
+    position: absolute;
+    top:15px;
+    left: 15px;
+}
+
+.DetailsBack{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url("../../images/back@2x.png") no-repeat center center;
+    background-size: 20px 20px;
+
+}
+
+.DetailsBox{
+    width: 100%;
+    height: auto;
+}
+
+.DetailsImg{
+    width: 100%;
+    height:250px;
+    display: block;
+    background-color: yellow;
+}
+
+.DetailsSet{
+    flex: 1;
+    height: auto;
+    padding:10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.DetailsTitle{
+    width: 100%;
+    height: 25px;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.DetailsLimitedTime{
+    display: inline-block;
+    padding:0 3px;
+    height: 18px;
+    font-size: 10px;
+    color: #ffffff;
+    line-height: 18px;
+    text-align: center;
+    border-radius: 3px;
+    background-color: red;
+    margin-right: 5px;
+}
+
+.DetailsPrice{
+    font-size: 20px;
+    height: 18px;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.DetailsOriginalPrice{
+    font-size: 12px;
+    color: #707C93;
+    text-align: center;
+    text-decoration:line-through;
+    display: inline-block;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.DetailsDiscount{
+    height: 18px;
+    font-size: 12px;
+    color: #707C93;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.DetailsShipping{
+    height: 18px;
+    line-height: 15px;
+    font-size: 12px;
+    color: red;
+    padding: 0 2px;
+    border-radius: 3px;
+    border: 1px solid red;
+    text-align: center;
+    display: inline-block;
+}
+
+.DetailsText{
+    font-size: 15px;
+    color: #333333;
+    overflow:hidden;
+    padding: 5px 0;
+    text-overflow:ellipsis;
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:2;
+}
+
+.DetailsSource{
+    width: 100%;
+    height: 25px;
+    text-align: left;
+    line-height: 25px;
+    color: #707C93;
+    font-size: 13px;
+}
+
+.DetailsSourceFor{
+    width: auto;
+    height: 100%;
+    float: left;
+}
+
+.DetailsName{
+    padding: 0 3px;
+    font-size: 13px;
+    color: #4077ff;
+}
+
+.DetailsPlace{
+    width: auto;
+    height: 100%;
+    float: right;
+    font-size: 13px;
+    color: #707C93;
+}
+
+
+.activity{
+    flex: 1;
+    height: auto;
+    padding:0 10px;
+    background-color: #ffffff;
+    margin-top: 10px;
+}
+
+.activitySet{
+    flex:1;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.activitySet:last-child{
+    border-bottom:none;
+}
+
+.activityTitle{
+    flex: 1;
+    height: 40px;
+    text-align: left;
+    color: #1B1B1A;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.activityTask{
+    line-height: 40px;
+    font-size: 13px;
+    color: #707C93;
+}
+
+.activityQua{
+    height: 16px;
+    line-height: 16px;
+    padding: 0 1px;
+    border-radius: 3px;
+    font-size: 12px;
+    color: #ffffff;
+    background-color: red;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.activityBack{
+    width: 30px;
+    height: 30px;
+    background: url("../../images/chicangdan_go@2x.png") no-repeat;
+    background-position: right center;
+    background-size: 15px 15px;
+}
+
+.Return{
+    flex: 1;
+    height: auto;
+    padding:0 10px;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.ReturnSet{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ReturnLeft{
+    width: 90%;
+    height: 50px;
+}
+
+.ReturnExpensive{
+    flex: 1;
+    height: 25px;
+    line-height: 30px;
+    text-align: left;
+    font-size: 13px;
+    color: #707C93;
+}
+
+.ReturnExpensiveIcon{
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    background-color: red;
+    margin-right: 5px;
+    background-size: 10px 10px;
+}
+
+.ReturnTitle{
+    flex: 1;
+    height: 25px;
+    line-height: 20px;
+    text-align: left;
+    font-size: 12px;
+    color: #707C93;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    white-space:nowrap;
+}
+
+.ReturnRight{
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url("../../images/chicangdan_go@2x.png") no-repeat;
+    background-position: right center;
+    background-size: 15px 15px;
+}
+
+.Store{
+    flex: 1;
+    height: auto;
+    padding:0 10px;
+    margin-top: 10px;
+    background-color: #ffffff;
+}
+
+.StoreSet{
+    width: 100%;
+    height: 60px;
+    display: flex;
+}
+
+.StoreIcon{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: #3b2667;
+    margin:10px 10px 10px 0;
+    border-radius: 50%;
+}
+
+.StoreName{
+    flex: 1;
+    height: 60px;
+}
+
+.StoreTitle{
+    flex: 1;
+    height: 30px;
+    color: #333333;
+    font-size: 12px;
+    line-height: 40px;
+    font-weight: bold;
+}
+
+.StoreNum{
+    flex: 1;
+    height: 30px;
+    color: #707C93;
+    font-size: 12px;
+    line-height: 15px;
+}
+
+.StoreGoto{
+    width: auto;
+    height: 60px;
+    font-size: 12px;
+    color: #707C93;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.StoreGotoIcon{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: url("../../images/chicangdan_go@2x.png") no-repeat;
+    background-position: right center;
+    background-size: 15px 15px;
+}
+
+.comment{
+    flex: 1;
+    height:auto;
+    padding: 0 10px;
+    margin-top: 10px;
+    background-color: white;
+}
+
+.commentSet{
+    width: 100%;
+    height: auto;
+}
+
+.commentTop{
+    width: 100%;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commentDetails{
+    width: auto;
+    height: 100%;
+    font-size: 13px;
+    color: #1B1B1A;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commentMore{
+    width: auto;
+    height: 100%;
+    font-size: 13px;
+    color: #707C93;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.commentGo{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    background: url("../../images/chicangdan_go@2x.png") no-repeat;
+    background-position: right center;
+    background-size: 15px 15px;
+}
+
+.commentText{
+    width: 100%;
+    height: auto;
+    padding:8px 0 8px 0;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.commentMe{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.commentNameIcon{
+    width: 20px;
+    height: 20px;
+    display: flex;
+    border-radius: 50%;
+    background-color: red;
+    margin-right: 5px;
+}
+
+.commentName{
+    width: auto;
+    height: 20px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.commentTitle{
+    flex: 1;
+    height: 20px;
+    text-align: left;
+    font-size: 12px;
+    color: #615B61;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.commentQuestion{
+    width: 100%;
+    height: auto;
+    padding: 5px 0 10px 0;
+}
+
+.commentNo{
+    width: 100%;
+    height: auto;
+    text-align: left;
+    padding: 5px 0 0 0;
+    line-height: 20px;
+    font-size: 12px;
+    color: #615B61;
+}
+
+.DetailsPlaceSer{
+    width: 100%;
+    height: auto;
+    padding: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.commentGood{
+    flex: 1;
+    height: auto;
+    text-align: left;
+    color: #615B61;
+}
+
+.commentReply{
+    width: auto;
+    height: 15px;
+    font-size: 12px;
+    padding: 0 3px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 12px;
+    margin-right: 5px;
+    background-color: orangered;
+
+}
+
+.commentGoReply{
+    width: auto;
+    height: auto;
+    padding: 1px 5px;
+    color: orangered;
+    font-size: 12px;
+    border-radius: 4px;
+    text-align: center;
+    border: 1px solid orangered;
+}
