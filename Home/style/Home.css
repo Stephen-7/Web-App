@@ -4,21 +4,21 @@ html {
     overflow-y: auto;
 }
 
-#box{
-    width:100%;
+#box {
+    width: 100%;
     height: auto;
     position: relative;
-    background: linear-gradient(to bottom left,#8C1BAB 0%, #623AA2 50%,#F97794 100%);
+    background: linear-gradient(to bottom left, #8C1BAB 0%, #623AA2 50%, #F97794 100%);
     margin-bottom: 40px;
     padding-bottom: 10px;
     overflow: hidden;
 }
 
-.headerTop{
+.headerTop {
     width: 100%;
     height: 44px;
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
     z-index: 999;
     /*background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);*/
@@ -26,31 +26,35 @@ html {
     justify-content: center;
     align-items: center;
 }
-.headerNav{
-    width:100%;
+
+.headerNav {
+    width: 100%;
     height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color:transparent;
+    background-color: transparent;
 }
-.icon{
-    width:11%;
-    height:45px;
+
+.icon {
+    width: 11%;
+    height: 45px;
     display: inline-block;
     background: url("../image/saoyisao.png") no-repeat;
     background-size: 50px 40px;
     background-position: center center;
 }
-.header_nav{
+
+.header_nav {
     width: 78%;
-    height:45px;
+    height: 45px;
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 }
-.headerInput{
+
+.headerInput {
     width: 100%;
     height: 30px;
     border-radius: 15px;
@@ -64,8 +68,9 @@ html {
     justify-content: center;
     align-items: center;
 }
-.header_nav_icon{
-    width:30px;
+
+.header_nav_icon {
+    width: 30px;
     height: 30px;
     display: inline-block;
     background: url("../../images/search@2x.png");
@@ -74,10 +79,11 @@ html {
     background-position: 70% center;
     position: absolute;
     top: 7px;
-    left:0;
+    left: 0;
 }
-.header_nav_camera{
-    width:40px;
+
+.header_nav_camera {
+    width: 40px;
     height: 45px;
     display: inline-block;
     background: url("../image/Camera_332px_1130661_easyicon.net.png");
@@ -88,53 +94,58 @@ html {
     top: 0;
     right: 0;
 }
-.header_right{
+
+.header_right {
     width: 11%;
-    height:44px;
+    height: 44px;
     display: inline-block;
     float: left;
     font-size: 15px;
-    color:#ffffff;
+    color: #ffffff;
     text-align: center;
     line-height: 40px;
     background: url("../image/huiyuanma.png") no-repeat;
     background-size: 35px 35px;
     background-position: center center;
 }
-.header_right_icon{
+
+.header_right_icon {
     width: 20px;
     height: 20px;
     display: inline-block;
 }
 
-
-.Carousel{
-    width:100%;
+.Carousel {
+    width: 100%;
     height: auto;
     /*margin-top: 40px;*/
     overflow: hidden;
     position: relative;
 }
-.Carousel ul{
+
+.Carousel ul {
     width: 1000%;
     list-style: none;
     overflow: hidden;
     float: left;
 }
-.Carousel ul li{
+
+.Carousel ul li {
     width: 10%;
     float: left;
 }
-.Carousel ul li a{
-    width: 100%;
-    display: block;
-}
-.Carousel ul li a img{
+
+.Carousel ul li a {
     width: 100%;
     display: block;
 }
 
-.index{
+.Carousel ul li a img {
+    width: 100%;
+    display: block;
+}
+
+.index {
     width: 23%;
     height: 7px;
     position: absolute;
@@ -142,65 +153,72 @@ html {
     left: 38.5%;
     list-style: none;
 }
-.index li{
+
+.index li {
     width: 5px;
-    height:5px;
+    height: 5px;
     border: 1px solid #ffffff;
     border-radius: 50%;
     float: left;
     margin-left: 5.5%;
 }
-.current{
+
+.current {
     background-color: yellow;
 }
 
-
-.Supermarket{
+.Supermarket {
     width: 100%;
     margin-top: 5px;
 }
-.Supermarket ul{
+
+.Supermarket ul {
     width: 100%;
     list-style: none;
     overflow: hidden;
     padding-top: 10px;
 }
-.Supermarket ul li{
+
+.Supermarket ul li {
     width: 20%;
     float: left;
     text-align: center;
     margin-bottom: 15px;
 }
-.Supermarket ul li a{
+
+.Supermarket ul li a {
     width: 100%;
     display: block;
     text-decoration: none;
 }
-.Supermarket ul li a p{
+
+.Supermarket ul li a p {
     font-family: "sans-serif";
     font-size: 12px;
     color: #ffffff;
 }
-.Supermarket ul li a img{
+
+.Supermarket ul li a img {
     width: 30px;
-    height:30px;
+    height: 30px;
 }
 
-
-.body{
+.body {
     width: 95%;
     height: auto;
     margin: 5px 2.5% 12px 2.5%;
     background-color: #ffffff;
     border-radius: 5px;
 }
-.body_header{
+
+.body_header {
     width: 100%;
     height: 35px;
     display: flex;
     align-items: center;
 }
-.body_title{
+
+.body_title {
     width: auto;
     height: 20px;
     float: left;
@@ -211,7 +229,8 @@ html {
     font-weight: bold;
     padding-left: 10px;
 }
-.body_time{
+
+.body_time {
     flex: 1;
     height: 20px;
     line-height: 20px;
@@ -220,7 +239,8 @@ html {
     align-content: center;
     align-items: center;
 }
-.body_time_title{
+
+.body_time_title {
     width: auto;
     height: 20px;
     text-align: left;
@@ -232,7 +252,8 @@ html {
     align-items: center;
     /*align-content: center;*/
 }
-.body_time_box{
+
+.body_time_box {
     width: auto;
     height: auto;
     margin-left: 5px;
@@ -241,16 +262,18 @@ html {
     align-items: center;
     /*align-content: center;*/
 }
-.body_time_box span{
+
+.body_time_box span {
     width: auto;
     height: 20px;
     display: inline-block;
     font-size: 14px;
-    color:  #333333;
+    color: #333333;
     line-height: 20px;
     text-align: center;
 }
-.body_time_span_dian{
+
+.body_time_span_dian {
     width: 10px;
     height: 20px;
     text-align: center;
@@ -260,7 +283,8 @@ html {
     align-items: center;
     align-content: center;
 }
-.genDuo{
+
+.genDuo {
     width: auto;
     height: 20px;
     float: right;
@@ -272,7 +296,8 @@ html {
     display: flex;
     padding-left: 5px;
 }
-.genDuo_icon{
+
+.genDuo_icon {
     width: 17px;
     height: 20px;
     display: inline-block;
@@ -281,51 +306,59 @@ html {
     background-position: center center;
 }
 
-.body_img{
+.body_img {
     width: 100%;
     height: auto;
     overflow: hidden;
 }
-.body_img_left,.body_img_content,.body_img_right{
+
+.body_img_left, .body_img_content, .body_img_right {
     width: 33.33%;
     height: 140px;
     display: flex;
     flex-wrap: wrap;
 }
-.body_img_left{
+
+.body_img_left {
     float: left;
 }
-.body_img_content{
+
+.body_img_content {
     float: left;
 }
-.body_img_right{
+
+.body_img_right {
     float: right;
 }
 
-.body_img_left_bg,.body_img_content_bg,.body_img_right_bg{
+.body_img_left_bg, .body_img_content_bg, .body_img_right_bg {
     width: 100%;
     height: 90px;
     display: inline-block;
     padding: 10%;
     border-left: 1px solid #e5e5e5;
 }
-.body_img_left_bg{
+
+.body_img_left_bg {
     background: url("../image/detail01.jpg") no-repeat;
     background-size: 80% 80%;
     background-position: center center;
-    border-left:none;
+    border-left: none;
 }
-.body_img_content_bg{
+
+.body_img_content_bg {
     background: url("../image/detail02.jpg") no-repeat;
     background-size: 80% 80%;
     background-position: center center;
 }
-.body_img_right_bg{
+
+.body_img_right_bg {
     background: url("../image/detail03.jpg") no-repeat;
     background-size: 80% 80%;
     background-position: center center;
 }
-.body_img_left_true,.body_img_content_true,.body_img_right_true{
+
+.body_img_left_true, .body_img_content_true, .body_img_right_true {
     width: 100%;
     height: 25px;
     display: inline-block;
@@ -334,7 +367,8 @@ html {
     text-align: center;
     font-size: 13px;
 }
-.body_img_left_false,.body_img_content_false,.body_img_right_false{
+
+.body_img_left_false, .body_img_content_false, .body_img_right_false {
     width: 100%;
     height: 25px;
     display: inline-block;
@@ -342,20 +376,20 @@ html {
     color: #999999;
     text-align: center;
     font-size: 13px;
-    text-decoration:line-through;
+    text-decoration: line-through;
 }
 
-.Digital{
+.Digital {
     width: 95%;
     height: auto;
     overflow: hidden;
-    margin: 15px 2.5% 12px 2.5%;
-    background-color: #ffffff;
-    /*border: 1px solid #e5e5e5;*/
     border-radius: 5px;
+    background-color: #ffffff;
+    margin: 15px 2.5% 12px 2.5%;
 }
-.Digital_header{
-    flex: 1;
+
+.Digital_header {
+    width: 100%;
     height: 34px;
     line-height: 34px;
     border-bottom: 1px solid #e5e5e5;
@@ -363,7 +397,8 @@ html {
     align-items: center;
     justify-content: center;
 }
-.Digital_header_left{
+
+.Digital_header_left {
     width: auto;
     height: 34px;
     line-height: 34px;
@@ -372,31 +407,33 @@ html {
     color: #333333;
     font-size: 13px;
     font-weight: bold;
-    padding:0 10px 0 10px;
+    padding: 0 10px 0 10px;
 }
-.Digital_header_right{
+
+.Digital_header_right {
     flex: 1;
     height: 20px;
     overflow: hidden;
     display: flex;
-    z-index:1;
 }
-.Digital_header_right_text1{
+
+.Digital_header_right_text1 {
     line-height: 17px;
     text-align: center;
     padding: 0 3px;
     font-size: 10px;
     color: #f10215;
-    background-color: rgba(255,165,167,0.8);
+    background-color: rgba(255, 165, 167, 0.8);
     border-radius: 5px;
     margin: 0 5px 0 0;
 }
 
-.Digital_header_right_ul{
+.Digital_header_right_ul {
+    width: 100%;
     height: auto;
     position: relative;
-    animation: moveUp 9s 0.9s infinite;
-    -webkit-animation: moveUp 9s 0.9s infinite;
+    animation: moveUp 10s 0.9s infinite;
+    -webkit-animation: moveUp 10s 0.9s infinite;
 }
 
 @keyframes moveUp {
@@ -432,7 +469,7 @@ html {
     }
 }
 
-@-webkit-keyframes moveUp{
+@-webkit-keyframes moveUp {
     0% {
         top: 0;
     }
@@ -465,52 +502,59 @@ html {
     }
 }
 
-.Digital_header_right_li{
-    width: 100%;
+.Digital_header_right_li {
+    width: 98%;
     height: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: #666;
     line-height: 20px;
+    margin-right: 2%;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
 
-.Digital_header_right_title1{
+.Digital_header_right_title1 {
     flex: 1;
     height: 20px;
     font-size: 12px;
     color: #333333;;
     text-align: left;
     overflow: hidden;
-    text-overflow:ellipsis;
+    text-overflow: ellipsis;
     white-space: nowrap;
 }
-.Digital_nav{
+
+.Digital_nav {
     width: 100%;
     height: auto;
 }
-.Digital_nav_ul{
+
+.Digital_nav_ul {
     width: 100%;
     height: auto;
     display: flex;
     flex-wrap: wrap;
 }
-.Digital_nav_ul li{
+
+.Digital_nav_ul li {
     width: 50%;
     height: 130px;
-    border-right: 1px solid #e5e5e5 ;
-    border-bottom: 1px solid #e5e5e5 ;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
-.Digital_nav_ul li:nth-child(2){
-    border-right: none ;
+
+.Digital_nav_ul li:nth-child(2) {
+    border-right: none;
 }
-.Digital_nav_ul li:nth-child(4){
-    border-right: none ;
+
+.Digital_nav_ul li:nth-child(4) {
+    border-right: none;
 }
-.Digital_nav_li_header{
+
+.Digital_nav_li_header {
     width: 100%;
     height: 20px;
     line-height: 20px;
@@ -520,7 +564,8 @@ html {
     text-align: left;
     display: flex;
 }
-.Digital_nav_li_icon{
+
+.Digital_nav_li_icon {
     width: 20px;
     height: 20px;
     display: inline-block;
@@ -528,14 +573,16 @@ html {
     background-repeat: no-repeat;
     background-size: 15px 15px;
     background-position: center center;
-    margin:0 1px 0 10px;
+    margin: 0 1px 0 10px;
 }
-.Digital_nav_li_left{
+
+.Digital_nav_li_left {
     width: 55%;
     height: 100px;
     float: left;
 }
-.Digital_nav_li_left_title{
+
+.Digital_nav_li_left_title {
     width: 100%;
     height: 25px;
     display: inline-block;
@@ -546,12 +593,14 @@ html {
     color: #333333;
     overflow: hidden;
 }
-.Digital_nav_li_left img{
+
+.Digital_nav_li_left img {
     width: 100%;
     height: 71px;
     padding: 0 7px 7px 7px;
 }
-.Digital_nav_li_right{
+
+.Digital_nav_li_right {
     width: 45%;
     height: 99px;
     float: right;
@@ -560,62 +609,67 @@ html {
     justify-content: center;
     align-items: center;
 }
-.Digital_nav_li_right img{
+
+.Digital_nav_li_right img {
     width: 100%;
     padding: 4% 2% 4% 2%;
 }
 
-
-.MallVideo{
+.MallVideo {
     width: 95%;
     height: 200px;
     margin: 15px 2.5% 12px 2.5%;
     border-radius: 5px;
-    background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);
+    background: linear-gradient(to top right, #3b2667 0%, #bc78ec 100%);
 }
-.MallVideoTop{
+
+.MallVideoTop {
     width: 100%;
     height: auto;
     background-color: #623AA2;
 }
-.MallVideoMp{
+
+.MallVideoMp {
     width: 70%;
     height: 100px;
 }
 
-.EatDrinkHaveFun{
+.EatDrinkHaveFun {
     width: 95%;
     height: auto;
     margin: 0 2.5% 15px 2.5%;
     border-radius: 5px;
-    background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);
+    background: linear-gradient(to top right, #3b2667 0%, #bc78ec 100%);
 }
 
-.EatDrinkHaveFunSet{
+.EatDrinkHaveFunSet {
     width: 100%;
     height: 100px;
     position: relative;
     border-radius: 5px;
-    background-color: white;
+    background:url("../image/381.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
-.EatDrinkHaveFunErr{
+.EatDrinkHaveFunErr {
     width: 65px;
     height: 65px;
     border-radius: 5px;
     display: inline-block;
-    background-color: #623AA2;
-    border: 5px solid #3b2667;
+    background-color: white;
+    border: 5px solid yellow;
     position: absolute;
-    top:17.5px;
+    top: 17.5px;
     left: 20px;
 }
 
-.EatDrinkHaveFunGo{
+.EatDrinkHaveFunGo {
     width: 40px;
     height: 40px;
     display: inline-block;
-    background-color: #623AA2;
+    background-color: #F97794;
     position: absolute;
     top: 35px;
     right: 10px;
@@ -625,45 +679,45 @@ html {
     text-align: center;
     -webkit-animation-name: scaleDraw; /*关键帧名称*/
     -webkit-animation-timing-function: ease-in-out; /*动画的速度曲线*/
-    -webkit-animation-iteration-count: infinite;  /*动画播放的次数*/
+    -webkit-animation-iteration-count: infinite; /*动画播放的次数*/
     -webkit-animation-duration: 4s; /*动画所花费的时间*/
 }
 
-@keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
-    0%{
-        transform: scale(1);  /*开始为原始大小*/
+@keyframes scaleDraw { /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+    0% {
+        transform: scale(1); /*开始为原始大小*/
     }
-    25%{
+    25% {
         transform: scale(1.1); /*放大1.1倍*/
     }
-    50%{
+    50% {
         transform: scale(1);
     }
-    75%{
+    75% {
         transform: scale(1.1);
     }
-    100%{
+    100% {
         transform: scale(1);
     }
 }
 
-.Slider{
+.Slider {
     width: 95%;
     height: auto;
     margin: 15px 2.5% 12px 2.5%;
     border-radius: 5px;
-    background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);
+    background: linear-gradient(to top right, #3b2667 0%, #bc78ec 100%);
     overflow: scroll;
 }
 
-.SliderTopTitle{
+.SliderTopTitle {
     width: 100%;
     height: 35px;
     background: #ffffff;
     border-bottom: 1px solid #e5e5e5;
 }
 
-.SliderName{
+.SliderName {
     flex: 1;
     height: 35px;
     text-align: left;
@@ -675,16 +729,16 @@ html {
     padding: 0 10px;
 }
 
-.SliderChildren{
+.SliderChildren {
     width: auto;
     height: auto;
-    overflow-x:auto;
+    overflow-x: auto;
     display: flex;
 }
 
 .SliderChildren::-webkit-scrollbar {
-    width:0;
-    height:0;
+    width: 0;
+    height: 0;
     display: none;
 }
 
@@ -696,22 +750,22 @@ html {
     display: flex;
 }
 
-.SliderChildrenBox:first-child{
-    margin-left:0;
+.SliderChildrenBox:first-child {
+    margin-left: 0;
 }
 
 .SliderChildrenBox:last-child {
-    margin-right:0;
+    margin-right: 0;
 }
 
-.SliderLi{
+.SliderLi {
     width: 260px;
     height: 100px;
     position: relative;
     display: flex;
 }
 
-.SliderShop{
+.SliderShop {
     font-size: 12px;
     color: #f10215;
     border-radius: 10px;
@@ -722,13 +776,13 @@ html {
     right: 10px;
 }
 
-.SliderImg{
+.SliderImg {
     width: 80px;
     height: 80px;
     margin: 10px;
 }
 
-.SliderRightBox{
+.SliderRightBox {
     flex: 1;
     height: 100px;
     display: flex;
@@ -737,17 +791,17 @@ html {
     justify-content: center;
 }
 
-.SliderMi{
-    padding:0 4px;
+.SliderMi {
+    padding: 0 4px;
     background-color: #f10215;
-    color:#ffffff;
+    color: #ffffff;
     font-size: 10px;
     text-align: center;
     border-radius: 7px;
     margin-right: 5px;
 }
 
-.SliderTitle{
+.SliderTitle {
     width: 100%;
     height: auto;
     text-align: left;
@@ -755,56 +809,56 @@ html {
     font-size: 12px;
     margin-top: 10px;
     padding-right: 10px;
-    overflow:hidden;
-    text-overflow:ellipsis;
-    display:-webkit-box;
-    -webkit-box-orient:vertical;
-    -webkit-line-clamp:2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
 }
 
-.SliderTotal{
+.SliderTotal {
     width: 100%;
     font-size: 12px;
     text-align: left;
     color: #999999;
 }
 
-.SliderGrand{
+.SliderGrand {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
     display: flex;
-    align-self:flex-end;
+    align-self: flex-end;
 }
 
-.money,.RenMoney{
+.money, .RenMoney {
     width: auto;
     font-size: 14px;
     color: #333333;
     text-align: center;
 }
 
-.symbol{
+.symbol {
     font-size: 14px;
     color: red;
 }
 
-.SliderRen{
+.SliderRen {
     width: 14px;
     font-size: 12px;
     color: white;
     display: inline-block;
-    margin:0 4px 0 7px;
+    margin: 0 4px 0 7px;
     background-color: red;
     text-align: center;
 }
 
-.RenSymbol{
+.RenSymbol {
     font-size: 14px;
     color: #000000;
 }
 
-.life{
+.life {
     width: 95%;
     height: auto;
     margin: 15px 2.5% 12px 2.5%;
@@ -813,7 +867,8 @@ html {
     border-radius: 5px;
     overflow: hidden;
 }
-.life_header{
+
+.life_header {
     flex: 1;
     height: 35px;
     text-align: left;
@@ -824,51 +879,57 @@ html {
     display: flex;
     padding: 0 10px;
 }
-.life_left{
+
+.life_left {
     width: 55%;
     height: auto;
     float: left;
     border-right: 1px solid #e5e5e5;
 }
-.life_left_top{
+
+.life_left_top {
     width: 100%;
     height: 90px;
     background-color: skyblue;
 }
-.life_left_top img{
+
+.life_left_top img {
     width: 100%;
     height: 90px;
 }
-.life_left_bottom{
+
+.life_left_bottom {
     width: 100%;
     height: 90px;
     background-color: skyblue;
     border-top: 1px solid #e5e5e5;
 }
-.life_left_bottom img{
+
+.life_left_bottom img {
     width: 100%;
     height: 90px;
 }
-.life_right{
+
+.life_right {
     width: 45%;
     height: 180px;
     background-color: yellow;
     float: right;
 }
-.life_right img{
+
+.life_right img {
     width: 100%;
     height: 180px;
 }
 
-
-
-.list{
+.list {
     width: 100%;
     height: auto;
     margin: 15px 0 12px 0;
     overflow: hidden;
 }
-.list_header{
+
+.list_header {
     width: 100%;
     height: 25px;
     line-height: 25px;
@@ -878,12 +939,12 @@ html {
     position: relative;
 }
 
-.list_header span{
+.list_header span {
     font-size: 17px;
     color: #fff;
 }
 
-.add_list{
+.add_list {
     width: 100%;
     height: auto;
     overflow: hidden;
@@ -893,19 +954,21 @@ html {
     flex-wrap: wrap;
 }
 
-.add_list_index{
+.add_list_index {
     width: 46%;
     height: auto;
     border-radius: 5px;
     margin: 1.4%;
     background-color: #ffffff;
 }
-.add_list_index_img{
+
+.add_list_index_img {
     width: 100%;
     height: 150px;
     padding: 8px 10px 0 10px;
 }
-.add_list_index_title{
+
+.add_list_index_title {
     flex: 1;
     height: 25px;
     line-height: 28px;
@@ -915,11 +978,13 @@ html {
     padding-left: 7%;
     overflow: hidden;
 }
-.add_list_index_zhan{
+
+.add_list_index_zhan {
     flex: 1;
     height: 30px;
 }
-.add_list_index_zhan_left{
+
+.add_list_index_zhan_left {
     width: auto;
     height: 25px;
     line-height: 25px;
@@ -929,7 +994,8 @@ html {
     font-size: 12px;
     color: #f10215;
 }
-.add_list_index_zhan_right{
+
+.add_list_index_zhan_right {
     width: auto;
     height: 22px;
     display: inline-block;
@@ -945,7 +1011,8 @@ html {
     margin-right: 7%;
     margin-top: 2px;
 }
-.list_btn{
+
+.list_btn {
     width: 100%;
     height: 40px;
     line-height: 50px;
@@ -955,8 +1022,7 @@ html {
 
 }
 
-
-#topIcon{
+#topIcon {
     width: 35px;
     height: 35px;
     background: url("../../images/scroll-to-top-icon.png");
@@ -968,11 +1034,9 @@ html {
     bottom: 15%;
 }
 
-
-
 /*[class^="icon_"]{*/
-    /*background: url("../../images/sprites.png") no-repeat;*/
-    /*-webkit-background-size:200px 200px;*/
-    /*background-size:230px 230px;*/
-    /*background-position: -93px 2px;*/
+/*background: url("../../images/sprites.png") no-repeat;*/
+/*-webkit-background-size:200px 200px;*/
+/*background-size:230px 230px;*/
+/*background-position: -93px 2px;*/
 /*}*/

@@ -1,12 +1,21 @@
 window.onload = function () {
     backTop();
     banner();
-    changeNavColor();
 };
 
 function backTop() {
-    var topBegin = 0,topEend = 0,topTime = null,topIcon = document.getElementById('topIcon');
+    var topIcon = document.getElementById('topIcon'),topBegin = 0,topEend = 0,topTime = null;
+    var Carousel = document.getElementsByClassName('Carousel')[0],headerTop = document.getElementsByClassName('headerTop')[0],CarouselH = Carousel.offsetHeight,scrollTopH = 0;
+
     window.onscroll = function () {
+        scrollTopH = scroll().top;
+        if (scrollTopH < CarouselH) {
+            var opt = scrollTopH / CarouselH * 1.3;
+        } else {
+            opt = 1.3;
+        }
+        headerTop.style.background = 'linear-gradient(to top right,rgba(59, 38, 103, '+ opt +') 0%, rgba(188, 120, 236, '+ opt +') 100%)';
+
         var scrollTop = scroll().top;
         scrollTop > 500 ? topIcon.style.display = 'block' : topIcon.style.display = 'none';
         topBegin = scrollTop;
@@ -23,21 +32,6 @@ function backTop() {
         }, 10);
     };
 }
-
-function changeNavColor() {
-    var Carousel = document.getElementsByClassName('Carousel')[0],headerTop = document.getElementsByClassName('headerTop')[0],CarouselH = Carousel.offsetHeight,scrollTopH = 0;
-    window.onscroll = function(){
-        scrollTopH = document.documentElement.scrollTop;
-
-        if (scrollTopH < CarouselH) {
-            var opt = scrollTopH / CarouselH * 1.3;
-        } else {
-            opt = 1.3;
-        }
-        headerTop.style.background = 'linear-gradient(to top right,rgba(59, 38, 103, '+ opt +') 0%, rgba(188, 120, 236, '+ opt +') 100%)';
-    }
-}
-
 
 
 function banner() {
