@@ -360,6 +360,8 @@ html {
     line-height: 34px;
     border-bottom: 1px solid #e5e5e5;
     display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .Digital_header_left{
     width: auto;
@@ -374,7 +376,7 @@ html {
 }
 .Digital_header_right{
     flex: 1;
-    height: auto;
+    height: 20px;
     overflow: hidden;
     display: flex;
     z-index:1;
@@ -387,24 +389,98 @@ html {
     color: #f10215;
     background-color: rgba(255,165,167,0.8);
     border-radius: 5px;
-    margin: 8px 5px 0 0;
+    margin: 0 5px 0 0;
 }
+
 .Digital_header_right_ul{
-    flex: 1;
-    height: 220px;
-    overflow: hidden;
-    padding-right: 10px;
+    height: auto;
+    position: relative;
+    animation: moveUp 9s 0.9s infinite;
+    -webkit-animation: moveUp 9s 0.9s infinite;
 }
+
+@keyframes moveUp {
+    0% {
+        top: 0;
+    }
+    18% {
+        top: 0;
+    }
+    20% {
+        top: -20px;
+    }
+    38% {
+        top: -20px;
+    }
+    40% {
+        top: -40px;
+    }
+    58% {
+        top: -40px;
+    }
+    60% {
+        top: -60px;
+    }
+    78% {
+        top: -60px;
+    }
+    80% {
+        top: -80px;
+    }
+    98% {
+        top: -80px;
+    }
+}
+
+@-webkit-keyframes moveUp{
+    0% {
+        top: 0;
+    }
+    18% {
+        top: 0;
+    }
+    20% {
+        top: -20px;
+    }
+    38% {
+        top: -20px;
+    }
+    40% {
+        top: -40px;
+    }
+    58% {
+        top: -40px;
+    }
+    60% {
+        top: -60px;
+    }
+    78% {
+        top: -60px;
+    }
+    80% {
+        top: -80px;
+    }
+    98% {
+        top: -80px;
+    }
+}
+
 .Digital_header_right_li{
     width: 100%;
-    height: 34px;
+    height: 20px;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    line-height: 20px;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    white-space: nowrap;
 }
+
 .Digital_header_right_title1{
     flex: 1;
-    height: 34px;
+    height: 20px;
     font-size: 12px;
     color: #333333;;
     text-align: left;
@@ -509,10 +585,66 @@ html {
 
 .EatDrinkHaveFun{
     width: 95%;
-    height: 200px;
-    margin: 15px 2.5% 12px 2.5%;
+    height: auto;
+    margin: 0 2.5% 15px 2.5%;
     border-radius: 5px;
     background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);
+}
+
+.EatDrinkHaveFunSet{
+    width: 100%;
+    height: 100px;
+    position: relative;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.EatDrinkHaveFunErr{
+    width: 65px;
+    height: 65px;
+    border-radius: 5px;
+    display: inline-block;
+    background-color: #623AA2;
+    border: 5px solid #3b2667;
+    position: absolute;
+    top:17.5px;
+    left: 20px;
+}
+
+.EatDrinkHaveFunGo{
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-color: #623AA2;
+    position: absolute;
+    top: 35px;
+    right: 10px;
+    font-size: 13px;
+    color: white;
+    border-radius: 50%;
+    text-align: center;
+    -webkit-animation-name: scaleDraw; /*关键帧名称*/
+    -webkit-animation-timing-function: ease-in-out; /*动画的速度曲线*/
+    -webkit-animation-iteration-count: infinite;  /*动画播放的次数*/
+    -webkit-animation-duration: 4s; /*动画所花费的时间*/
+}
+
+@keyframes scaleDraw {  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+    0%{
+        transform: scale(1);  /*开始为原始大小*/
+    }
+    25%{
+        transform: scale(1.1); /*放大1.1倍*/
+    }
+    50%{
+        transform: scale(1);
+    }
+    75%{
+        transform: scale(1.1);
+    }
+    100%{
+        transform: scale(1);
+    }
 }
 
 .Slider{

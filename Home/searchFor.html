@@ -3,10 +3,113 @@
 <head>
     <meta charset="UTF-8">
     <title>搜索</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
     <link rel="stylesheet" href="../style/base.css">
     <link rel="stylesheet" href="../style/shared.css">
-    <link rel="stylesheet" href="./css/searchFor.css">
+    <link rel="stylesheet" href="./style/searchFor.css">
+    <style>
+        /*ul, li {*/
+            /*margin: 0;*/
+            /*padding: 0;*/
+            /*list-style: none;*/
+        /*}*/
+
+        .container {
+            width: 100%;
+            display: inline-block;
+            background: #efefef;
+            padding:10px 0;
+        }
+
+        .li-box {
+            height: 20px;
+            overflow: hidden;
+        }
+
+        .container ul {
+            height: auto;
+            position: relative;
+            animation: moveUp 9s 0.9s infinite;
+            -webkit-animation: moveUp 9s 0.9s infinite;
+        }
+
+        .container li {
+            color: #666;
+            height: 20px;
+            line-height: 20px;
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+        }
+
+
+        @keyframes moveUp {
+            0% {
+                top: 0;
+            }
+            18% {
+                top: 0;
+            }
+            20% {
+                top: -20px;
+            }
+            38% {
+                top: -20px;
+            }
+            40% {
+                top: -40px;
+            }
+            58% {
+                top: -40px;
+            }
+            60% {
+                top: -60px;
+            }
+            78% {
+                top: -60px;
+            }
+            80% {
+                top: -80px;
+            }
+            98% {
+                top: -80px;
+            }
+        }
+
+        @-webkit-keyframes moveUp{
+            0% {
+                top: 0;
+            }
+            18% {
+                top: 0;
+            }
+            20% {
+                top: -20px;
+            }
+            38% {
+                top: -20px;
+            }
+            40% {
+                top: -40px;
+            }
+            58% {
+                top: -40px;
+            }
+            60% {
+                top: -60px;
+            }
+            78% {
+                top: -60px;
+            }
+            80% {
+                top: -80px;
+            }
+            98% {
+                top: -80px;
+            }
+        }
+
+    </style>
 </head>
 <body>
 
@@ -23,6 +126,20 @@
     </div>
 
 
+    <div class="container">
+        <div class="li-box">
+            <ul>
+                <li>飞鲨勇士张超：曾驾歼-8战机逼退外军侦察机</li>
+                <li>台媒炒作大陆军机飞临台海 台军方：全程监控</li>
+                <li>菲总统对华为何晴转阴：先期待“访华”后欲“清算中国”</li>
+                <li>外媒称韩国醉心中等强国地位 屡次在关涉中国时遇挫</li>
+                <li>伊朗官方回应日本驻伊大使被扣押：没有的事儿</li>
+                <li>菲总统对华为何晴转阴：先期待“访华”后欲“清算中国”</li>
+            </ul>
+        </div>
+    </div>
+
+
 </div>
 
 </body>
@@ -31,19 +148,18 @@
     var params = window.location.href.split('?')[1];
     var arr = params.split("&");
     var token = {};
-    for(var i=0; i<arr.length; i++){
+    for (var i = 0; i < arr.length; i++) {
         var key = arr[i].split("=")[0];
         token[key] = arr[i].split("=")[1];
     }
 
 
-
     $(function () {
-        $('.header_nav_icon')[0].addEventListener('click',function () {
+        $('.header_nav_icon')[0].addEventListener('click', function () {
             alert('放大镜');
         });
 
-        $('.header_right_searchFor')[0].addEventListener('click',function () {
+        $('.header_right_searchFor')[0].addEventListener('click', function () {
             alert('搜索');
         });
     })
