@@ -615,24 +615,98 @@ html {
     padding: 4% 2% 4% 2%;
 }
 
-.MallVideo {
+.MallData {
     width: 95%;
-    height: 200px;
+    height: auto;
     margin: 15px 2.5% 12px 2.5%;
     border-radius: 5px;
-    background: linear-gradient(to top right, #3b2667 0%, #bc78ec 100%);
+    /*background: linear-gradient(to top right, #3b2667 0%, #bc78ec 100%);*/
 }
 
-.MallVideoTop {
+.MallDataSet {
     width: 100%;
     height: auto;
-    background-color: #623AA2;
+    border-radius: 5px;
+    /*background-color: #623AA2;*/
 }
 
-.MallVideoMp {
-    width: 70%;
-    height: 100px;
+.MallDataSetUl{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
 }
+
+.MallDataSetLi{
+    width: 23%;
+    height: auto;
+    margin: 1% 1.3%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: royalblue;
+}
+
+.MallDataSetLi:nth-child(4){
+    margin-right: 0;
+}
+
+.MallDataSetLi:nth-child(5){
+    margin-left: 0;
+}
+
+.MallDataSetLi:first-child{
+    margin-left: 0;
+}
+
+.MallDataSetLi:last-child{
+    margin-right: 0;
+}
+
+.MallDataSetImg{
+    width: 100%;
+    display: inline-block;
+    background-color: yellow;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.MallDataSetText{
+    width: 100%;
+    height: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(188, 120, 236,0.4);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.MallDataSetTitle{
+    width: 100%;
+    height: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: white;
+    line-height: 15px;
+}
+
+.MallDataSetNum{
+    width: 100%;
+    height: 15px;
+    text-align: center;
+    font-size: 10px;;
+    color: white;
+    line-height: 15px;
+}
+
 
 .EatDrinkHaveFun {
     width: 95%;
@@ -657,12 +731,77 @@ html {
     width: 65px;
     height: 65px;
     border-radius: 5px;
-    display: inline-block;
     background-color: white;
-    border: 5px solid yellow;
+    border: 3.5px solid yellow;
     position: absolute;
     top: 17.5px;
     left: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    overflow: hidden;
+}
+
+
+.EatDrinkHaveFunUl {
+    width: 325px;
+    height: 57.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: myani 10s 0s infinite;
+    -webkit-animation: myani 10s 0s infinite;
+
+}
+
+.EatDrinkHaveFunUl li {
+    width: 50px;
+    height: 45px;
+    margin-left: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.EatDrinkHaveFunErrImage{
+    width: 50px;
+    height: 45px;
+}
+
+@keyframes myani {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: -55px;
+    }
+    40% {
+        margin-left: -110px;
+    }
+    60% {
+        margin-left: -170px;
+    }
+    80% {
+        margin-left: -225px;
+    }
+}
+
+@-webkit-keyframes myani {
+    0% {
+        margin-left: 0;
+    }
+    20% {
+        margin-left: -55px;
+    }
+    40% {
+        margin-left: -110px;
+    }
+    60% {
+        margin-left: -170px;
+    }
+    80% {
+        margin-left: -225px;
+    }
 }
 
 .EatDrinkHaveFunGo {

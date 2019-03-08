@@ -22,7 +22,7 @@
 }
 .header_nav{
     width: 70%;
-    height:45px;
+    height:44px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -56,7 +56,7 @@
 }
 .header_nav_camera{
     width:40px;
-    height: 45px;
+    height: 44px;
     display: inline-block;
     background: url("../image/Camera_332px_1130661_easyicon.net.png");
     background-repeat: no-repeat;
@@ -75,13 +75,13 @@
     align-items: center;
 }
 .header_right_searchFor{
-    width: 45px;
+    padding: 0 5px;
     height: 27px;
     background-image: linear-gradient(to right, rgb(198, 115, 255), rgb(147, 59, 255));
     font-size: 13px;
     color: #FFFFFF;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
