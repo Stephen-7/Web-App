@@ -7,8 +7,42 @@
     <link rel="stylesheet" href="../style/base.css">
     <link rel="stylesheet" href="../style/shared.css">
     <link rel="stylesheet" href="./style/searchFor.css">
+    <link rel="stylesheet" href="../style/swiper.min.css">
     <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
 
+        .swiper-container {
+            width: 100%;
+            height: 180px;
+            border-bottom: 1px solid #e5e5e5;
+        }
+
+        .swiper-slide {
+            text-align: center;
+            font-size: 18px;
+            background: #fff;
+
+            /* Center slide text vertically */
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            -webkit-justify-content: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            -webkit-align-items: center;
+            align-items: center;
+        }
+
+        .swiper-slide img{
+            width: 100%;
+        }
     </style>
 </head>
 <body>
@@ -26,11 +60,30 @@
     </div>
 
 
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">1</div>
+            <div class="swiper-slide">2</div>
+            <div class="swiper-slide">3</div>
+            <div class="swiper-slide">4</div>
+            <div class="swiper-slide">5</div>
+            <div class="swiper-slide">6</div>
+        </div>
+
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- Add Arrows -->
+        <!--<div class="swiper-button-next"></div>-->
+        <!--<div class="swiper-button-prev"></div>-->
+    </div>
+
 
 </div>
 
 </body>
 <script src="../script/jquery-3.2.1.js"></script>
+<script src="../script/swiper.min.js"></script>
 <script>
     var params = window.location.href.split('?')[1];
     var arr = params.split("&");
@@ -49,7 +102,28 @@
         $('.header_right_searchFor')[0].addEventListener('click', function () {
             alert('搜索');
         });
-    })
+
+
+
+    });
+
+
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 10,
+        centeredSlides: true,
+        autoplay: {
+            delay: 1000,
+            disableOnInteraction: true,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
 
 </script>
 </html>
