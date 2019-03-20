@@ -12,91 +12,40 @@
     <link rel="stylesheet" href="style/Mine.css">
 </head>
 <body>
+
 <div id="box">
-    <div class="Mine_header">
-        <div class="Mine_header_left">
-            <span class="Mine_header_icon"></span>
-        </div>
-        <div class="Mine_header_center">
-            <p class="Mine_header_text0">好名字可以让你朋友更容易记住你</p>
-            <p class="Mine_header_text1"><span class="Mine_registered">注册/登录</span><span class="Mine_header_go"></span></p>
-            <p class="Mine_header_text2">这个人很懒，什么都没有留下。</p>
-        </div>
-        <div class="Mine_header_right">
-            <span class="Mine_header_Setting"></span>
-        </div>
-    </div>
-
-    <div class="Mine_money">
-        <p class="Mine_money_index1">当前余额</p>
-        <p class="Mine_money_index2">长期持有，盈利无上限</p>
-        <p class="Mine_money_index3">666.00</p>
-        <p class="Mine_money_index4">
-            <span class="Mine_money_TX indexOut">充值</span>
-            <span class="Mine_money_CZ">提现</span>
+    <header class="Header">
+        <p class="headerSaoYs">1</p>
+        <p class="headerEnt">2</p>
+    </header>
+    <div class="personal">
+        <p class="personalIcon">
+            <span  class="personalImage"></span>
+            <span  class="personalSex"></span>
         </p>
-    </div>
-
-        <div class="Mine_nav">
-            <div class="Mine_nav_add"><p class="Mine_nav_add_left">我的订单</p><p class="Mine_nav_add_right">查看更多订单<span class="Mine_nav_add_go"></span></p></div>
-            <ul class="Mine_nav_ul">
-                <li onclick="window.location.href=''"><span class="numIcon">1</span><span class="Mine_nav_dfk"></span><p class="Mine_nav_text">待付款</p></li>
-                <li onclick="window.location.href=''"><span class="numIcon">2</span><span class="Mine_nav_dfh"></span><p class="Mine_nav_text">待发货</p></li>
-                <li onclick="window.location.href=''"><span class="numIcon">3</span><span class="Mine_nav_dsh"></span><p class="Mine_nav_text">代收货</p></li>
-                <li onclick="window.location.href=''"><span class="numIcon">4</span><span class="Mine_nav_dpl"></span><p class="Mine_nav_text">待评论</p></li>
-                <li onclick="window.location.href=''"><span class="numIcon">5</span><span class="Mine_nav_tk"></span><p class="Mine_nav_text">退款</p></li>
-            </ul>
+        <div class="personalMi">
+            <p class="personalName">stephen</p>
+            <div class="personalTitle">
+                <p class="personalMember"></p>
+                <p class="personalAdd">普通会员</p>
+            </div>
         </div>
-
-    <div class="Mine_center">
-        <ul class="Mine_center_clearfix">
-            <li><span class="Mine_center_img"></span><p class="Mine_center_text">可使用</p></li>
-            <li><span class="Mine_center_img"></span><p class="Mine_center_text">关注</p></li>
-            <li><span class="Mine_center_img"></span><p class="Mine_center_text">足迹</p></li>
-            <li><span class="Mine_center_img"></span><p class="Mine_center_text">收藏</p></li>
-            <li><span class="Mine_center_img"></span><p class="Mine_center_text">卡券</p></li>
-            <li><span class="Mine_center_img"></span><p class="Mine_center_text">积分</p></li>
-            <li><span class="Mine_center_img"></span><p class="Mine_center_text">发票</p></li>
-            <li><span class="Mine_center_img"></span><p class="Mine_center_text">我的问答</p></li>
-        </ul>
-    </div>
-
-    <div class="Mine_footer">
-        <div class="Mine_footer_Variety">
-            <a href="#"><p class="Mine_footer_Variety_text">会员等级</p><span></span></a>
-        </div>
-        <div class="Mine_footer_Variety">
-            <a href="#"><p class="Mine_footer_Variety_text">我的贡献</p><span></span></a>
-        </div>
-        <div class="Mine_footer_Variety">
-            <a href="#"><p class="Mine_footer_Variety_text">每日福利</p><span></span></a>
-        </div>
-        <div class="Mine_footer_Variety">
-            <a href="#"><p class="Mine_footer_Variety_text">发票助手</p><span></span></a>
-        </div>
-        <div class="Mine_footer_Variety">
-            <a href="#"><p class="Mine_footer_Variety_text">联系客服</p><span></span></a>
-        </div>
-        <div class="Mine_footer_Variety">
-            <a href="#"><p class="Mine_footer_Variety_text">我要合作</p><span></span></a>
-        </div>
-        <div class="Mine_footer_Variety">
-            <a href="#"><p class="Mine_footer_Variety_text">声明及协议</p><span></span></a>
+        <div class="personalGoTo">
+            <div class="personalGoToBox">
+                <p class="personalGoToIcon"></p>
+                <p class="personalGoToTitle">签到</p>
+            </div>
         </div>
     </div>
-
-
-
-    <!--提示框-->
-    <p class="warn"></p>
-    <!--loading-->
-    <div class="loading">
-        <div class="loadingItem">
-            <p class="loadingImg"></p>
+    <div class="Order">
+        <div class="OrderSet">
+            <p class="MyOrder">我的订单</p>
+            <p class="allOrder">全部订单 <span class="OrderBack"></span></p>
         </div>
+        <div></div>
     </div>
-
 </div>
+
 
 <div class="BotNavigation">
     <ul class="tabBar" id="tabBar">
@@ -111,37 +60,6 @@
 <script src="../script/jquery-3.2.1.js"></script>
 <script src="../script/shared.js"></script>
 <script>
-    $(function(){
-        $('.Mine_registered')[0].addEventListener('click',function(){
-            window.location.href = "signUp/Landing.html";
-        });
 
-        $('.Mine_header_Setting')[0].addEventListener('click',function () {
-            window.location.href = "Setting.html";
-        });
-
-        $('.Mine_money_TX')[0].addEventListener('click',function(){
-            $('.Mine_money_TX').addClass('indexOut');
-            $('.Mine_money_CZ').removeClass('indexOut');
-            window.location.href = "Recharge/Recharge.html";
-        });
-
-        $('.Mine_money_CZ')[0].addEventListener('click',function(){
-            $('.Mine_money_CZ').addClass('indexOut');
-            $('.Mine_money_TX').removeClass('indexOut');
-            window.location.href = "Recharge/withdraw.html";
-        });
-
-//        $('.Mine_nav_ul>li')[1].addEventListener('click',function () {
-//            alert(1234)
-//        })
-
-
-//        if(){
-//
-//        }
-
-
-    })
 </script>
 </html>

@@ -114,7 +114,7 @@
     box-shadow: 0 5px 15px 5px #e5e5e5;
     position: fixed;
     left: 0;
-    bottom:45px;
+    bottom:0;
     display: flex;
 }
 .footerLeft{
