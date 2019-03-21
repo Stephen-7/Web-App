@@ -15,7 +15,6 @@ function backTop() {
             opt = 1.3;
         }
         headerTop.style.background = 'linear-gradient(to top right,rgba(59, 38, 103, '+ opt +') 0%, rgba(188, 120, 236, '+ opt +') 100%)';
-
         var scrollTop = scroll().top;
         scrollTop > 500 ? topIcon.style.display = 'block' : topIcon.style.display = 'none';
         topBegin = scrollTop;
@@ -85,7 +84,7 @@ function banner() {
         setPoint();
     });
 
-    var setPoint = function () {
+    let setPoint = ()=> {
         for (var i = 0; i < allPoints.length; i++) {
             allPoints[i].className = '';
         }
@@ -98,7 +97,7 @@ function banner() {
         allPoints[pointIndex - 1].className = 'current';
     };
 
-    var startX = 0, endX = 0, distanceX = 0;
+    let startX = 0, endX = 0, distanceX = 0;
     imageBox.addEventListener('touchstart', function (e) {
         clearInterval(timer);
         startX = e.touches[0].clientX;
@@ -153,10 +152,8 @@ $(function () {
     });
 
 
-    var timestamp = Date.parse(new Date());
-    var arrItem = Date.parse(new Date('2019-12-31 14:00:00'));
-    var index = (arrItem - timestamp) / 1000;
-    var timer = setInterval(function () {
+    let timestamp = Date.parse(new Date()),arrItem = Date.parse(new Date('2019-12-31 14:00:00')),index = (arrItem - timestamp) / 1000;
+    let timer = setInterval(function () {
         allTime(index);
         index--;
         if (index < 0) {
@@ -166,10 +163,7 @@ $(function () {
     }, 1000);
 
     function allTime(time) {
-        var hh = Math.floor(time / (60 * 60));
-        var one = time % (60 * 60);
-        var mm = Math.floor(one / 60);
-        var ss = one % 60;
+        var hh = Math.floor(time / (60 * 60)).one = time % (60 * 60),mm = Math.floor(one / 60),ss = one % 60;
         if (hh < 10) {
             $('.body_time_span1').text(0);
             $('.body_time_span2').text(hh);
@@ -194,15 +188,15 @@ $(function () {
     }
 
 
-    var oBox = $('.SliderChildrenBox'),oBoxWidth = $('.SliderChildrenBox').width();
-    oBox.find('li').on('click',function(){
-        var thisWidth = $(this).width(),moveLeft = this.offsetLeft;
-        if(oBoxWidth<moveLeft+thisWidth){
-            oBox.animate({scrollLeft:moveLeft});
-        }else{
-            oBox.animate({scrollLeft:0});
-        }
-    });
+    // var oBox = $('.SliderChildrenBox'),oBoxWidth = $('.SliderChildrenBox').width();
+    // oBox.find('li').on('click',function(){
+    //     var thisWidth = $(this).width(),moveLeft = this.offsetLeft;
+    //     if(oBoxWidth<moveLeft+thisWidth){
+    //         oBox.animate({scrollLeft:moveLeft});
+    //     }else{
+    //         oBox.animate({scrollLeft:0});
+    //     }
+    // });
 
 
 

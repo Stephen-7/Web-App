@@ -13,13 +13,13 @@ function leftCategory(){
     var childBox = parentBox.getElementsByTagName('ul')[0];
     var parentH = parentBox.offsetHeight;
     var childH = childBox.offsetHeight;
-    //console.log(parentH, childH);
+
 
     // 2. 确定合理的滚动区间
     var maxY = 0, minY = -(childH - parentH);
 
     // 3. 缓冲区间
-    var buffer = 100;
+    var buffer = 150;
 
     // 4. 过渡效果\清除过渡效果\位置的改变
     var addTransition = function(){
@@ -45,8 +45,16 @@ function leftCategory(){
 
     childBox.addEventListener('touchstart', function(e){
         // 5.1 获取起始位置
+        var e = e || window.e;
         startY = e.touches[0].clientY;
-    });
+        var target = e.target || e.srcElement;
+        // if(target.nodeName.toLowerCase() == 'a'){
+        //     if(target.innerHTML === '家用电器'){
+        //
+        //     }
+        // }
+        console.log(target.innerHTML);
+    },true);
 
     childBox.addEventListener('touchmove', function(e){
         // 5.2 获取结束位置
@@ -82,10 +90,11 @@ function leftCategory(){
         startY = 0;
         endY = 0;
         moveY = 0;
-    });
+    },true);
 
     // 6. 监听tap事件
     var listLi = childBox.getElementsByTagName('li');
+    listLi[0].className = 'current';
     stephen.tap(childBox, function(e){
         // 6.1 清除所有的className
         for(var i=0; i<listLi.length; i++){
@@ -113,12 +122,12 @@ function leftCategory(){
 
         // 6.5 模拟数据
         var rightContent = document.getElementsByClassName('category_main_right')[0];
-        // rightContent.style.transition = 'all .1s ease';
-        // rightContent.style.webkitTransition = 'all .1s ease';
-        // rightContent.style.opacity = 0;
+        rightContent.style.transition = 'all .1s ease';
+        rightContent.style.webkitTransition = 'all .1s ease';
+        rightContent.style.opacity = 0;
         setTimeout(function(){
             rightContent.style.opacity = 1;
-        }, 200);
+        }, 100);
     });
 
 }
