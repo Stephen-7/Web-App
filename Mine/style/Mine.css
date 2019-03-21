@@ -178,8 +178,9 @@
 }
 
 .OrderTop{
-    width: 100%;
+    flex: 1;
     height: 35px;
+    padding: 0 3px 0 7px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -219,7 +220,7 @@
 .OrderSet{
     width: 100%;
     height: auto;
-    border-top: 1px solid #f0f0f0;
+    /*border-top: 1px solid #f0f0f0;*/
 }
 
 .OrderUl{
@@ -264,13 +265,8 @@
 }
 
 .OrderLiIcon{
-    width: 23px;
-    height: 23px;
-    display: inline-block;
-    /*background: url("../image/daifukuan.png");*/
-    background-repeat: no-repeat;
-    background-size: 23px 23px;
-    background-position: center center;
+    width: 20px;
+    height: 20px;
 }
 
 .OrderLiTitle{
