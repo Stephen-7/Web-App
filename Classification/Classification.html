@@ -13,7 +13,18 @@
 </head>
 <body>
 <div id="box">
-
+    <div class="headerTop">
+        <div class="headerNav">
+            <span class="icon"></span>
+            <div class="header_nav">
+                <span class="header_nav_icon"></span>
+                <!--移动端search,唤醒键盘,键盘最右下角的键的内容:搜索-->
+                <input type="search" class="headerInput" placeholder="搜索商品/店铺">
+                <span class="header_nav_camera"></span>
+            </div>
+            <span class="header_right"></span>
+        </div>
+    </div>
 
     <main class="category_main">
         <div class="category_main_left">
@@ -25,9 +36,7 @@
             </a>
             <div class="category_right_con">
                 <h3>热门分类</h3>
-                <ul class="category_right_item">
-
-                </ul>
+                <ul class="category_right_item"></ul>
             </div>
         </div>
     </main>
@@ -58,16 +67,18 @@
 <script src="script/Classification.js"></script>
 <script src="script/data.js"></script>
 <script>
-    $(function () {
-        var html = '';
-        var form = '';
-        for (var i in list){
+    $(()=>{
+        let html = '';
+        let form = '';
+
+        for (let i in list){
             html += '<li><a href="#">'+ list[i].key +'</a></li>';
         }
         $('.category_left_con').html(html);
-        for(var x in item){
+
+        for(let x in item){
             form += ' <li>\n' +
-                '        <a href="#">\n' +
+                '        <a href="">\n' +
                 '            <img src="'+ item[x].imgUrl +'" alt="">\n' +
                 '            <div class="center_title">\n' +
                 '                <p class="center_title_Name">'+ item[x].title +'</p>\n' +
@@ -77,6 +88,20 @@
                 '     </li>'
         }
         $('.category_right_item').html(form);
+    });
+
+
+    function check(id) {
+        window.location.href = '../components/ProductShowcase.html?id='+id;
+    }
+
+    var headerTop = document.getElementsByClassName('headerTop')[0];
+    headerTop.addEventListener('click',function (e) {
+        var e = e || window.e;
+        var target = e.target || e.srcElement;
+        console.log(e);
+        console.log(target);
     })
+
 </script>
 </html>

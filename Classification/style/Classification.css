@@ -1,7 +1,108 @@
-html,body{
-    width:100%;
-    height:100%;
+
+.headerTop {
+    width: 100%;
+    height: 44px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: linear-gradient(to top right,#3b2667 0%, #bc78ec 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*border-bottom: 1px solid #e5e5e5;*/
 }
+
+.headerNav {
+    width: 100%;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.icon {
+    width: 11%;
+    height: 45px;
+    display: inline-block;
+    background: url("../../Home/image/saoyisao.png") no-repeat;
+    background-size: 50px 40px;
+    background-position: center center;
+    visibility: hidden;
+}
+
+.header_nav {
+    width: 78%;
+    height: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.headerInput {
+    width: 100%;
+    height: 30px;
+    border-radius: 15px;
+    padding-left: 30px;
+    padding-right: 35px;
+    font-size: 13px;
+    line-height: 30px;
+    text-align: left;
+    border: none;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_nav_icon {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    background: url("../../images/search@2x.png");
+    background-repeat: no-repeat;
+    background-size: 27px 27px;
+    background-position:center center;
+    position: absolute;
+    top: 8px;
+    left: 0;
+}
+
+.header_nav_camera {
+    width: 40px;
+    height: 45px;
+    display: inline-block;
+    background: url("../../Home/image/Camera_332px_1130661_easyicon.net.png");
+    background-repeat: no-repeat;
+    background-size: 19px 17px;
+    background-position: center 50%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.header_right {
+    width: 11%;
+    height: 44px;
+    display: inline-block;
+    float: left;
+    font-size: 15px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 40px;
+    background: url("../../Home/image/huiyuanma.png") no-repeat;
+    background-size: 35px 35px;
+    background-position: center center;
+}
+
+.header_right_icon {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+
 
 
 
@@ -10,7 +111,7 @@ html,body{
     width:100%;
     height:auto;
     overflow: hidden;
-    padding:40px 0 45px 0;
+    padding:45px 0 45px 0;
 }
 
 .category_main_left{

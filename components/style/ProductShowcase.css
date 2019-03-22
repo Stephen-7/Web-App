@@ -70,11 +70,13 @@
     height: auto;
 }
 
+.DetailsShowImg{
+    width: 100%;
+    height: auto;
+}
+
 .DetailsImg{
     width: 100%;
-    height:250px;
-    display: block;
-    background-color: yellow;
 }
 
 .DetailsSet{
@@ -168,26 +170,20 @@
     line-height: 25px;
     color: #707C93;
     font-size: 13px;
+    display: flex;
 }
 
 .DetailsSourceFor{
     width: auto;
     height: 100%;
-    float: left;
-}
-
-.DetailsName{
-    padding: 0 3px;
-    font-size: 13px;
-    color: #4077ff;
 }
 
 .DetailsPlace{
     width: auto;
     height: 100%;
-    float: right;
     font-size: 13px;
     color: #707C93;
+    margin-left: 5px;
 }
 
 
@@ -580,4 +576,82 @@
     width: 100%;
     height: 700px;
     background-color: #3b2667;
+}
+
+
+
+.bottomAdd{
+    width: 100%;
+    height: 44px;
+    background-color: white;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    position: sticky;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.bottomAddLeft{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomAddLeftKe{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+
+.bottomAddLeftKeIcon1,.bottomAddLeftKeIcon2{
+    width: 20px;
+    height: 20px;
+    background-color: red;
+}
+
+.bottomAddLeftKeTitle{
+    width: 100%;
+    font-size: 10px;
+    color: #333333;
+    text-align: center;
+}
+
+.bottomAddRight{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottomAddRightAddShop{
+    width: 50%;
+    height: 100%;
+    font-size: 13px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffaf5e;
+}
+
+.bottomAddRightAddGo{
+    flex: 1;
+    height: 100%;
+    border-left: 1px solid #e5e5e5;
+    font-size: 13px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ff3e3e;
 }

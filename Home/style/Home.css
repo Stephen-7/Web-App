@@ -629,6 +629,7 @@ html {
     height: auto;
     margin: 15px 2.5% 12px 2.5%;
     border-radius: 5px;
+    background-color: #ffffff;
     /*background: linear-gradient(to top right, #3b2667 0%, #bc78ec 100%);*/
 }
 
@@ -636,7 +637,7 @@ html {
     width: 100%;
     height: auto;
     border-radius: 5px;
-    /*background-color: #623AA2;*/
+    border-top: 1px solid #e5e5e5;
 }
 
 .MallDataSetUl{
@@ -652,13 +653,12 @@ html {
 .MallDataSetLi{
     width: 23%;
     height: auto;
-    margin: 1% 1.3%;
+    margin: 10px 1.3% 0 1.3%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     border-radius: 5px;
-    background-color: royalblue;
 }
 
 .MallDataSetLi:nth-child(4){
@@ -865,11 +865,14 @@ html {
     width: 100%;
     height: 35px;
     background: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-bottom: 1px solid #e5e5e5;
 }
 
 .SliderName {
-    flex: 1;
+    width: 50%;
     height: 35px;
     text-align: left;
     line-height: 35px;
@@ -878,6 +881,28 @@ html {
     font-weight: bold;
     display: flex;
     padding: 0 10px;
+}
+
+.SliderGo{
+    width: 50%;
+    height: 35px;
+    text-align: right;
+    line-height: 35px;
+    color: #cccccc;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.SliderGoIcon{
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+    background: url("../image/chicangdan_go@2x.png") no-repeat;
+    background-size: 15px 15px;
+    background-position: center center;
 }
 
 .SliderChildren {
