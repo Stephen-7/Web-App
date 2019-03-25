@@ -16,7 +16,7 @@
         </p>
         <div class="DetailsBox">
             <p class="DetailsShowImg">
-                <img class="DetailsImg" src="" alt="">
+                <img class="DetailsImg" src="../Home/image/buy-pro1.jpg" alt="">
             </p>
             <div class="DetailsSet">
                 <div class="DetailsTitle">
@@ -92,6 +92,14 @@
     <!--</div>-->
 </div>
 
+<p class="warn"></p>
+<!--<p class="loadMore"></p>-->
+<div class="loading">
+    <div class="loadingItem">
+        <p class="loadingImg"></p>
+    </div>
+</div>
+
 
 <div class="bottomAdd">
     <div class="bottomAddLeft">
@@ -105,8 +113,8 @@
         </p>
     </div>
     <div class="bottomAddRight">
-        <p class="bottomAddRightAddShop">加入购物车</p>
-        <p class="bottomAddRightAddGo">立即购买</p>
+        <p class="bottomAddRightAddShop" onclick="addShopping()">加入购物车</p>
+        <p class="bottomAddRightAddGo" onclick="goToShopping()">立即购买</p>
     </div>
 </div>
 
@@ -116,5 +124,20 @@
 <script src="../script/jquery-3.2.1.js"></script>
 <script src="script/ProductShowcase.js"></script>
 <script src="script/data.js"></script>
-<script></script>
+<script>
+    function addShopping() {
+        $('.loading').show();
+        $('.warn').show();
+        $('.warn').text('已添加至购物车');
+        setTimeout(()=>{
+            $('.warn').hide();
+            $('.loading').hide();
+        },2000)
+    }
+
+    function goToShopping() {
+        window.location.href = '../ShoppingCart/ConfirmOrder.html'
+    }
+
+</script>
 </html>

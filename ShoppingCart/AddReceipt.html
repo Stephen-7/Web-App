@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>新增收货地址</title>
+    <title>添加地址</title>
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
     <meta content="yes" name="apple-mobile-web-app-capable">
     <meta content="black" name="apple-mobile-web-app-status-bar-style">
@@ -60,7 +60,9 @@
             margin-left: 3%;
         }
 
-        .NewHarvestAddress_name{
+        .NewHarvestAddress_name,
+        .NewHarvestAddress_ID,
+        .NewHarvestAddress_Phone{
             width: 75%;
             height: 45px;
             float: left;
@@ -120,28 +122,7 @@
            outline: none;
        }
 
-        .NewHarvestAddress_bg{
-            width: 100%;
-            height: 100vh;
-            background-color: rgba(0,0,0,0.5);
-            position: fixed;
-            top:0;
-            left: 0;
-            display: none;
-        }
-        
-        .NewHarvestAddress_no{
-            width: 25px;
-            height: 25px;
-            display: inline-block;
-            background: url("image/close.png") no-repeat;
-            background-size: 23px 23px;
-            border-radius: 50%;
-            border: 1px solid #fff;
-            position: absolute;
-            top:4%;
-            right: 7%;
-        }
+
     </style>
 </head>
 <body>
@@ -158,23 +139,17 @@
     </div>
     <div class="NewHarvestAddress_form">
         <span class="NewHarvestAddress_data">身份证号</span>
-        <input type="text" class="NewHarvestAddress_name">
+        <input type="text" class="NewHarvestAddress_ID">
     </div>
     <div class="NewHarvestAddress_form">
         <span class="NewHarvestAddress_data">手机号码</span>
-        <input type="text" class="NewHarvestAddress_name">
+        <input type="text" class="NewHarvestAddress_Phone">
     </div>
     <div class="NewHarvestAddress_form">
         <span class="NewHarvestAddress_data">所在地区</span>
         <p class="NewHarvestAddress_text">
             <select class="select">
                 <option value="volvo">请选择城市</option>
-                <option value="1">广州市</option>
-                <option value="2">深圳市</option>
-                <option value="3">惠州市</option>
-                <option value="4">香港特别行政区</option>
-                <option value="5">澳门特别行政区</option>
-                <option value="6">新疆维吾尔族自治区</option>
             </select>
         </p>
     </div>
@@ -182,26 +157,41 @@
         <span class="NewHarvestAddress_XX">详细地址</span>
         <textarea class="NewHarvestAddress_index"></textarea>
     </div>
-    <div class="NewHarvestAddress_form" style="padding-left: 3%;">设置默认地址 <span class="btn"></span></div>
+    <!--<div class="NewHarvestAddress_form" style="padding-left: 3%;">设置默认地址 <span class="btn"></span></div>-->
 </div>
 
 
-<div class="NewHarvestAddress_bg">
-    <span class="NewHarvestAddress_no"></span>
-</div>
+
 
 
 </body>
 <script src="../script/jquery-3.2.1.js"></script>
 <script src="../script/shared.js"></script>
+<script src="script/data.js"></script>
 <script>
     $(function(){
-//        $('.NewHarvestAddress_text')[0].addEventListener('click',function () {
-//            $('.NewHarvestAddress_bg').show();
-//        });
-//        $('.NewHarvestAddress_no')[0].addEventListener('click',function () {
-//            $('.NewHarvestAddress_bg').hide();
-//        })
+
+
+        var html = '';
+        for(var i in province){
+            var arr = province[i];
+            html += '<option value="'+ arr.id +'">'+ arr.label +'</option>'
+        }
+        $('.select').append(html);
+
+        $('.select').change(function () {
+            var option = $(this).find("option:selected");
+            window.selv = option.val();
+            window.elt = option.text();
+        });
+
+
+        $('.right')[0].addEventListener('click',function () {
+            var name = $('.NewHarvestAddress_name').val().trim();
+            var id = $('.NewHarvestAddress_ID').val().trim();
+            var phone = $('.NewHarvestAddress_Phone').val().trim();
+            var receipt = $('.NewHarvestAddress_index').val().trim();
+        })
     })
 </script>
 </html>

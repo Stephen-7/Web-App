@@ -23,12 +23,14 @@ $(function () {
     // })
 
 
-    console.log(item[id]);
+    console.log(item[id].image);
 
     // $('.DetailsSetImage').css({'backgroundImage': 'url("' + productsContent[id].imgUrl + '")'}); //span改换css背景图
     $(".DetailsImg").attr('src',item[id].image); //image替换
     $('.DetailsText').text(item[id].title);
-    $('.DetailsPrice').text('¥'+item[id].price)
+    $('.DetailsPrice').text('¥'+item[id].price);
 
 
 });
+
+
