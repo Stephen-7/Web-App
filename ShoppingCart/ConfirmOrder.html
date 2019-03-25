@@ -169,6 +169,8 @@
         .ConfirmOrder_btn_left{
             width: 60%;
             height: 45px;
+            font-size: 16px;
+            color: #FF4E56;
             display: flex;
             align-items: center;
             justify-items: center;
@@ -229,13 +231,13 @@
 
     <p class="ConfirmOrder_text">商品数量
         <span class="ConfirmOrder_nan0">
-            <span class="ConfirmOrder_add down"></span>
+            <span class="ConfirmOrder_add up"></span>
             <input type="text" class="ConfirmOrder_Quantity" value="1">
-            <span class="ConfirmOrder_Less up"></span>
+            <span class="ConfirmOrder_Less down"></span>
         </span>
     </p>
     <!--<p class="ConfirmOrder_text">商品合计 <span class="ConfirmOrder_nan">￥5588</span></p>-->
-    <p class="ConfirmOrder_text">运费合计 <span class="ConfirmOrder_nan">￥10.00</span></p>
+    <p class="ConfirmOrder_text">运费合计 <span class="ConfirmOrder_nan">10.00</span></p>
     <!--<p class="ConfirmOrder_text">优惠活动 <span class="ConfirmOrder_nan">￥0.00</span></p>-->
     <!--<p class="ConfirmOrder_text">实际合计 <span class="ConfirmOrder_nan">￥5588</span></p>-->
 
@@ -243,7 +245,8 @@
     <div class="ConfirmOrder_btn">
         <div class="ConfirmOrder_btn_left">
             <p class="allNum">总价：</p>
-            <input type="text" class="ConfirmOrder_btn_btn" disabled="disabled" value="￥5588">
+            <!--<input type="text" class="ConfirmOrder_btn_btn" disabled="disabled" value="310.00">-->
+            <p  class="ConfirmOrder_btn_btn">￥310.00</p>
         </div>
         <span class="ConfirmOrder_btn_right">立即购买</span>
     </div>
@@ -257,29 +260,26 @@
             window.location.href = 'Receipt.html';
         });
 
-        $('.down')[0].addEventListener('click',()=>{
+
+
+        $('.up')[0].addEventListener('click',function () {
             var nowNum = $('.ConfirmOrder_Quantity').val();
-            $('.ConfirmOrder_Quantity').val(parseInt(nowNum) + 1);
-            var allNum = $('.ConfirmOrder_btn_btn').val();
-            console.log(allNum);
-            $('.ConfirmOrder_btn_btn').val(parseInt(allNum) * (parseInt(nowNum) + 1));
+            $('.ConfirmOrder_Quantity').val(parseFloat(nowNum) + 1);
 
+            var money = $('.ConfirmOrder_image_nan').text();
+            var Postage = $('.ConfirmOrder_nan').text();
 
-            // var nowNum = $('.chooseNum').val();
-            // $('.chooseNum').val(parseInt(nowNum) + 1);
-            // var integral = $('#integral').text();
-            // $('.pointText').text(integral * (parseInt(nowNum) + 1));
+            $('.ConfirmOrder_btn_btn').text(parseFloat(money) * (parseFloat(nowNum) + 1) + Postage)
         });
 
-        // $('.up')[0].addEventListener('click',()=>{
-        //     var nowNum = $('.ConfirmOrder_Quantity').val();
-        //     $('.ConfirmOrder_Quantity').val(parseInt(nowNum) - 1);
-        // });
-
-
-
-
-
+        $('.down')[0].addEventListener('click',function () {
+            var nowNum = $('.ConfirmOrder_Quantity').val();
+            if(nowNum <= 1){
+                $('.ConfirmOrder_Quantity').val(1);
+            }else {
+                $('.ConfirmOrder_Quantity').val(parseInt(nowNum) - 1);
+            }
+        })
 
     })
 </script>

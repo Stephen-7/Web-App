@@ -159,26 +159,30 @@
             top:0;
             left: 0;
             z-index:10;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            /*display: flex;*/
+            /*align-items: center;*/
+            /*justify-content: center;*/
         }
 
         .componentBoxSet{
             width: 75%;
-            height: 25%;
+            /*height: 25%;*/
             overflow: hidden;
             border-radius: 5px;
             background-color: #ffffff;
+            border-bottom:1px solid #e0e0e0;
+            margin-left:10%;
+            margin-top:200px;
+            padding: 15px;
         }
 
         .componentTop{
             width: 100%;
-            height: 70%;
+            height: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-            border-bottom: 1px solid #e5e5e5;
+            /*border-bottom: 1px solid #e5e5e5;*/
         }
 
         .componentTitle{
@@ -188,7 +192,7 @@
 
         .componentBottom{
             width: 100%;
-            height: 30%;
+            height: 35px;
             font-size: 15px;
             color: #333333;
             display: flex;
@@ -197,20 +201,58 @@
         }
 
         .componentNone{
-            flex: 1;
-            text-align: center;
-            border-right: 1px solid #e5e5e5;
-        }
-
-        .componentDetermine{
-            width: 50%;
+            width: 45%;
             height: 100%;
-            color: #ffffff;
+            color: #333333;
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #ff3e3e;
+            background-color: #fff;
+            border-radius: 5px;
+            border: 1px solid #e5e5e5;
+            margin: 0 5px;
         }
+
+        .componentDetermine{
+            width: 45%;
+            height: 100%;
+            color: #ffffff;
+            display: flex;
+            margin: 0 5px;
+            border-radius: 5px;
+            align-items: center;
+            justify-content: center;
+            background-color: #ff3e3e;
+            border: 1px solid #ff3e3e;
+        }
+
+        .jump{
+            animation: jump 1s ease;
+        }
+        @keyframes jump{
+            0%{
+                opacity:0;
+                transform: translateY(-3000px);
+                -webkit-transform: translateY(-3000px);
+            }
+            65%{
+                opacity:1;
+                transform: translateY(30px);
+                -webkit-transform: translateY(-30px);
+            }
+            85%{
+                transform: translateY(-5px);
+                -webkit-transform: translateY(-5px);
+            }
+            100%{
+                opacity:1;
+                transform: none;
+                -webkit-transform: none;
+            }
+        }
+
+
+
     </style>
 </head>
 <body>
@@ -229,7 +271,7 @@
                     <p class="ReceiptSetItemAddress">广州市海珠区客村丽影广场E座</p>
                 </div>
                 <p class="ReceiptSetItemText">编辑</p>
-                <span class="deleteReceipt" id="deleteReceipt"></span>
+                <span class="deleteReceipt" id="deleteReceipt" onclick="$('.componentBox').show()"></span>
             </li>
         </ul>
     </div>
@@ -246,28 +288,34 @@
     </div>
 </div>
 
-<!--<div class="componentBox" style="display: none">-->
-    <!--<div class="componentBoxSet">-->
-        <!--<div class="componentTop">-->
-            <!--<p class="componentTitle">确定删除吗？</p>-->
-        <!--</div>-->
-        <!--<div class="componentBottom">-->
-            <!--<p class="componentNone" onclick="$('.componentBox').hide()">取消</p>-->
-            <!--<p class="componentDetermine">确定</p>-->
-        <!--</div>-->
-    <!--</div>-->
-<!--</div>-->
+<div class="componentBox" style="display: none">
+    <div class="componentBoxSet jump">
+        <div class="componentTop">
+            <p class="componentTitle">确定删除吗？</p>
+        </div>
+        <div class="componentBottom">
+            <p class="componentNone" onclick="$('.componentBox').hide()">取消</p>
+            <p class="componentDetermine">确定</p>
+        </div>
+    </div>
+</div>
 </body>
 <script src="../script/mock-min.js"></script>
 <script src="../script/jquery-3.2.1.js"></script>
 <script>
-    $(()=>{
-        $('.deleteReceipt')[0].addEventListener('click',function () {
-            (li).remove();
-        })
+//    $(function () {
+//        $('.componentDetermine')[0].addEventListener('click',function () {
+//            ('.ReceiptSetList').remove();
+//        })
+//    });
+
+
+    $(document).ready(function(){
+        $(".componentDetermine").click(function(){
+            $(".ReceiptSetList").remove();
+            $('.componentBox').hide();
+        });
     });
-
-
 
 
 
