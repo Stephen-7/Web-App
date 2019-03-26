@@ -159,21 +159,18 @@
             top:0;
             left: 0;
             z-index:10;
-            /*display: flex;*/
-            /*align-items: center;*/
-            /*justify-content: center;*/
         }
 
         .componentBoxSet{
             width: 75%;
-            /*height: 25%;*/
             overflow: hidden;
             border-radius: 5px;
             background-color: #ffffff;
             border-bottom:1px solid #e0e0e0;
-            margin-left:10%;
-            margin-top:200px;
+            margin-left:12.5%;
+            margin-top:70%;
             padding: 15px;
+            animation: jump 1s ease;
         }
 
         .componentTop{
@@ -182,7 +179,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            /*border-bottom: 1px solid #e5e5e5;*/
         }
 
         .componentTitle{
@@ -226,9 +222,7 @@
             border: 1px solid #ff3e3e;
         }
 
-        .jump{
-            animation: jump 1s ease;
-        }
+
         @keyframes jump{
             0%{
                 opacity:0;
@@ -289,7 +283,7 @@
 </div>
 
 <div class="componentBox" style="display: none">
-    <div class="componentBoxSet jump">
+    <div class="componentBoxSet">
         <div class="componentTop">
             <p class="componentTitle">确定删除吗？</p>
         </div>
