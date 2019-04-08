@@ -48,21 +48,21 @@
         /*}*/
 
         .ReceiptSetItemData{
-            width: 80%;
-            height:auto ;
+            width: 75%;
+            height:60px ;
         }
 
         .ReceiptSetItemTop{
             width: 100%;
             height: auto;
             display: flex;
-            align-items: center;
+            align-items: flex-end;
             justify-content: flex-start;
         }
 
         .ReceiptSetItemName{
-            width: auto;
-            height: 30px;
+            width:auto;
+            height: 33px;
             font-size: 15px;
             color: #333333;
             font-weight: bold;
@@ -72,9 +72,9 @@
         }
 
         .ReceiptSetItemPhone{
-            flex: 1;
-            height: 30px;
             margin-left: 5px;
+            font-weight: normal;
+            font-size: 14px;
             display: flex;
             align-items: flex-end;
             justify-items: flex-start;
@@ -82,10 +82,8 @@
 
         .ReceiptSetItemAddress{
             width: 100%;
-            height: auto;
+            height: 27px;
             font-size: 12px;
-            /*display: flex;*/
-            padding:6px 5px 5px 0;
             align-items: flex-start;
             justify-content: flex-start;
             color: #6B6B6B;
@@ -272,6 +270,7 @@
         }
 
 
+
     </style>
 </head>
 <body>
@@ -283,9 +282,7 @@
     </div>
 
     <div class="Receipt">
-        <ul class="ReceiptSet">
-
-        </ul>
+        <ul class="ReceiptSet"></ul>
     </div>
 
 
@@ -323,20 +320,22 @@
         $(".componentDetermine").click(function(){
             $(".ReceiptSetList").remove();
             $('.componentBox').hide();
+            sessionStorage.removeItem("address");
+            $('.dataNone').show();
         });
 
         var address = sessionStorage.getItem("address");
         var index = JSON.parse(address);
         if(index !== null){
             var html = '<li class="ReceiptSetList">\n' +
-                '           <div class="ReceiptSetItemData">\n' +
+                '           <div class="ReceiptSetItemData" onclick="back()">\n' +
                 '               <div class="ReceiptSetItemTop">\n' +
                 '                   <p class="ReceiptSetItemName">'+ index.name +'</p>\n' +
                 '                   <p class="ReceiptSetItemPhone">'+ index.phone +'</p>\n' +
                 '               </div>\n' +
                 '               <p class="ReceiptSetItemAddress">'+ index.elt+index.receipt +'</p>\n' +
                 '           </div>\n' +
-                '           <p class="ReceiptSetItemText">编辑</p>\n' +
+                '           <p class="ReceiptSetItemText" onclick="modify()">编辑</p>\n' +
                 '           <span class="deleteReceipt" id="deleteReceipt" onclick="$(\'.componentBox\').show()"></span>\n' +
                 '       </li>';
             $('.ReceiptSet').html(html);
@@ -345,9 +344,15 @@
         }
     });
 
-
-
     function addReceipt() {
+        window.location.href = '../ShoppingCart/AddReceipt.html'
+    }
+
+    function back() {
+        window.history.back();
+    }
+
+    function modify() {
         window.location.href = '../ShoppingCart/AddReceipt.html'
     }
 </script>

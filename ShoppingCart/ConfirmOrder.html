@@ -10,44 +10,50 @@
     <link rel="stylesheet" href="../style/base.css">
     <link rel="stylesheet" href="../style/shared.css">
     <style>
-        #box{
+        #box {
             background-color: #F8F8F8;
         }
 
-        .header{
+        .header {
             background-color: #fff;
         }
 
-        .ConfirmOrder_address{
+        .ConfirmOrder_address {
             width: 100%;
             height: auto;
             overflow: hidden;
             border-bottom: 1px solid #e5e5e5;
             margin-bottom: 10px;
             background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
-        .ConfirmOrder_left{
+
+        .ConfirmOrder_left {
             width: 10%;
-            height: 50px;
+            height: 60px;
             display: inline-block;
             float: left;
             background: url("image/xingquban.png") no-repeat;
             background-size: 15px 20px;
             background-position: 50% 50%;
         }
-        .ConfirmOrder_center{
+
+        .ConfirmOrder_center {
             width: 80%;
-            height: 50px;
-            display: inline-block;
-            float: left;
+            height: 60px;
             text-align: left;
             font-size: 16px;
             color: #333333;
-            line-height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
         }
-        .ConfirmOrder_right{
+
+        .ConfirmOrder_right {
             width: 10%;
-            height: 50px;
+            height: 60px;
             display: inline-block;
             float: right;
             background: url("image/minepage_go_gray.png") no-repeat;
@@ -55,7 +61,51 @@
             background-position: 50% 50%;
         }
 
-        .ConfirmOrder_image{
+        .ConfirmOrder_center_title {
+            flex: 1;
+            height: 60px;
+            font-size: 14px;
+            color: #333333;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .ReceiptSetItemData {
+            width: 100%;
+            height: 60px;
+        }
+
+        .ReceiptSetItemName {
+            flex: 1;
+            height: 33px;
+            font-size: 15px;
+            color: #333333;
+            font-weight: bold;
+            display: flex;
+            align-items: flex-end;
+            justify-items: flex-start;
+        }
+
+        .ReceiptSetItemPhone {
+            margin-left: 5px;
+            font-weight: normal;
+            font-size: 14px;
+        }
+
+        .ReceiptSetItemAddress {
+            width: 100%;
+            height: 27px;
+            font-size: 12px;
+            align-items: flex-start;
+            justify-content: flex-start;
+            color: #6B6B6B;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap
+        }
+
+        .ConfirmOrder_image {
             width: 100%;
             height: auto;
             overflow: hidden;
@@ -63,7 +113,14 @@
             background-color: #fff;
         }
 
-        .ConfirmOrder_image_img{
+        .ConfirmOrderShow {
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .ConfirmOrder_image_img {
             width: 25%;
             height: 80px;
             display: inline-block;
@@ -73,32 +130,30 @@
             float: left;
         }
 
-        .ConfirmOrder_image_text{
+        .ConfirmOrder_image_text {
             width: 67%;
             height: 60px;
             padding-right: 15px;
             justify-content: center;
             margin-top: 10px;
             font-size: 15px;
-            color:#333333;
+            color: #333333;
             float: left;
         }
 
-        .ConfirmOrder_image_nan{
+        .ConfirmOrder_image_nan {
             width: 67%;
             height: 20px;
             display: inline-block;
             text-align: left;
             font-size: 16px;
-            color:#FF4E56;
+            color: #FF4E56;
             float: left;
             margin-bottom: 10px;
             font-weight: bold;
         }
 
-
-
-        .ConfirmOrder_text{
+        .ConfirmOrder_text {
             width: 100%;
             height: 39px;
             padding-left: 15px;
@@ -109,22 +164,22 @@
             background-color: #fff;
         }
 
-        .ConfirmOrder_nan,.ConfirmOrder_nan0{
+        .ConfirmOrder_nan, .ConfirmOrder_nan0 {
             width: auto;
             height: 39px;
             display: inline-block;
             line-height: 39px;
             font-size: 14px;
-            color:#FF4E56;
+            color: #FF4E56;
             float: right;
             margin-right: 15px;
         }
 
-        .ConfirmOrder_nan0{
+        .ConfirmOrder_nan0 {
             padding-top: 7px;
         }
 
-        .ConfirmOrder_Less{
+        .ConfirmOrder_Less {
             width: 25px;
             height: 25px;
             display: inline-block;
@@ -133,7 +188,8 @@
             float: right;
             border-radius: 50%;
         }
-        .ConfirmOrder_Quantity{
+
+        .ConfirmOrder_Quantity {
             width: 45px;
             height: 25px;
             background-color: #f8f8f8;
@@ -145,7 +201,8 @@
             margin: 0 5px;
             border-radius: 5px;
         }
-        .ConfirmOrder_add{
+
+        .ConfirmOrder_add {
             width: 25px;
             height: 25px;
             display: inline-block;
@@ -155,7 +212,7 @@
             border-radius: 50%;
         }
 
-        .ConfirmOrder_btn{
+        .ConfirmOrder_btn {
             width: 100%;
             height: 45px;
             background-color: #fff;
@@ -166,7 +223,7 @@
             display: flex;
         }
 
-        .ConfirmOrder_btn_left{
+        .ConfirmOrder_btn_left {
             width: 60%;
             height: 45px;
             font-size: 16px;
@@ -176,7 +233,7 @@
             justify-items: center;
         }
 
-        .allNum{
+        .allNum {
             width: 25%;
             height: 45px;
             text-align: center;
@@ -186,7 +243,7 @@
             margin-left: 5px;
         }
 
-        .ConfirmOrder_btn_btn{
+        .ConfirmOrder_btn_btn {
             width: 75%;
             height: 45px;
             display: inline-block;
@@ -196,7 +253,7 @@
             background-color: #ffffff;
         }
 
-        .ConfirmOrder_btn_right{
+        .ConfirmOrder_btn_right {
             width: 40%;
             height: 45px;
             display: inline-block;
@@ -212,32 +269,37 @@
 <body>
 <div id="box">
     <div class="header">
-        <span class="left" onclick="window.history.back()"></span>
+        <span class="left" onclick="Back()"></span>
         <p class="center">确定订单</p>
         <span class="right"></span>
     </div>
 
     <div class="ConfirmOrder_address">
         <span class="ConfirmOrder_left"></span>
-        <span class="ConfirmOrder_center">添加收货地址</span>
+        <div class="ConfirmOrder_center">
+
+
+        </div>
         <span class="ConfirmOrder_right"></span>
     </div>
 
     <div class="ConfirmOrder_image">
-        <span class="ConfirmOrder_image_img"></span>
-        <p class="ConfirmOrder_image_text">蜂蜜系列护肤秋冬不脱皮不敏感,超级补水用过的发射点…</p>
-        <span class="ConfirmOrder_image_nan">￥300</span>
+        <div class="ConfirmOrderShow">
+            <span class="ConfirmOrder_image_img"></span>
+            <p class="ConfirmOrder_image_text">蜂蜜系列护肤秋冬不脱皮不敏感,超级补水用过的发射点…</p>
+            <span class="ConfirmOrder_image_nan">￥300</span>
+        </div>
     </div>
 
-    <p class="ConfirmOrder_text">商品数量
+    <div class="ConfirmOrder_text">商品数量
         <span class="ConfirmOrder_nan0">
             <span class="ConfirmOrder_add up"></span>
             <input type="text" class="ConfirmOrder_Quantity" value="1">
             <span class="ConfirmOrder_Less down"></span>
         </span>
-    </p>
-    <!--<p class="ConfirmOrder_text">商品合计 <span class="ConfirmOrder_nan">￥5588</span></p>-->
-    <p class="ConfirmOrder_text">运费合计 <span class="ConfirmOrder_nan">10.00</span></p>
+    </div>
+    <!--<p class="ConfirmOrder_text">商品合计 <span class="ConfirmOrder_nan">￥310</span></p>-->
+    <p class="ConfirmOrder_text">运费合计 <span class="ConfirmOrder_nan">￥10</span></p>
     <!--<p class="ConfirmOrder_text">优惠活动 <span class="ConfirmOrder_nan">￥0.00</span></p>-->
     <!--<p class="ConfirmOrder_text">实际合计 <span class="ConfirmOrder_nan">￥5588</span></p>-->
 
@@ -246,39 +308,97 @@
         <div class="ConfirmOrder_btn_left">
             <p class="allNum">总价：</p>
             <!--<input type="text" class="ConfirmOrder_btn_btn" disabled="disabled" value="310.00">-->
-            <p  class="ConfirmOrder_btn_btn">￥310.00</p>
+            <p class="ConfirmOrder_btn_btn">￥00.00</p>
         </div>
-        <span class="ConfirmOrder_btn_right">立即购买</span>
+        <span class="ConfirmOrder_btn_right" onclick="goShopping()">立即购买</span>
+    </div>
+</div>
+
+<p class="warn"></p>
+<div class="loading">
+    <div class="loadingItem">
+        <p class="loadingImg"></p>
     </div>
 </div>
 </body>
 <script src="../script/jquery-3.2.1.js"></script>
 <script src="../script/shared.js"></script>
 <script>
-    $(function(){
-        $('.ConfirmOrder_address')[0].addEventListener('click',function () {
+
+    $(function () {
+        const arr = sessionStorage.getItem("arr"), list = JSON.parse(arr);
+        if(arr !== null){
+            $('.ConfirmOrder_image_img').css({'backgroundImage': 'url("' + list.image + '")'});
+            $('.ConfirmOrder_image_text').text(list.title);
+            $('.ConfirmOrder_image_nan').text(list.price);
+        }else {
+
+        }
+
+        var order = $('.ConfirmOrder_nan').text();
+        var price = Number(list.price);//价格
+        var addOrder = Number(order);//运费
+        console.log(typeof addOrder);
+        $('.ConfirmOrder_btn_btn').text('￥'+((price*1)+10));
+
+
+        var address = sessionStorage.getItem("address");
+        var index = JSON.parse(address);
+        if (index !== null) {
+            var html = '<div class="ReceiptSetItemData" onclick="back()">\n' +
+                '           <p class="ReceiptSetItemName">' + index.name + '<span class="ReceiptSetItemPhone">' + index.phone + '</span></p>\n' +
+                '           <p class="ReceiptSetItemAddress">' + index.elt + index.receipt + '</p>\n' +
+                '       </div>';
+            $('.ConfirmOrder_center').html(html);
+        } else {
+            $('.ConfirmOrder_center').append('<p class="ConfirmOrder_center_title">添加收货地址</p>')
+        }
+
+        $('.ConfirmOrder_address')[0].addEventListener('click', function () {
             window.location.href = 'Receipt.html';
         });
 
-        $('.up')[0].addEventListener('click',function () {
+
+        $('.up')[0].addEventListener('click', function () {
             var nowNum = $('.ConfirmOrder_Quantity').val();
-            $('.ConfirmOrder_Quantity').val(parseFloat(nowNum) + 1);
-
-            var money = $('.ConfirmOrder_image_nan').text();
-            var Postage = $('.ConfirmOrder_nan').text();
-
-            $('.ConfirmOrder_btn_btn').text(parseFloat(money) * (parseFloat(nowNum) + 1) + Postage)
+            var num = parseInt(nowNum) + 1;
+            $('.ConfirmOrder_Quantity').val(num);
+            var price = Number(list.price);//价格
+            var order = $('.ConfirmOrder_nan').text();
+            var addOrder = Number(order);//运费
+            $('.ConfirmOrder_btn_btn').text('￥'+((price*num)+10));
         });
 
-        $('.down')[0].addEventListener('click',function () {
+        $('.down')[0].addEventListener('click', function () {
             var nowNum = $('.ConfirmOrder_Quantity').val();
-            if(nowNum <= 1){
+            var num = parseInt(nowNum) - 1;
+            $('.ConfirmOrder_Quantity').val(num);
+            if (num <= 1) {
                 $('.ConfirmOrder_Quantity').val(1);
-            }else {
-                $('.ConfirmOrder_Quantity').val(parseInt(nowNum) - 1);
+            } else {
+                $('.ConfirmOrder_Quantity').val(num);
             }
-        })
+            var order = $('.ConfirmOrder_nan').text();
+            var price = Number(list.price);//价格
+            var addOrder = Number(order);//运费
+            console.log(typeof addOrder);
+            $('.ConfirmOrder_btn_btn').text('￥'+((price*num)+10));
+        });
+    });
 
-    })
+    function Back() {
+        sessionStorage.setItem("arr", JSON.stringify(window.ken));
+        window.history.back()
+    }
+    
+    function goShopping() {
+        $('.warn').show();
+        $('.loading').show();
+        $('.warn').text('下单成功');
+        setTimeout(function () {
+            $('.warn').hide();
+            $('.loading').hide();
+        },1000);
+    }
 </script>
 </html>

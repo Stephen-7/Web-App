@@ -10,23 +10,29 @@
     <link rel="stylesheet" href="../style/base.css">
     <link rel="stylesheet" href="../style/shared.css">
     <style>
-        #box{
+        #box {
             background-color: #F8F8F8;
         }
 
-        .header{
+        .header {
             background-color: #fff;
-            border:none;
+            border: none;
         }
 
-        .right{
+        .right {
+            justify-content: flex-start;
+        }
+
+        .addTitle {
+            padding: 4px 5px;
+            color: #FFFFFF;
+            font-size: 12px;
             text-align: center;
-            line-height: 40px;
-            color: #f10215;
-            font-size: 14px;
+            display: inline-block;
+            background: linear-gradient(to right top, rgb(59, 38, 103) 0%, rgb(188, 120, 236) 100%);
         }
 
-        .NewHarvestAddress_form{
+        .NewHarvestAddress_form {
             width: 100%;
             height: 45px;
             overflow: hidden;
@@ -39,7 +45,7 @@
             line-height: 45px;
         }
 
-        .NewHarvestAddress_form4{
+        .NewHarvestAddress_form4 {
             width: 100%;
             height: auto;
             overflow: hidden;
@@ -48,7 +54,7 @@
         }
 
         .NewHarvestAddress_data,
-        .NewHarvestAddress_XX{
+        .NewHarvestAddress_XX {
             width: 22%;
             height: 45px;
             display: inline-block;
@@ -62,7 +68,7 @@
 
         .NewHarvestAddress_name,
         .NewHarvestAddress_ID,
-        .NewHarvestAddress_Phone{
+        .NewHarvestAddress_Phone {
             width: 75%;
             height: 45px;
             float: left;
@@ -72,7 +78,7 @@
             line-height: 45px;
         }
 
-        .NewHarvestAddress_index{
+        .NewHarvestAddress_index {
             width: 72%;
             height: 60px;
             float: left;
@@ -84,7 +90,7 @@
             resize: none;
         }
 
-        .btn{
+        .btn {
             width: 40px;
             height: 20px;
             display: inline-block;
@@ -95,7 +101,7 @@
             margin-top: 13px;
         }
 
-        .NewHarvestAddress_text{
+        .NewHarvestAddress_text {
             width: 75%;
             height: 45px;
             display: inline-block;
@@ -107,20 +113,20 @@
             position: relative;
         }
 
-       .select{
-           width: 100%;
-           height: 45px;
-           text-align: right;
-           color: #333333;
-           font-size: 14px;
-           background-color: #FFFFFF;
-           appearance:none;
-           -moz-appearance:none;
-           -webkit-appearance:none;
-           -ms-appearance:none;
-           border: none;
-           outline: none;
-       }
+        .select {
+            width: 100%;
+            height: 45px;
+            text-align: right;
+            color: #333333;
+            font-size: 14px;
+            background-color: #FFFFFF;
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            -ms-appearance: none;
+            border: none;
+            outline: none;
+        }
 
 
     </style>
@@ -130,7 +136,9 @@
     <div class="header">
         <span class="left" onclick="window.history.back()"></span>
         <p class="center">新增收货地址</p>
-        <span class="right">保存</span>
+        <span class="right">
+            <span class="addTitle">保存</span>
+        </span>
     </div>
 
     <div class="NewHarvestAddress_form">
@@ -175,12 +183,12 @@
 <script src="script/data.js"></script>
 <script>
     $(function(){
-        sessionStorage.removeItem("address");
+//        sessionStorage.removeItem("address");
 
         var html = '';
-        for(var i in province){
+        for (var i in province) {
             var arr = province[i];
-            html += '<option value="'+ arr.id +'">'+ arr.label +'</option>'
+            html += '<option value="' + arr.id + '">' + arr.label + '</option>'
         }
         $('.select').append(html);
 
@@ -188,8 +196,6 @@
             var option = $(this).find("option:selected");
             window.selv = option.val();
             window.elt = option.text();
-            console.log(window.selv);
-            console.log(window.elt);
         });
 
         var data = {};

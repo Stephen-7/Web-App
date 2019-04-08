@@ -10,6 +10,115 @@
     <link rel="stylesheet" href="../style/base.css">
     <link rel="stylesheet" href="../style/shared.css">
     <link rel="stylesheet" href="./style/ShoppingCart.css">
+    <style>
+        table {
+            border-collapse: collapse;
+            border-spacing: 0;
+            border: 0;
+            text-align: center;
+            width: 100%;
+            height: auto;
+        }
+        th, td {
+            border: 1px solid #CADEFF;
+        }
+        th {
+            background: #e2f2ff;
+            border-top: 3px solid #a7cbff;
+            height: 30px;
+        }
+
+        .labelSelect{
+            width: 100%;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        td {
+            /*padding: 10px;*/
+            color: #444;
+        }
+        tbody tr:hover {
+            background: RGB(238,246,255);
+        }
+        .checkbox {
+            width: 60px;
+        }
+
+
+        .goods {
+            /*width: 300px;*/
+        }
+        .goods span {
+            /*width: 180px;*/
+            text-align: left;
+            float: left;
+        }
+
+
+        .count {
+            width: 90px;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+        }
+        .count .add, .count input, .count .reduce {
+            float: left;
+            margin-right: -1px;
+            position: relative;
+            z-index: 0;
+        }
+        .count .add, .count .reduce {
+            height: 23px;
+            width: 17px;
+            border: 1px solid #e5e5e5;
+            background: #f0f0f0;
+            text-align: center;
+            line-height: 23px;
+            color: #444;
+        }
+        .count .add:hover, .count .reduce:hover {
+            color: #f50;
+            z-index: 3;
+            border-color: #f60;
+            cursor: pointer;
+        }
+        .count input {
+            width: 50px;
+            height: 23px;
+            line-height: 23px;
+            border: 1px solid #aaa;
+            color: #343434;
+            text-align: center;
+            padding: 4px 0;
+            background-color: #fff;
+            z-index: 2;
+        }
+
+        .subtotal {
+            width: 150px;
+            color: red;
+            font-weight: bold;
+        }
+
+
+        .operation {
+            width: 80px;
+        }
+        .operation span:hover, a:hover {
+            cursor: pointer;
+            color: red;
+            text-decoration: underline;
+        }
+        img {
+            width: 80px;
+            height: 80px;
+            float: left;
+        }
+
+    </style>
 </head>
 <body>
 <div id="box">
@@ -18,60 +127,95 @@
             <span class="backIcon" onclick="window.history.back()"></span>
         </p>
         <p class="HeaderTitle">购物车 <span class="HeaderTitleIcon"></span></p>
-        <p class="HeaderRight1">管理</p>
-        <p class="HeaderRight2">完成</p>
+        <p class="HeaderRight1 up">管理</p>
+        <p class="HeaderRight2 down">完成</p>
     </div>
 
 
-    <div class="shopList">
-        <div class="shopIndex">
-            <div class="shopAllCheck">
-                <span class="checkSpan"></span>
-                <p class="shopTitle">123456789</p>
-            </div>
-        </div>
-        <div class="shopItem">
-
-        </div>
-    </div>
+    <table id="cartTable">
+        <thead class="thead">
+            <tr class="tr">
+                <th class="allSelect">
+                    <label class="labelSelect">
+                        <input class="check-all check" type="checkbox"/>&nbsp;全选
+                    </label>
+                </th>
+                <th>商品</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+            </tr>
+        </thead>
+        <tbody class="tbody">
+        <tr>
+            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+            <td class="goods"><img src="image/1.jpg" alt=""/><span>Casio/卡西欧 EX-TR350</span></td>
+            <td class="count">
+                <span class="reduce">-</span>
+                <input class="count-input" type="text" value="1"/>
+                <span class="add">+</span></td>
+            <td class="subtotal">5999.88</td>
+            <td class="operation"><span class="delete">删除</span></td>
+        </tr>
+        </tbody>
+    </table>
 
 
     <div class="footer">
-        <p class="footerLeft">
-            <span class="footerIcon check"></span>
-            <span class="all">全选</span>
-        </p>
-        <div class="numAndZo" id="numAndZo">
-            <p class="footerContent">合计：123</p>
-            <span class="footerRight">去结算(2)</span>
+        <div class="footerLeft">
+            <span class="footerLeftIcon"></span>
+            <p class="footerLeftAll">总计：<span class="footerLeftMoney">120</span></p>
         </div>
-        <div class="deleteIndex" id="deleteIndex">
-            <p class="delete">删除</p>
-        </div>
-    </div>
-
-    <!--提示框-->
-    <p class="warn"></p>
-    <!--loading-->
-    <div class="loading">
-        <div class="loadingItem">
-            <p class="loadingImg"></p>
+        <div class="footerRight">
+            <p class="footerRightGo">立即购买</p>
+            <p class="deleteType" onclick="$('.componentBox').show()">删除</p>
         </div>
     </div>
 
 </div>
 
-<div class="sure">
-    <div class="sureBox">
-        <p class="sureBoxTitle">确定要删除这1种商品吗？</p>
-        <p class="tabBnt">
-            <span class="no" onclick=" $('.sure').hide()">取消</span>
-            <span class="yes">确定</span>
-        </p>
+
+<!--提示框-->
+<p class="warn"></p>
+<!--loading-->
+<div class="loading">
+    <div class="loadingItem">
+        <p class="loadingImg"></p>
     </div>
 </div>
-
+<div class="componentBox" style="display: none">
+    <div class="componentBoxSet">
+        <div class="componentTop">
+            <p class="componentTitle">确定删除吗？</p>
+        </div>
+        <div class="componentBottom">
+            <p class="componentNone" onclick="$('.componentBox').hide()">取消</p>
+            <p class="componentDetermine">确定</p>
+        </div>
+    </div>
+</div>
 </body>
 <script src="../script/jquery-3.2.1.js"></script>
 <script src="./script/ShoppingCart.js"></script>
+<script>
+        $(function () {
+            $('.up')[0].addEventListener('click',function () {
+                $('.HeaderRight1').hide();
+                $('.HeaderRight2').show();
+                $('.footerRightGo').hide();
+                $('.deleteType').show();
+            });
+            $('.down')[0].addEventListener('click',function () {
+                $('.HeaderRight1').show();
+                $('.HeaderRight2').hide();
+                $('.footerRightGo').show();
+                $('.deleteType').hide();
+            });
+        });
+
+
+
+
+
+</script>
 </html>

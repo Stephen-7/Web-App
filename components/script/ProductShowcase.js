@@ -1,36 +1,38 @@
 
 
 $(function () {
-    let params = window.location.href.split("?")[1],arr = params.split("&"),obj = {};
-    for (var i = 0; i < arr.length; i++) {
-        var key = arr[i].split("=")[0];
-        obj[key] = arr[i].split("=")[1];
+    let params = window.location.href.split("?")[1],arr = params.split("&");
+    let key = '',value = '';
+    for (let i = 0; i < arr.length; i++) {
+        key = arr[i].split("=")[0];
+        value = arr[i].split("=")[1];
     }
-    var id = obj[key];
-
-    // $.ajax({
-    //     url:'http://admin/v1/ProductShowcase1',
-    //     type: 'GET',
-    //     dataType: "json",
-    //     success:function (res) {
-    //         if(res.code === 200){
-    //
-    //         }
-    //     },
-    //     error:function (err) {
-    //         console.log(err);
-    //     }
-    // })
-
-
-    console.log(item[id].image);
 
     // $('.DetailsSetImage').css({'backgroundImage': 'url("' + productsContent[id].imgUrl + '")'}); //span改换css背景图
-    $(".DetailsImg").attr('src',item[id].image); //image替换
-    $('.DetailsText').text(item[id].title);
-    $('.DetailsPrice').text('¥'+item[id].price);
+    $(".DetailsImg").attr('src',item[value].image); //image替换
+    $('.DetailsText').text(item[value].title);
+    $('.DetailsPrice').text('¥'+item[value].price);
 
+    window.ken = item[value];
 
 });
+
+
+function addShopping() {
+    $('.loading').show();
+    $('.warn').show();
+    $('.warn').text('已添加至购物车');
+    setTimeout(()=>{
+        $('.warn').hide();
+        $('.loading').hide();
+    },2000);
+    sessionStorage.setItem("arr",JSON.stringify(window.ken));
+}
+
+function goToShopping() {
+    $('.loading').show();
+    window.location.href = '../ShoppingCart/ConfirmOrder.html';
+    sessionStorage.setItem("arr",JSON.stringify(window.ken));
+}
 
 
