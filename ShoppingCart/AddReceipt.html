@@ -66,7 +66,7 @@
             width: 75%;
             height: 45px;
             float: left;
-            font-size: 15px;
+            font-size: 14px;
             color: #333333;
             text-align: left;
             line-height: 45px;
@@ -135,15 +135,15 @@
 
     <div class="NewHarvestAddress_form">
         <span class="NewHarvestAddress_data">名字</span>
-        <input type="text" class="NewHarvestAddress_name">
+        <input type="text" class="NewHarvestAddress_name" placeholder="请输入名字">
     </div>
     <div class="NewHarvestAddress_form">
         <span class="NewHarvestAddress_data">身份证号</span>
-        <input type="text" class="NewHarvestAddress_ID">
+        <input type="text" class="NewHarvestAddress_ID" maxlength="18" placeholder="请输入身份证">
     </div>
     <div class="NewHarvestAddress_form">
         <span class="NewHarvestAddress_data">手机号码</span>
-        <input type="text" class="NewHarvestAddress_Phone">
+        <input type="text" class="NewHarvestAddress_Phone" maxlength="11" placeholder="请输入手机号码">
     </div>
     <div class="NewHarvestAddress_form">
         <span class="NewHarvestAddress_data">所在地区</span>
@@ -155,14 +155,19 @@
     </div>
     <div class="NewHarvestAddress_form4">
         <span class="NewHarvestAddress_XX">详细地址</span>
-        <textarea class="NewHarvestAddress_index"></textarea>
+        <textarea class="NewHarvestAddress_index" placeholder="请输入详细地址"></textarea>
     </div>
     <!--<div class="NewHarvestAddress_form" style="padding-left: 3%;">设置默认地址 <span class="btn"></span></div>-->
 </div>
 
 
 
-
+<p class="warn"></p>
+<div class="loading">
+    <div class="loadingItem">
+        <p class="loadingImg"></p>
+    </div>
+</div>
 
 </body>
 <script src="../script/jquery-3.2.1.js"></script>
@@ -170,7 +175,7 @@
 <script src="script/data.js"></script>
 <script>
     $(function(){
-
+        sessionStorage.removeItem("address");
 
         var html = '';
         for(var i in province){
@@ -183,14 +188,58 @@
             var option = $(this).find("option:selected");
             window.selv = option.val();
             window.elt = option.text();
+            console.log(window.selv);
+            console.log(window.elt);
         });
 
-
+        var data = {};
+        var dataArr = [];
         $('.right')[0].addEventListener('click',function () {
             var name = $('.NewHarvestAddress_name').val().trim();
             var id = $('.NewHarvestAddress_ID').val().trim();
             var phone = $('.NewHarvestAddress_Phone').val().trim();
             var receipt = $('.NewHarvestAddress_index').val().trim();
+            if(name !== ''){
+                if(id !== ''){
+                    if(phone !== ''){
+                        if(receipt !== ''){
+                            person = {"name":name,"id":id,"phone":phone,"selv":window.selv,"elt":window.elt,"receipt":receipt};
+                            // dataArr.push(person);
+                            sessionStorage.setItem('address',JSON.stringify(person));
+                            $('.warn').show();
+                            $('.warn').text('添加成功');
+                            setTimeout(function () {
+                                $('.warn').hide();
+                            },1000);
+                            window.history.back();
+                        }else {
+                            $('.warn').show();
+                            $('.warn').text('请输入详细地址');
+                            setTimeout(function () {
+                                $('.warn').hide();
+                            },1000)
+                        }
+                    }else {
+                        $('.warn').show();
+                        $('.warn').text('请输入手机');
+                        setTimeout(function () {
+                            $('.warn').hide();
+                        },1000)
+                    }
+                }else {
+                    $('.warn').show();
+                    $('.warn').text('请输入身份证号');
+                    setTimeout(function () {
+                        $('.warn').hide();
+                    },1000)
+                }
+            }else{
+                $('.warn').show();
+                $('.warn').text('请输入名字');
+                setTimeout(function () {
+                    $('.warn').hide();
+                },1000)
+            }
         })
     })
 </script>

@@ -23,7 +23,7 @@
             height: auto;
             overflow: hidden;
             box-sizing: content-box;
-            margin-top: 45px;
+            padding-top: 45px;
         }
 
         .ReceiptSet{
@@ -43,15 +43,27 @@
             border-bottom: 1px solid #e4e4e4;
         }
 
+        /*.ReceiptSetList:last-child{*/
+            /*border-bottom:none;*/
+        /*}*/
+
         .ReceiptSetItemData{
             width: 80%;
             height:auto ;
         }
 
+        .ReceiptSetItemTop{
+            width: 100%;
+            height: auto;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
         .ReceiptSetItemName{
-            flex: 1;
+            width: auto;
             height: 30px;
-            font-size: 16px;
+            font-size: 15px;
             color: #333333;
             font-weight: bold;
             display: flex;
@@ -60,7 +72,12 @@
         }
 
         .ReceiptSetItemPhone{
+            flex: 1;
+            height: 30px;
             margin-left: 5px;
+            display: flex;
+            align-items: flex-end;
+            justify-items: flex-start;
         }
 
         .ReceiptSetItemAddress{
@@ -97,6 +114,7 @@
             left: 0;
             right: 0;
             background-color: #ff3e3e;
+            z-index: 2;
         }
 
         .addReceipt{
@@ -121,10 +139,18 @@
         .dataNone{
             width: 100%;
             height: 100vh;
+            position: fixed;
+            top:0;
+            left: 0;
+            display: none;
+        }
+
+        .dataNoneSet{
+            width: 100%;
+            height: 100vh;
             display: flex;
             align-items: center;
             justify-items: center;
-            display: none;
         }
 
         .dataNoneBox{
@@ -246,7 +272,6 @@
         }
 
 
-
     </style>
 </head>
 <body>
@@ -259,16 +284,10 @@
 
     <div class="Receipt">
         <ul class="ReceiptSet">
-            <li class="ReceiptSetList">
-                <div class="ReceiptSetItemData">
-                    <p class="ReceiptSetItemName">stephen<span class="ReceiptSetItemPhone">17620835317</span></p>
-                    <p class="ReceiptSetItemAddress">广州市海珠区客村丽影广场E座</p>
-                </div>
-                <p class="ReceiptSetItemText">编辑</p>
-                <span class="deleteReceipt" id="deleteReceipt" onclick="$('.componentBox').show()"></span>
-            </li>
+
         </ul>
     </div>
+
 
     <div class="bottomBar">
         <p class="addReceipt" onclick="addReceipt()">添加新地址</p>
@@ -276,9 +295,11 @@
 </div>
 
 <div class="dataNone">
-    <div class="dataNoneBox">
-        <p class="dataNoneBoxIcon"></p>
-        <p class="dataNoneBoxTitle">当前没有地址</p>
+    <div class="dataNoneSet">
+        <div class="dataNoneBox">
+            <p class="dataNoneBoxIcon"></p>
+            <p class="dataNoneBoxTitle">当前没有地址</p>
+        </div>
     </div>
 </div>
 
@@ -297,18 +318,31 @@
 <script src="../script/mock-min.js"></script>
 <script src="../script/jquery-3.2.1.js"></script>
 <script>
-//    $(function () {
-//        $('.componentDetermine')[0].addEventListener('click',function () {
-//            ('.ReceiptSetList').remove();
-//        })
-//    });
-
 
     $(document).ready(function(){
         $(".componentDetermine").click(function(){
             $(".ReceiptSetList").remove();
             $('.componentBox').hide();
         });
+
+        var address = sessionStorage.getItem("address");
+        var index = JSON.parse(address);
+        if(index !== null){
+            var html = '<li class="ReceiptSetList">\n' +
+                '           <div class="ReceiptSetItemData">\n' +
+                '               <div class="ReceiptSetItemTop">\n' +
+                '                   <p class="ReceiptSetItemName">'+ index.name +'</p>\n' +
+                '                   <p class="ReceiptSetItemPhone">'+ index.phone +'</p>\n' +
+                '               </div>\n' +
+                '               <p class="ReceiptSetItemAddress">'+ index.elt+index.receipt +'</p>\n' +
+                '           </div>\n' +
+                '           <p class="ReceiptSetItemText">编辑</p>\n' +
+                '           <span class="deleteReceipt" id="deleteReceipt" onclick="$(\'.componentBox\').show()"></span>\n' +
+                '       </li>';
+            $('.ReceiptSet').html(html);
+        }else {
+            $('.dataNone').show();
+        }
     });
 
 
