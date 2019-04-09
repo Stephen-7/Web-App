@@ -268,15 +268,12 @@
                 -webkit-transform: none;
             }
         }
-
-
-
     </style>
 </head>
 <body>
 <div id="box">
     <div class="header">
-        <span class="left" onclick="window.history.back()"></span>
+        <span class="left" onclick="window.history.back();"></span>
         <p class="center">添加新地址</p>
         <span class="right"></span>
     </div>
@@ -315,9 +312,8 @@
 <script src="../script/mock-min.js"></script>
 <script src="../script/jquery-3.2.1.js"></script>
 <script>
-
     $(document).ready(function(){
-        $(".componentDetermine").click(function(){
+        $(".componentDetermine")[0].addEventListener('click',function(){
             $(".ReceiptSetList").remove();
             $('.componentBox').hide();
             sessionStorage.removeItem("address");
@@ -328,14 +324,14 @@
         var index = JSON.parse(address);
         if(index !== null){
             var html = '<li class="ReceiptSetList">\n' +
-                '           <div class="ReceiptSetItemData" onclick="back()">\n' +
+                '           <div class="ReceiptSetItemData" onclick="window.history.back();">\n' +
                 '               <div class="ReceiptSetItemTop">\n' +
                 '                   <p class="ReceiptSetItemName">'+ index.name +'</p>\n' +
                 '                   <p class="ReceiptSetItemPhone">'+ index.phone +'</p>\n' +
                 '               </div>\n' +
                 '               <p class="ReceiptSetItemAddress">'+ index.elt+index.receipt +'</p>\n' +
                 '           </div>\n' +
-                '           <p class="ReceiptSetItemText" onclick="modify()">编辑</p>\n' +
+                '           <p class="ReceiptSetItemText" onclick="modify('+ index.selv +')">编辑</p>\n' +
                 '           <span class="deleteReceipt" id="deleteReceipt" onclick="$(\'.componentBox\').show()"></span>\n' +
                 '       </li>';
             $('.ReceiptSet').html(html);
@@ -348,12 +344,8 @@
         window.location.href = '../ShoppingCart/AddReceipt.html'
     }
 
-    function back() {
-        window.history.back();
-    }
-
-    function modify() {
-        window.location.href = '../ShoppingCart/AddReceipt.html'
+    function modify(selv) {
+        window.location.href = '../ShoppingCart/AddReceipt.html?selv='+selv;
     }
 </script>
 </html>

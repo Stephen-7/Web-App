@@ -323,7 +323,10 @@
     width: 40px;
     height: 40px;
     display: inline-block;
-    background-color: #3b2667;
+    background: url("../images/default.png");
+    background-size: 40px 40px;
+    background-repeat: no-repeat;
+    background-position: center center;
     margin:10px 10px 10px 0;
     border-radius: 50%;
 }

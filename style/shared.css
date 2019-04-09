@@ -1,12 +1,12 @@
-
 /*头部导航栏*/
-#box{
+#box {
     width: 100%;
     height: 100vh;
     position: relative;
     background-color: #ffffff;
 }
-.header{
+
+.header {
     width: 100%;
     height: 44px;
     border-bottom: 1px solid #e5e5e5;
@@ -15,12 +15,14 @@
     justify-content: center;
     align-items: center;
 }
-.left,.right{
+
+.left, .right {
     width: 15%;
     height: 44px;
     display: inline-block;
 }
-.left{
+
+.left {
     background: url("../images/back@2x.png") no-repeat;
     background-size: 25px 25px;
     background-position: 20% 50%;
@@ -28,17 +30,19 @@
     justify-content: center;
     align-items: center;
 }
-.right{
+
+.right {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.center{
+
+.center {
     width: 70%;
     height: 44px;
     float: left;
     font-size: 16px;
-    color:#333333;
+    color: #333333;
     text-align: center;
     display: flex;
     justify-content: center;
@@ -46,27 +50,29 @@
 }
 
 
-
 /*底部导航栏*/
-.BotNavigation{
+.BotNavigation {
     width: 100%;
     height: 45px;
     background-color: #ffffff;
     box-shadow: 0 -2px 2px #ccc;
-    position:fixed;
+    position: fixed;
     bottom: 0;
     left: 0;
 }
-.tabBar{
+
+.tabBar {
     width: 100%;
     height: 45px;
     display: flex;
 }
-.tabBarItem{
+
+.tabBarItem {
     width: 20%;
     height: 45px;
 }
-.tabBarItem a{
+
+.tabBarItem a {
     width: 100%;
     height: 100%;
     display: flex;
@@ -74,11 +80,13 @@
     justify-content: center;
     align-content: center;
 }
-.tabBarImg{
+
+.tabBarImg {
     width: 45px;
-    /*height: 45px;*/
+    height: 45px;
 }
-.tabBarTitle{
+
+.tabBarTitle {
     width: 100%;
     font-size: 10px;
     text-align: center;
@@ -86,65 +94,63 @@
 }
 
 
-
-
 *,
 ::before,
-::after{
+::after {
     margin: 0;
     padding: 0;
 
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
 
-    -webkit-tap-highlight-color:transparent;
+    -webkit-tap-highlight-color: transparent;
 }
 
-body{
+body {
     font-family: 'Microsoft Yahei', sans-serif;
     font-size: 12px;
-    color:#000;
+    color: #000;
 }
 
-a{
+a {
     text-decoration: none;
     color: #666;
 }
 
-ul,ol{
+ul, ol {
     list-style: none;
 }
 
-textarea,input{
-    outline:none;
-    border:none;
+textarea, input {
+    outline: none;
+    border: none;
     /*-webkit-appearance: none;*/
 }
 
 
 .clearfix::before,
-.clearfix::after{
+.clearfix::after {
     content: '';
     width: 0;
-    height:0;
+    height: 0;
     line-height: 0;
     display: block;
     clear: both;
 }
 
-.none_bottom_border{
+.none_bottom_border {
     border-bottom: none !important;
 }
 
 
-[class^='icon_']{
-    background:url("../images/sprites.png") no-repeat;
+[class^='icon_'] {
+    background: url("../images/sprites.png") no-repeat;
     -webkit-background-size: 200px 200px;
     background-size: 200px 200px;
 
 }
 
-.loadMore{
+.loadMore {
     width: 100%;
     height: 44px;
     color: #cccccc;
@@ -154,25 +160,27 @@ textarea,input{
 }
 
 /*loading*/
-.loading{
+.loading {
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(0, 0, 0, 0);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 99;
     display: none;
 }
-.loadingItem{
+
+.loadingItem {
     width: 100px;
     height: 100px;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     border-radius: 5px;
     margin: 200px auto;
     position: relative;
 }
-.loadingImg{
+
+.loadingImg {
     width: 40%;
     height: 40%;
     position: absolute;
@@ -184,15 +192,16 @@ textarea,input{
     -o-animation: rotate infinite linear 1s;
     animation: rotate infinite linear 1s;
 }
+
 @keyframes rotate {
-    from{
+    from {
         -webkit-transform: rotateZ(0);
         -moz-transform: rotateZ(0);
         -ms-transform: rotateZ(0);
         -o-transform: rotateZ(0);
         transform: rotateZ(0);
     }
-    to{
+    to {
         -webkit-transform: rotateZ(360deg);
         -moz-transform: rotateZ(360deg);
         -ms-transform: rotateZ(360deg);
@@ -200,15 +209,16 @@ textarea,input{
         transform: rotateZ(360deg);
     }
 }
+
 @-webkit-keyframes rotate {
-    from{
+    from {
         -webkit-transform: rotateZ(0);
         -moz-transform: rotateZ(0);
         -ms-transform: rotateZ(0);
         -o-transform: rotateZ(0);
         transform: rotateZ(0);
     }
-    to{
+    to {
         -webkit-transform: rotateZ(360deg);
         -moz-transform: rotateZ(360deg);
         -ms-transform: rotateZ(360deg);
@@ -218,13 +228,13 @@ textarea,input{
 }
 
 
-.warn{
+.warn {
     width: 70%;
     padding: 20px 0;
     font-size: 14px;
     color: #fff;
     text-align: center;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     position: fixed;
     left: 15%;
@@ -234,22 +244,22 @@ textarea,input{
 }
 
 
-.allFor{
+.allFor {
     width: 60%;
     height: 30px;
-    background-color: rgba(0,0,0,0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     border-radius: 10px;
     text-align: center;
     line-height: 30px;
     font-size: 13px;
-    color:#fff;
+    color: #fff;
     position: absolute;
-    bottom:15%;
+    bottom: 15%;
     left: 20%;
     display: none;
 }
 
-.publicAll{
+.publicAll {
     width: 60%;
     height: 40px;
     line-height: 40px;
@@ -262,29 +272,29 @@ textarea,input{
     background-color: #4077FF;
 }
 
-.componentBox{
+.componentBox {
     width: 100%;
     height: 100vh;
-    background-color: rgba(0,0,0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
-    top:0;
+    top: 0;
     left: 0;
-    z-index:10;
+    z-index: 10;
 }
 
-.componentBoxSet{
+.componentBoxSet {
     width: 75%;
     overflow: hidden;
     border-radius: 5px;
     background-color: #ffffff;
-    border-bottom:1px solid #e0e0e0;
-    margin-left:12.5%;
-    margin-top:70%;
+    border-bottom: 1px solid #e0e0e0;
+    margin-left: 12.5%;
+    margin-top: 70%;
     padding: 15px;
     animation: jump 1s ease;
 }
 
-.componentTop{
+.componentTop {
     width: 100%;
     height: 60px;
     display: flex;
@@ -292,12 +302,12 @@ textarea,input{
     justify-content: center;
 }
 
-.componentTitle{
+.componentTitle {
     font-size: 16px;
     color: #333333;
 }
 
-.componentBottom{
+.componentBottom {
     width: 100%;
     height: 35px;
     font-size: 15px;
@@ -307,7 +317,7 @@ textarea,input{
     justify-content: center;
 }
 
-.componentNone{
+.componentNone {
     width: 45%;
     height: 100%;
     color: #333333;
@@ -320,7 +330,7 @@ textarea,input{
     margin: 0 5px;
 }
 
-.componentDetermine{
+.componentDetermine {
     width: 45%;
     height: 100%;
     color: #ffffff;
@@ -334,23 +344,23 @@ textarea,input{
 }
 
 
-@keyframes jump{
-    0%{
-        opacity:0;
+@keyframes jump {
+    0% {
+        opacity: 0;
         transform: translateY(-3000px);
         -webkit-transform: translateY(-3000px);
     }
-    65%{
-        opacity:1;
+    65% {
+        opacity: 1;
         transform: translateY(30px);
         -webkit-transform: translateY(-30px);
     }
-    85%{
+    85% {
         transform: translateY(-5px);
         -webkit-transform: translateY(-5px);
     }
-    100%{
-        opacity:1;
+    100% {
+        opacity: 1;
         transform: none;
         -webkit-transform: none;
     }
