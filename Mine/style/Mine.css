@@ -2,13 +2,14 @@
 
 #box{
     width: 100%;
-    height: auto;;
     min-height: 100vh;
-    max-height: 100%;
-    box-sizing: content-box;
-    background: url("../image/bg1.png") no-repeat;
+    background: url(../image/bg1.png);
     background-size: 100% 100%;
-    padding-bottom: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    overflow: scroll;
+    box-sizing: content-box;
+    position: relative;
 }
 
 .Header{
@@ -363,7 +364,7 @@
     border-radius: 5px;
     margin: 10px 3.5% 0 3.5%;
     background-color: white;
-    /*padding-bottom: 45px;*/
+    margin-bottom: 60px;
 }
 
 .serviceSet{

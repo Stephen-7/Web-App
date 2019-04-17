@@ -338,7 +338,6 @@
         var order = $('.ConfirmOrder_nan').text();
         var price = Number(list.price);//价格
         var addOrder = Number(order);//运费
-        console.log(typeof addOrder);
         $('.ConfirmOrder_btn_btn').text('￥'+((price*1)+10));
 
 
@@ -381,7 +380,6 @@
             var order = $('.ConfirmOrder_nan').text();
             var price = Number(list.price);//价格
             var addOrder = Number(order);//运费
-            console.log(typeof addOrder);
             $('.ConfirmOrder_btn_btn').text('￥'+((price*num)+10));
         });
     });
