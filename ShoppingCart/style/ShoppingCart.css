@@ -123,7 +123,7 @@
     justify-content: center;
 }
 
-.indexTopChecked{
+.CheckedInput{
     width: 15px;
     height: 15px;
     margin: 0 10px;
@@ -277,20 +277,23 @@
     width: 18px;
     height: 18px;
     display: inline-block;
+    text-align: center;
 }
 
 .numAdd{
-    background: url("../image/jifenduihuan_icon_jianshao.png");
+    /*background: url("../image/jifenduihuan_icon_zengjia .png");*/
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: center center;
+    background-color: #e5e5e5;
 }
 
 .numLess{
-    background: url("../image/jifenduihuan_icon_zengjia .png");
+    /*background: url("../image/jifenduihuan_icon_jianshao.png");*/
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: center center;
+    background-color: #e5e5e5;
 }
 
 .numCenter{
@@ -303,12 +306,13 @@
 .footer{
     width: 100%;
     height: 45px;
-    box-shadow: 0 5px 15px 5px #e5e5e5;
     position: fixed;
     left: 0;
     bottom:0;
     display: flex;
     background-color: #FFFFFF;
+    border-top:1px solid #e5e5e5;
+    box-shadow: 0 5px 15px 5px #e5e5e5;
 }
 .footerLeft{
     width: 65%;
@@ -338,7 +342,7 @@
     justify-content: flex-end;
 }
 
-.footerLeftIcon{
+.check-all{
     width: 15px;
     height: 15px;
     margin: 0 5px 0 10px;
@@ -362,7 +366,7 @@
     width: auto;
     font-size: 15px;
     color: #ea3838;
-    padding-right: 10px;
+    padding-right: 5px;
 }
 
 .footerRight{
@@ -399,3 +403,16 @@
     color: #FFFFFF;
 }
 
+#deleteNum{
+    text-align: center;
+    font-size: 14px;
+    color: #FFFFFF;
+}
+
+
+.show{
+    display: block;
+}
+.hide{
+    display: none;
+}
